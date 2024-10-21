@@ -1,43 +1,50 @@
 # Welcone To Hello World!!😀
 ## ‼필수 사항‼
-1. 현재 사용중인 사람이 있는지 없는지 확인할것
-2. 없다면 체크박으에 체크하고 대략적인 시간과 할 것 써놓기
+1. 현재 **사용중인 사람**이 있는지 없는지 **확인**할것
+2. 없다면 **체크박스에 체크**하고 대략적인 시간쓰기
 3. 만약 사용 중인 사람이 있다면 연락 후 조율하여 할 것!
 4. **항상!!! commit 잘 할 것!!!!**
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
 
-5. 서브파일에 작성하고 pull/push 시에만 메인 파일에 옮기기
+5. **서브파일에 작성**하고 **pull/push 시에만 메인 파일**에 옮기기
+6. 작업 다 하고나서는 관련 내용 **마지막으로 한 작업** 란에 작성(양식에 맞추어서)
   
 ---  
 ### Pull/Push 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
 - [ ] 영호핑
 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10 | login 기능 수정
+  약 00:00 ~ 00:10
 </details>
 
 
 - [ ] 영하핑
 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10 | login 기능 수정
+  약 00:00 ~ 00:10
 </details>
 
 
 - [ ] 시윤핑
 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10 | login 기능 수정
+  약 00:00 ~ 00:10
 </details>
 
 
 - [ ] 지수핑
 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10 | login 기능 수정
+  약 00:00 ~ 00:10
 </details>
 
+---
+### 마지막으로 한 작업
+<details>
+  <summary>접기 / 펼치기</summary>
+  ex) 2024/10/21(월) 17:13 | 시윤핑 ==> ooo작업을 함 
+</details>
 
 
 ---
