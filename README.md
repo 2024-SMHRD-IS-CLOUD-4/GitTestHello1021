@@ -1,11 +1,11 @@
 # Welcone To Hello World
 
 ## 필수 사항
-# 사용 중인 사람
-- [] test
-- [] test
-- [] test
-- [] test
+# 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
+- [ ] test
+- [ ] test
+- [ ] test
+- [ ] test
 
 ---
 ### 파일 올리는 방법
