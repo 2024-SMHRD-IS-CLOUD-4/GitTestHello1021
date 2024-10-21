@@ -1,5 +1,12 @@
 # Welcone To Hello World
 
+## 필수 사항
+# 사용 중인 사람
+- [] test
+- [] test
+- [] test
+- [] test
+
 ---
 ### 파일 올리는 방법
 <파일 올리기>
