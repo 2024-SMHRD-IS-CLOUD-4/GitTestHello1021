@@ -8,6 +8,8 @@
 5. 서브파일에 작성하고 pull/push 시에만 메인 파일에 옮기기
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
+  
+---  
 ### Pull/Push 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
 - [ ] 영호핑
 <details>
