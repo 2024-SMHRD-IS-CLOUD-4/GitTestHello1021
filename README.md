@@ -5,6 +5,7 @@
 2. 없다면 체크박으에 체크하고 대략적인 시간과 할 것 써놓기
 3. 만약 사용 중인 사람이 있다면 연락 후 조율하여 할 것!
 4. **항상!!! commit 잘 할 것!!!!**
+
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기
   
   // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
