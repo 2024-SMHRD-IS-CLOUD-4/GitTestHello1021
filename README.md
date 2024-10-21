@@ -10,5 +10,5 @@
 6. 우클릭 -> team -> push to branch 하고 푸시
 7. 무조건 말해주기!!!!!!★★★★★★★★★★★★
 
-###작성법
+### 작성법
 참고 : https://velog.io/@ktw9115/Git-Hub-README.md-%EC%9E%91%EC%84%B1%EB%B2%95
