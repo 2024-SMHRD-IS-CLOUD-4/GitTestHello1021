@@ -12,29 +12,25 @@
   
 ---  
 ### Pull/Push 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
-- [ ] 영호핑
-<details>
+- [ ] 영호핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
 </details>
 
 
-- [ ] 영하핑
-<details>
+- [ ] 영하핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
 </details>
 
 
-- [x] 시윤핑
-<details>
+- [x] 시윤핑 <details>
   <summary>접기 / 펼치기</summary>
   약 17:18 ~ 18:18 | html 메인 파일 업로드
 </details>
 
 
-- [ ] 지수핑
-<details>
+- [ ] 지수핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
 </details>
