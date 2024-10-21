@@ -26,10 +26,10 @@
 </details>
 
 
-- [ ] 시윤핑
+- [ x ] 시윤핑
 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10
+  약 17:18 ~ 18:18 | html 메인 파일 업로드
 </details>
 
 
