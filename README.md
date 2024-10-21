@@ -3,19 +3,31 @@
 ## ‼필수 사항‼
 ### 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
 - [ ] 영호핑
-ex) 약 00:00 ~ 00:10 | login 기능 수정
+<details>
+  <summary>접기 / 펼치기</summary>
+  약 00:00 ~ 00:10 | login 기능 수정
+</details>
 
 
 - [ ] 영하핑
-ex) 약 00:00 ~ 00:10 | login 기능 수정
+<details>
+  <summary>접기 / 펼치기</summary>
+  약 00:00 ~ 00:10 | login 기능 수정
+</details>
 
 
 - [ ] 시윤핑
-ex) 약 00:00 ~ 00:10 | login 기능 수정
+<details>
+  <summary>접기 / 펼치기</summary>
+  약 00:00 ~ 00:10 | login 기능 수정
+</details>
 
 
 - [ ] 지수핑
-ex) 약 00:00 ~ 00:10 | login 기능 수정
+<details>
+  <summary>접기 / 펼치기</summary>
+  약 00:00 ~ 00:10 | login 기능 수정
+</details>
 
 
 
