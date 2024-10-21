@@ -53,6 +53,20 @@
 <파일 받기>
 1. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
 2. 프로젝트위 우클릭 -> team -> pull(2개 중 위에꺼)
+
+### 파일 사본 만들기 / 자바에 불러오기
+<사본 만들기>
+1. Export - Export
+2. General - File System
+3. 복사할 파일 체크 후 To directory로 파일 저장 위치 체크
+4. Finish
+
+<만든 사본 자바에 불러오기>
+1. import - import
+2. General - File System
+3. From directory에서 불러올 파일 선택하기
+4. 밑에 가져올 파일 체크
+5. Finish(Yes To All)
 ---
 ### 작성법
 참고 : [https://velog.io/@ktw9115/Git-Hub-README.md-%EC%9E%91%EC%84%B1%EB%B2%95](https://velog.io/@gmlstjq123/Readme.md-%ED%8C%8C%EC%9D%BC-%EC%9E%91%EC%84%B1%EB%B2%95)
