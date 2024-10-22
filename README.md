@@ -30,7 +30,7 @@
 </details>
 
 
-- [x] 지수핑 <details>
+- [ ] 지수핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
 </details>
