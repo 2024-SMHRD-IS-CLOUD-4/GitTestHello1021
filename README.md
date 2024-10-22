@@ -87,6 +87,7 @@
 ### 톰켓 작동안될 때
 <details>
   <summary>접기 / 펼치기</summary>
+
 1. 이클립스 화면 하단에 servers 클릭
 2. 만약 없을 시 상단에 window -> show view -> servers
 3. servers를 보면 톰켓이 있음. 우클릭 후 add and remove
