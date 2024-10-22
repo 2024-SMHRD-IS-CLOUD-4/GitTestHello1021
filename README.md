@@ -7,7 +7,7 @@
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
 
-5. **서브파일에 작성**하고 **pull/push 시에만 메인 파일**에 옮기기
+5. 작업시에는 **항상!! 서브파일**에서하고 **pull/push 시에만 메인 파일**에 옮기기
 6. 작업 다 하고나서는 관련 내용 **마지막으로 한 작업** 란에 작성(양식에 맞추어서)
   
 ---  
