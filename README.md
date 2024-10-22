@@ -44,9 +44,10 @@
   2024/10/21(월) 18:21 | 시윤핑 ==> 약 html 메인 파일 업로드 완료
 </details>
 
-
 ---
 ### 파일 올리는 방법
+<details>
+  <summary>접기 / 펼치기</summary>
 <파일 올리기>
 1. 파일 저장
 2. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
@@ -59,9 +60,12 @@
 <파일 받기>
 1. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
 2. 프로젝트위 우클릭 -> team -> pull(2개 중 위에꺼)
+</details>
 
 ---
 ### 파일 사본 만들기 / 자바에 불러오기
+<details>
+  <summary>접기 / 펼치기</summary>
 <사본 만들기>
 1. Export - Export
 2. General - File System
@@ -74,6 +78,18 @@
 3. From directory에서 불러올 파일 선택하기
 4. 밑에 가져올 파일 체크
 5. Finish(Yes To All)
+</details>
+
+
+---
+### 톰켓 작동안될 때
+<details>
+  <summary>접기 / 펼치기</summary>
+  1.
+  2.
+  
+</details>
+
 ---
 ### 작성법
 참고 : 
