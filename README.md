@@ -48,6 +48,7 @@
 ### 파일 올리는 방법
 <details>
   <summary>접기 / 펼치기</summary>
+  
 <파일 올리기>
 1. 파일 저장
 2. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
@@ -66,6 +67,7 @@
 ### 파일 사본 만들기 / 자바에 불러오기
 <details>
   <summary>접기 / 펼치기</summary>
+  
 <사본 만들기>
 1. Export - Export
 2. General - File System
@@ -85,8 +87,11 @@
 ### 톰켓 작동안될 때
 <details>
   <summary>접기 / 펼치기</summary>
-  1.
-  2.
+1. 이클립스 화면 하단에 servers 클릭
+2. 만약 없을 시 상단에 window -> show view -> servers
+3. servers를 보면 톰켓이 있음. 우클릭 후 add and remove
+4. Remove All 눌려서 모든 파일 좌측으로 옮기기
+5. Finish
   
 </details>
 
