@@ -4,6 +4,7 @@
 2. 없다면 **체크박스에 체크**하고 대략적인 시간쓰기
 3. 만약 사용 중인 사람이 있다면 연락 후 조율하여 할 것!
 4. **항상!!! commit 잘 할 것!!!!**
+5. <span style="color: blue;">이것은 파란색 텍스트입니다.</span>
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
 
