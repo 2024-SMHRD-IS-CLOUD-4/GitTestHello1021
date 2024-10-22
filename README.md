@@ -45,7 +45,7 @@
 </details>
 
 ---
-### 파일 올리는 방법
+### 파일 PUll/PUSH 방법
 <details>
   <summary>접기 / 펼치기</summary>
   
