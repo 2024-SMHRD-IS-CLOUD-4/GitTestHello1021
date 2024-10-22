@@ -3,7 +3,7 @@
 1. 현재 **사용중인 사람**이 있는지 없는지 **확인**할것
 2. 없다면 **체크박스에 체크**하고 대략적인 시간쓰기
 3. 만약 사용 중인 사람이 있다면 연락 후 조율하여 할 것!
-4. **항상!!! commit 잘 할 것!!!!**
+4. <span style="color: red; background-color: yellow;"항상!!! commit 잘 할 것!!!!</span>**항상!!! commit 잘 할 것!!!!**
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
 
