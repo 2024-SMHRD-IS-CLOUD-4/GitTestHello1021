@@ -18,15 +18,9 @@
 </details>
 
 
-- [ ] 영하핑 <details>
+- [x] 시윤핑 <details>
   <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10
-</details>
-
-
-- [ ] 시윤핑 <details>
-  <summary>접기 / 펼치기</summary>
-  약 00:00 ~ 00:10
+  약 21:40 ~ 23:40 | 다이나믹웹 프로젝트 메이븐으로 변경
 </details>
 
 
