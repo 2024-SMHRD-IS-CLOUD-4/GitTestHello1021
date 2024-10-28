@@ -7,26 +7,20 @@
 
   (자바스크립트 window -> show veiw -> Other -> Git Staging 검색하여 Open 하기 // 이때 unstaged changes, staged changes에 파일이 있으면 저장, commit 하기)
 
-5. **서브파일에 작성**하고 **pull/push 시에만 메인 파일**에 옮기기
+5. 작업시에는 **항상!! 서브파일**에서하고 **pull/push 시에만 메인 파일**에 옮기기
 6. 작업 다 하고나서는 관련 내용 **마지막으로 한 작업** 란에 작성(양식에 맞추어서)
   
 ---  
-### Pull/Push 사용 중인 사람 / (사용 할 땐 체크박스에 x 넣기)
+### Pull/Push 사용 중인 사람 / (사용 할 땐 편집으로 들어가서 체크박스에 x 넣기)
 - [ ] 영호핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
 </details>
 
 
-- [ ] 영하핑 <details>
+- [ ] 시윤핑 <details>
   <summary>접기 / 펼치기</summary>
   약 00:00 ~ 00:10
-</details>
-
-
-- [x] 시윤핑 <details>
-  <summary>접기 / 펼치기</summary>
-  약 17:18 ~ 18:18 | html 메인 파일 업로드
 </details>
 
 
@@ -39,12 +33,18 @@
 ### 마지막으로 한 작업
 <details>
   <summary>접기 / 펼치기</summary>
-  ex) 2024/10/21(월) 17:13 | 시윤핑 ==> ooo작업을 함 
+  ex) 2024/10/21(월) 17:13 | 시윤핑 ==> ooo작업을 함
+
+  1. 2024/10/21(월) 18:21 | 시윤핑 ==> 약 html 메인 파일 업로드 완료
+  2. 2024/10/21(월) 18:21 | 시윤핑 ==> 약 21:40 ~ 23:40 | 다이나믹웹 프로젝트 메이븐으로 변경 => 실패... 이유 모름
+  
 </details>
 
-
 ---
-### 파일 올리는 방법
+### 파일 PUll/PUSH 방법
+<details>
+  <summary>접기 / 펼치기</summary>
+  
 <파일 올리기>
 1. 파일 저장
 2. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
@@ -57,9 +57,13 @@
 <파일 받기>
 1. 프로젝트위 우클릭 -> team -> commit (레파지토리 저장)
 2. 프로젝트위 우클릭 -> team -> pull(2개 중 위에꺼)
+</details>
 
 ---
 ### 파일 사본 만들기 / 자바에 불러오기
+<details>
+  <summary>접기 / 펼치기</summary>
+  
 <사본 만들기>
 1. Export - Export
 2. General - File System
@@ -72,6 +76,22 @@
 3. From directory에서 불러올 파일 선택하기
 4. 밑에 가져올 파일 체크
 5. Finish(Yes To All)
+</details>
+
+
+---
+### 톰켓 작동안될 때
+<details>
+  <summary>접기 / 펼치기</summary>
+
+1. 이클립스 화면 하단에 servers 클릭
+2. 만약 없을 시 상단에 window -> show view -> servers
+3. servers를 보면 톰켓이 있음. 우클릭 후 add and remove
+4. Remove All 눌려서 모든 파일 좌측으로 옮기기
+5. Finish
+  
+</details>
+
 ---
 ### 작성법
 참고 : 
