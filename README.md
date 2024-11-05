@@ -16,9 +16,9 @@
 
 | 이름     | 역할           | GitHub 프로필                           |
 |----------|----------------|-----------------------------------------|
-| 박영호   | 팀장(기획)     | [![박영호](images/park_youngho.jpg)](https://github.com/user1)      |
-| 김시윤   | 백엔드 개발자   | [![김시윤](images/kim_siyoon.jpg)](https://github.com/user2)      |
-| 김지수   | 프론트 개발자   | [![김지수](images/kim_jisoo.jpg)](https://github.com/user3)      |
+| 박영호   | 팀장(기획)     | [![박영호](images/박영호.png)]     |
+| 김시윤   | 백엔드 개발자   | [![김시윤](images/김시윤.png)]     |
+| 김지수   | 프론트 개발자   | [![김지수](images/김지수.png)]      |
 
 
 
