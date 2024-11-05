@@ -12,9 +12,9 @@
 
 ### pull / push 이력 관리
  <summary>접기 / 펼치기</summary>
-영호핑 pull 20:00
-시윤핑 push 20:00
-지수핑 pull 20:00
+  영호핑 pull 20:00
+  시윤핑 push 20:00
+  지수핑 pull 20:00
 </details>
 
 
