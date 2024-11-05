@@ -14,11 +14,11 @@
 
 ## 팀원 소개
 
-| 이름     | 역할           | GitHub 프로필                           | 연락처               |
-|----------|----------------|-----------------------------------------|----------------------|
-| 박영호   | 팀장(기획)   | [GitHub](https://github.com/user1)      | email@example.com    |
-| 김시윤   | 백엔드 개발자 | [GitHub](https://github.com/user2)      | email@example.com    |
-| 김지수   | 프론트 개발자        | [GitHub](https://github.com/user3)      | email@example.com    |
+| 이름     | 역할           | GitHub 프로필                           |
+|----------|----------------|-----------------------------------------|
+| 박영호   | 팀장(기획)     | [![박영호](images/park_youngho.jpg)](https://github.com/user1)      |
+| 김시윤   | 백엔드 개발자   | [![김시윤](images/kim_siyoon.jpg)](https://github.com/user2)      |
+| 김지수   | 프론트 개발자   | [![김지수](images/kim_jisoo.jpg)](https://github.com/user3)      |
 
 > 이 프로젝트는 ~를 목표로 하고 있습니다. 아래는 팀원 정보입니다.
 
