@@ -20,7 +20,6 @@
 | 김시윤   | 백엔드 개발자   | [![김시윤](images/kim_siyoon.jpg)](https://github.com/user2)      |
 | 김지수   | 프론트 개발자   | [![김지수](images/kim_jisoo.jpg)](https://github.com/user3)      |
 
-> 이 프로젝트는 ~를 목표로 하고 있습니다. 아래는 팀원 정보입니다.
 
 
 ### pull / push 이력 관리
