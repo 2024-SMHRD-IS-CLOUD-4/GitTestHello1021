@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("btn4").addEventListener("click", function() {
+	document.getElementById("btn5").addEventListener("click", function() {
 		window.location.href = "LogoutController1"; // 이동할 URL
 	});
 });

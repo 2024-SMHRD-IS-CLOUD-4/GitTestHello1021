@@ -48,7 +48,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 </style>
 
 
-		<form action="PostController1" method="post" enctype="multipart/form-data">
+		<form id="postForm" action="PostController1" method="post" enctype="multipart/form-data">
 			<section class="subContainer2">
 				<div class="subContainer2-1">
 					subContainer2-1<br>
@@ -84,7 +84,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 										style="font-weight: bold; background: none; border: none; cursor: pointer; color: #007bff;"
 										align="left">@지수핑</button>
 									<br> <br>
-									<textarea placeholder="텍스트를 입력하세요..."
+									<textarea id="textarea" name="textarea" placeholder="텍스트를 입력하세요..."
 										style="width: 100%; height: 300px; font-size: 16px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
 								</div>
 							</div>

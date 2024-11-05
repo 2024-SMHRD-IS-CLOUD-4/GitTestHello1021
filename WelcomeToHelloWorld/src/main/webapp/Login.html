@@ -2,58 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  	<link rel="stylesheet" href="css/Login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/Login.css">
 </head>
 
 <body>
 
-<h1 class="title" align="center">title</h1>
-    <div class="form nosign">
-        <div class="form-header">
-            <div class="show-nosign">비회원</div>
-            <div class="show-signin">회원</div>
-            <div class="show-signup">계정생성</div>
+	<h1 class="title" align="center">title</h1>
+	<div class="form nosign">
+		<div class="form-header">
+			<div class="show-nosign">비회원</div>
+			<div class="show-signin">회원</div>
+			<div class="show-signup">계정생성</div>
 
 
-        </div>
-        <div class="arrow"></div>
-        <form id="myForm" method="post">
-        <div class="form-elements">
-            <div class="form-element">
-                <input name="u_id" type="text" placeholder="ID">
-            </div>
-            <div class="form-element">
-                <input id="pw" name="u_pw" onkeyup="passCheck()" type="password" placeholder="Password">
-            </div>
-            <div>
-            <span id="passwordStrength"></span>
-            </div>
-            <div class="form-element">
-                <input id="pwCheck" onkeyup="passConfirm()" type="password" placeholder="Password Check">
-            </div>
-            <div>
-            <span id="confirmMsg"></span>
-            </div>
-            <div class="form-element">
-                <input name="u_nick" type="text" placeholder="Nick-Name">
-            </div>
-            <div class="form-element">
-                <input name="u_email" type="text" placeholder="E-mail">
-            </div>
-            <div class="form-element">
-                <input name="u_tel" type="text" placeholder="TEL">
-            </div>
-            <div class="form-element">
-                <button id="submit-btn"></button>
-            </div>
-        </div>
-        </form>
-    </div>
-    <script src="js/Login.js"></script>
-    
+		</div>
+		<div class="arrow"></div>
+		<form id="myForm" method="post">
+			<div class="form-elements">
+				<div class="form-element">
+					<input name="u_id" type="text" placeholder="ID">
+				</div>
+				<div class="form-element">
+					<input id="pw" name="u_pw" onkeyup="passCheck()" type="password"
+						placeholder="Password">
+				</div>
+				<div>
+					<span id="passwordStrength"></span>
+				</div>
+				<div class="form-element">
+					<input id="pwCheck" onkeyup="passConfirm()" type="password"
+						placeholder="Password Check">
+				</div>
+				<div>
+					<span id="confirmMsg"></span>
+				</div>
+				<div class="form-element">
+					<input name="u_nick" type="text" placeholder="Nick-Name">
+				</div>
+				<div class="form-element">
+					<input name="u_email" type="text" placeholder="E-mail">
+				</div>
+				<div class="form-element">
+					<input name="u_tel" type="text" placeholder="TEL">
+				</div>
+				<div class="form-element">
+					<button id="submit-btn"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/Login.js"></script>
+
 </body>
 
 </html>

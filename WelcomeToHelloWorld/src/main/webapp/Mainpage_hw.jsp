@@ -19,25 +19,34 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<button id="">
 				<img id="logo" src="img/로고1.png">
 			</button>
-			<button class="profile" type="submit">
+			<button id="profile" type="submit">
 				<img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님
 			</button>
 
 			<br>
-
-			<%
+			<div class="subContainer3-1">
+				subContainer3-1
+				<%
 			if (memer.getU_type().substring(0, 4).equals("USER")) {
-			%><button id="btn1" style="border-radius: 30px; cursor: pointer;">글
-				작성하기</button>
-			<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
-				수정하기</button>
-			<button id="btn3" style="border-radius: 30px; cursor: pointer;">보류^^</button>
-			<%
-			}
 			%>
-			<button id="btn4" style="border-radius: 30px; cursor: pointer;">
-				활동종료<br>(로그아웃)
-			</button>
+				<button id="btn1" style="border-radius: 30px; cursor: pointer;">글
+					작성하기</button>
+				<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
+					수정하기</button>
+				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
+					편집하기</button>
+				<button id="btn4" style="border-radius: 30px; cursor: pointer;">보류^^</button>
+
+				<%
+				}
+				%>
+			</div>
+			<div class="subContainer3-2">
+				subContainer3-2
+				<button id="btn5" style="border-radius: 30px; cursor: pointer;">
+					활동종료<br>(로그아웃)
+				</button>
+			</div>
 		</section>
 
 
@@ -46,7 +55,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 		<section class="subContainer2">
 			<div class="subContainer2-1">
 				subContainer2-1<br>
-				<div class="search">
+				<div id="search">
 					<input class="search-input" type="text" placeholder="검색어를 입력하세요...">
 					<button class="search-button">검색🔍</button>
 				</div>
@@ -74,11 +83,17 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 
 			<div class="subContainer2-5">
-				subContainer2-5-하단<br>
-				<button id="btn1_h">표정짓기 😀</button>
-				<button id="btn2_h">댓글달기 💬</button>
-				<button id="btn3_h">◀</button>
-				<button id="btn4_h">▶</button>
+				<div class="subContainer2-5-left" id="2-5-l">
+					<br>
+					<button id="btn1_h">표정짓기 😀</button>
+					<button id="btn2_h">댓글달기 💬</button>
+				</div>
+
+				<div class="subContainer2-5-right" id="2-5-r">
+					<br>
+					<button id="btn3_h">◀</button>
+					<button id="btn4_h">▶</button>
+				</div>
 			</div>
 		</section>
 

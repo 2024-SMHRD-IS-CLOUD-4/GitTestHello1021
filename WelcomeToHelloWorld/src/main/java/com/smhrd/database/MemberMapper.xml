@@ -15,16 +15,38 @@
 		#{u_pw}
 	</select>
 
+	<insert id="insertContent"
+		parameterType="com.smhrd.model.PostContent">
+		INSERT INTO POST_INFO
+		VALUES
+		(newpost_num_seq.NEXTVAL,
+		#{post_title},
+		#{post_content},
+		#{post_views},
+		#{post_likes},
+		#{u_id},
+		sysdate,
+		sysdate)
+	</insert>
+
+
 	<insert id="insertImage"
 		parameterType="com.smhrd.model.PostImage">
 		INSERT INTO FILES_INFO
 		VALUES
-		(file_post_num_seq.NEXTVAL, file_post_num_seq.NEXTVAL,
+		(newpost_num_seq.NEXTVAL,
+		(SELECT post_num
+		FROM (
+		SELECT post_num
+		FROM POST_INFO
+		ORDER BY post_num DESC
+		) WHERE ROWNUM = 1) ,
 		#{file_rname},
 		#{file_ext},
 		#{file_size},
 		sysdate,
 		sysdate)
 	</insert>
+
 
 </mapper>

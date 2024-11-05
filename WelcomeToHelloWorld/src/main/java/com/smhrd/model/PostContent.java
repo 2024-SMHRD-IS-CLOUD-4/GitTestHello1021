@@ -9,10 +9,12 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-public class PostImage {
+public class PostContent {
 
-    String file_ext;
-    long file_size; 
-    String file_rname;
+	String post_title;
+	String post_content;
+	int post_views;
+	int post_likes;
+	String u_id;
 
 }

@@ -64,8 +64,26 @@ imageUpload.addEventListener("change", function(event) {
         reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
     }
 });
+
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn2_h").addEventListener("click", function() {
 		window.location.href = "Mainpage_hw.jsp"; // 이동할 URL
 	});
 });
+
+
+  document.getElementById("postForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // 폼의 기본 제출 동작을 막습니다.
+
+    const imageUpload = document.getElementById("imageUpload").value;
+    const textarea = document.getElementById("textarea").value;
+
+    if (!imageUpload) {
+      alert("이미지를 넣어주세요!!!");
+    } else if (!textarea) {
+      alert("글을 작성해 주세요!!!");
+    } else {
+      // 실제 제출이 필요한 경우 아래 줄의 주석을 해제합니다.
+      this.submit();
+    }
+  });
