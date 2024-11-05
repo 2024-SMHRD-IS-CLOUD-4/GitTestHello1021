@@ -13,9 +13,9 @@
 ### pull / push 이력 관리 
 이력관리 <details>
  <summary>접기 / 펼치기</summary>
-  영호핑 pull 20:00
-  시윤핑 push 20:00
-  지수핑 pull 20:00
+  1. 영호핑 pull 20:00
+  2. 시윤핑 push 20:00
+  3. 지수핑 pull 20:00
 </details>
 
 
