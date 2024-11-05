@@ -16,9 +16,9 @@
 
 | 이름     | 역할           | GitHub 프로필                           | 연락처               |
 |----------|----------------|-----------------------------------------|----------------------|
-| 홍길동   | 백엔드 개발자   | [GitHub](https://github.com/user1)      | email@example.com    |
-| 김영희   | 프론트엔드 개발자 | [GitHub](https://github.com/user2)      | email@example.com    |
-| 박철수   | 디자이너        | [GitHub](https://github.com/user3)      | email@example.com    |
+| 박영호   | 팀장(기획)   | [GitHub](https://github.com/user1)      | email@example.com    |
+| 김시윤   | 백엔드 개발자 | [GitHub](https://github.com/user2)      | email@example.com    |
+| 김지수   | 프론트 개발자        | [GitHub](https://github.com/user3)      | email@example.com    |
 
 > 이 프로젝트는 ~를 목표로 하고 있습니다. 아래는 팀원 정보입니다.
 
