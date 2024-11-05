@@ -13,7 +13,7 @@
 ### pull / push 이력 관리
 <details>
 <summary>접기 / 펼치기</summary>
-
+[2024-11-05 화]
 1. 박영호 pull 20:00  
 2. 김시윤 push 20:00  
 3. 김지수 pull 20:00  
