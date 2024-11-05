@@ -10,6 +10,19 @@
 5. 작업시에는 **항상!! 서브파일**에서하고 **pull/push 시에만 메인 파일**에 옮기기
 6. 작업 다 하고나서는 관련 내용 **마지막으로 한 작업** 란에 작성(양식에 맞추어서)
 
+# Project Name
+
+## 팀원 소개
+
+| 이름     | 역할           | GitHub 프로필                           | 연락처               |
+|----------|----------------|-----------------------------------------|----------------------|
+| 홍길동   | 백엔드 개발자   | [GitHub](https://github.com/user1)      | email@example.com    |
+| 김영희   | 프론트엔드 개발자 | [GitHub](https://github.com/user2)      | email@example.com    |
+| 박철수   | 디자이너        | [GitHub](https://github.com/user3)      | email@example.com    |
+
+> 이 프로젝트는 ~를 목표로 하고 있습니다. 아래는 팀원 정보입니다.
+
+
 ### pull / push 이력 관리
 <details>
 <summary>접기 / 펼치기</summary>
