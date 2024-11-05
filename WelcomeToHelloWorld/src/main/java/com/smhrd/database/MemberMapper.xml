@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+	<insert id="join" parameterType="com.smhrd.model.MavenMemer">
+		insert into USER_INFO
+		values(#{u_id}, #{u_pw}, #{u_nick}, #{u_tel}, #{u_email}, 0, sysdate,
+		#{u_type})
+	</insert>
+
+	<select id="login" parameterType="com.smhrd.model.MavenMemer"
+		resultType="com.smhrd.model.MavenMemer">
+		select *
+		from USER_INFO
+		where U_ID = #{u_id} and U_PW =
+		#{u_pw}
+	</select>
+
+	<insert id="insertImage"
+		parameterType="com.smhrd.model.PostImage">
+		INSERT INTO FILES_INFO
+		VALUES
+		(file_post_num_seq.NEXTVAL, file_post_num_seq.NEXTVAL,
+		#{file_rname},
+		#{file_ext},
+		#{file_size},
+		sysdate,
+		sysdate)
+	</insert>
+
+</mapper>

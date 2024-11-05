@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(255, 0, 0);
+      /* 배경색 설정 */
+      overflow: hidden;
+      /* 스크롤바 숨기기 */
+      width: 100%;
+    }
+
+
+    .container {
+      display: flex;
+      /* 플렉스 박스 설정 */
+    }
+
+    .subContainer1,
+    .subContainer2,
+    .subContainer3 {
+      padding: 10px;
+      /* 패딩 설정 */
+      border: 5px solid #3f3f3f;
+      /* 테두리 설정 */
+      height: 880px;
+      /* 높이 설정 */
+      position: relative;
+      /* 상대 위치 설정 */
+    }
+
+    .subContainer1 {
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      width: 270px;
+      /* 너비 설정 */
+      background-color: rgb(255, 255, 255);
+    }
+
+    .mark {
+      margin: 0 auto;
+      /* 중앙 정렬 */
+      background-color: #ff5100e1;
+      /* 배경색 설정 */
+      border-radius: 10px;
+      /* 모서리 둥글게 */
+      padding: 10px;
+      /* 패딩 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      height: 60px;
+      /* 높이 설정 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* 그림자 효과 */
+    }
+
+    .search {
+      margin: 0 auto;
+      /* 중앙 정렬 */
+      margin-top: 10px;
+      /* 위쪽 여백 설정 */
+      background-color: rgb(194, 194, 194);
+      ;
+      /* 배경색 설정 */
+      border-radius: 10px;
+      /* 모서리 둥글게 */
+      padding: 10px;
+      /* 패딩 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      height: 30px;
+      /* 높이 설정 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* 그림자 효과 */
+      display: flex;
+      /* 플렉스 박스 설정 */
+      align-items: center;
+      /* 수직 중앙 정렬 */
+    }
+
+    .search-input {
+      width: 170px;
+      /* 너비 설정 */
+      height: 30px;
+      /* 높이 설정 */
+      border: none;
+      /* 테두리 없음 */
+      border-radius: 5px;
+      /* 모서리 둥글게 */
+      padding: 5px;
+      /* 패딩 설정 */
+      box-sizing: border-box;
+      /* 박스 크기 설정 */
+    }
+
+    .search-button {
+      margin-left: 10px;
+      /* 왼쪽 여백 설정 */
+      width: 70px;
+      /* 너비 설정 */
+      height: 30px;
+      /* 높이 설정 */
+      border: none;
+      /* 테두리 없음 */
+      border-radius: 30px;
+      /* 모서리 둥글게 */
+      padding: 5px;
+      /* 패딩 설정 */
+      background-color: white;
+    }
+
+    .speech-container {
+      opacity: 0;
+      /* 처음에는 보이지 않도록 설정 */
+      transition: opacity 0.5s ease-in-out;
+      /* 애니메이션 효과 */
+      position: absolute;
+      /* 위치를 절대값으로 설정 */
+      top: 0;
+      /* 상단 위치 설정 */
+      left: 0;
+      /* 좌측 위치 설정 */
+      width: 100%;
+      /* 너비 설정 */
+    }
+
+    .image-container {
+      position: relative;
+      /* 부모 요소에 상대 위치 설정 */
+    }
+
+    .image-container:hover .speech-container {
+      opacity: 1;
+      /* 마우스를 올리면 보이도록 설정 */
+    }
+
+    .speech-bubble {
+      margin: 0 auto;
+      /* 중앙 정렬 */
+      margin-top: 10px;
+      /* 위쪽 여백 설정 */
+      border-radius: 10px;
+      /* 모서리 둥글게 */
+      padding: 10px;
+      /* 패딩 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      height: 300px;
+      /* 높이 설정 */
+      background-color: #ff5100;
+      /* 배경색 설정 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* 그림자 효과 */
+    }
+
+    .circle1 {
+      margin: 0 auto;
+      /* 중앙 정렬 */
+      margin-top: 5px;
+      /* 위쪽 여백 설정 */
+      margin-left: 220px;
+      /* 왼쪽 여백 설정 */
+      width: 40px;
+      /* 너비 설정 */
+      height: 40px;
+      /* 높이 설정 */
+      background-color: #ff5100e1;
+      /* 배경색 설정 */
+      border-radius: 50%;
+      /* 원형으로 만들기 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* 그림자 효과 */
+    }
+
+    .circle2 {
+      margin: 0 auto;
+      /* 중앙 정렬 */
+      margin-top: 5px;
+      /* 위쪽 여백 설정 */
+      margin-left: 200px;
+      /* 왼쪽 여백 설정 */
+      width: 20px;
+      /* 너비 설정 */
+      height: 20px;
+      /* 높이 설정 */
+      background-color: #ff5100e1;
+      /* 배경색 설정 */
+      border-radius: 50%;
+      /* 원형으로 만들기 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* 그림자 효과 */
+    }
+
+    .image {
+      margin-top: 400px;
+      /* 위쪽 여백 설정 */
+      margin-left: -113px;
+      /* 왼쪽 여백 설정 */
+    }
+
+    .subContainer2 {
+      flex: 5;
+      /* 플렉스 비율 설정 */
+      width: 1200px;
+      /* 너비 설정 */
+      display: flex;
+      /* 플렉스 박스 설정 */
+      flex-direction: column;
+      /* 세로 방향으로 정렬 */
+      background-color: rgb(255, 255, 255);
+    }
+
+    .subContainer3 {
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      width: 300px;
+      /* 너비 설정 */
+      background-color: rgb(255, 255, 255);
+      border-style: solid;
+    }
+
+    .subContainer2-1,
+    .subContainer2-3,
+    .subContainer2-4,
+    .subContainer2-5 {
+      border-bottom: 2px solid #000000;
+      /* 하단 테두리 설정 */
+    }
+
+    .subContainer2-1 {
+      flex: 0.6;
+      /* 플렉스 비율 설정 */
+      background-color: rgb(194, 194, 194);
+      /* 배경색 설정 */
+    }
+
+    .subContainer2-1 .button {
+      width: 150px;
+      height: 50px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 1100px;
+      background-color: red;
+    }
+
+    .subContainer2-2 {
+      flex: 2.4;
+      /* 플렉스 비율 설정 */
+      display: flex;
+      /* 플렉스 박스 설정 */
+      border-bottom: 2px solid #000000;
+      /* 하단 테두리 설정 */
+    }
+
+    .subContainer2-2-left {
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      border-right: 2px solid #000000;
+      /* 오른쪽 테두리 설정 */
+      height: 490px;
+      /* 높이 설정 */
+      overflow-y: auto;
+      /* 세로 스크롤 활성화 */
+      background-color: rgb(255, 255, 255);
+      /* 배경색 설정 */
+    }
+
+    .subContainer2-2-right {
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      border-right: 2px solid #000000;
+      /* 오른쪽 테두리 설정 */
+      height: 490px;
+      /* 높이 설정 */
+      overflow-y: auto;
+      /* 세로 스크롤 활성화 */
+      background-color: white;
+      /* 배경색 설정 */
+    }
+
+    .subContainer2-3 {
+      flex: 0.8;
+      /* 플렉스 비율 설정 */
+      display: flex;
+      /* 플렉스 박스 설정 */
+    }
+
+    .subContainer2-3-left,
+    .subContainer2-3-right {
+      border-right: 2px solid #000000;
+      /* 오른쪽 테두리 설정 */
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      /* 필요에 따라 추가 스타일을 적용하세요 */
+    }
+
+    .subContainer2-3-left {
+      /*댓글*/
+      flex: 1;
+      /* 플렉스 비율 설정 */
+      border-right: 2px solid #000000;
+      /* 오른쪽 테두리 설정 */
+      height: 170px;
+      /* 높이 설정 */
+      overflow-y: auto;
+      /* 세로 스크롤 활성화 */
+      background-color: rgb(255, 255, 255);
+      /* 배경색 설정 */
+    }
+
+    .subContainer2-3-right {
+      /*대기이미지*/
+      background-color: rgb(255, 255, 255);
+      /* 배경색 설정 */
+      height: 170px
+    }
+
+    .subContainer2-5 {
+      flex: 0.5;
+      /* 플렉스 비율 설정 */
+      background-color: rgb(255, 255, 255);
+      /* 배경색 설정 */
+    }
+
+    .subContainer3 .button1 {
+      height: 120px;
+      /* 높이 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      font-size: 30px;
+      /* 글자 크기 설정 */
+    }
+
+    .subContainer3 .button2 {
+      margin-top: 10px;
+      /* 위쪽 여백 설정 */
+      height: 120px;
+      /* 높이 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      font-size: 30px;
+      /* 글자 크기 설정 */
+
+    }
+
+    .subContainer3 .button3 {
+      margin-top: 10px;
+      /* 위쪽 여백 설정 */
+      height: 120px;
+      /* 높이 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      font-size: 30px;
+      /* 글자 크기 설정 */
+
+    }
+
+    .subContainer3 .button4 {
+      margin-top: 10px;
+      /* 위쪽 여백 설정 */
+      height: 120px;
+      /* 높이 설정 */
+      width: 230px;
+      /* 너비 설정 */
+      font-size: 30px;
+      /* 글자 크기 설정 */
+
+    }
+
+    .subContainer2-1 {
+      border-top-left-radius: 20px;
+      /* 좌측 상단 모서리 둥글게 */
+      border-top-right-radius: 20px;
+      /* 우측 상단 모서리 둥글게 */
+    }
+
+    .subContainer2-5 {
+      border-bottom-left-radius: 20px;
+      /* 좌측 하단 모서리 둥글게 */
+      border-bottom-right-radius: 20px;
+      /* 좌측 하단 모서리 둥글게 */
+    }
+
+    .subContainer2-5 .button1,
+    .subContainer2-5 .button2,
+    .subContainer2-5 .button3,
+    .subContainer2-5 .button4 {
+      height: 100px;
+      /* 높이 설정 */
+      width: 255px;
+      /* 너비 설정 */
+      font-size: 30px;
+      /* 글자 크기 설정 */
+    }
+
+    .subContainer2-5 .button3 {
+      margin-left: 135px;
+    }
+
+    .subContainer2-5 .button4 {
+      margin-left: -10px;
+    }
+
+    .subContainer2-5 .button1 {
+      margin-left: 70px;
+      /* 왼쪽 여백 설정 */
+
+    }
+
+    .subContainer2-5 .button2 {
+      margin-left: -10px;
+    }
+
+
+    .subContainer2-5 .button1,
+    .subContainer2-5 .button3 {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      cursor: pointer;
+    }
+
+    .subContainer2-5 .button2,
+    .subContainer2-5 .button4 {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container" id="container">
+
+    <section class="subContainer3" align="center">subContainer3<br>
+      <button class="button1" style="border-radius: 30px; cursor: pointer;">활동하기</button>
+      <button class="button2" style="border-radius: 30px; cursor: pointer;">저장하기</button>
+      <button class="button3" style="border-radius: 30px; cursor: pointer;">작성하기</button>
+      <button class="button4" style="border-radius: 30px; cursor: pointer;">편집하기</button>
+    </section>
+    <section class="subContainer2">
+      <div class="subContainer2-1">subContainer2-1<br>
+        <button class="button">신고하기</button>
+
+      </div>
+      <div class="subContainer2-2">
+        <div class="subContainer2-2-left">subContainer2-2<div class="post" align="center"
+            style="font-size: 20px; font-weight: bold;">
+            안녕하세요 헬로핑입니다. 오랜만에 글 올립니다 😀👍<br>
+            안녕하세요 헬로핑입니다. 오랜만에 글 올립니다 💪😁<br>
+            안녕하세요 헬로핑입니다. 오랜만에 글 올립니다 😍<br>
+            안녕하세요 헬로핑입니다. 오랜만에 글 올립니다 🤑<br>
+
+          </div>
+        </div>
+
+        <div class="subContainer2-2-right" align="center">subContainer2-2-right
+          <input type="image" src="img/pping.png" width="500px" height="400px"><br>
+        </div>
+      </div>
+      <div class="subContainer2-3">
+        <div class="subContainer2-3-left">
+          subContainer2-3-left
+          <div class="post">
+            <table style="background-color:rgb(255, 255, 255); margin-left: 30px;">
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">지수핑 |<a style="color: white">|</a>
+                오점뭐?</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                먹고싶은 거 있니? ^^</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">지수핑 |<a style="color: white">|</a>
+                업떠요</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                ^^</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                배고팡</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                배고팡</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                배고팡</span>
+              <hr>
+              <span style="margin-left: 30px; font-size: 20px; font-weight: bold;">영호핑 |<a style="color: white">|</a>
+                배고팡</span>
+              <hr>
+
+
+            </table>
+
+            </table>
+
+          </div>
+        </div>
+        <div class="subContainer2-3-right" align="center">subContainer2-3-right<br>
+          <button class="button"
+            style=" height: 140px; width: 50px; font-size: 30px; border-radius: 10px; cursor: pointer; ">◀</button>
+          <img src="img/음식1.jpg" width="100px" height="140px"
+            style="vertical-align: bottom; border-style: solid; border-radius: 10px;">
+          <img src="img/음식2.jpg" width="100px" height="140px"
+            style="vertical-align: bottom; border-style: solid; border-radius: 10px;">
+          <img src="img/음식3.jpg" width="100px" height="140px"
+            style="vertical-align: bottom; border-style: solid; border-radius: 10px;">
+          <img src="img/음식4.jpg" width="100px" height="140px"
+            style="vertical-align: bottom; border-style: solid; border-radius: 10px;">
+
+          <button class="button"
+            style=" height: 140px; width: 50px; font-size: 30px; border-radius: 10px; cursor: pointer;">▶</button>
+        </div>
+      </div>
+      <div class="subContainer2-5">subContainer2-5<br>
+        <button class="button1">댓글남기기</button>
+        <button class="button2">궁금해요</button>
+        <button class="button3">◀</button>
+        <button class="button4">▶</button>
+      </div>
+    </section>
+
+
+
+
+    <!-- 1번 옮김 -->
+
+    <section class="subContainer1">
+      subContainer1
+      <div class="mark">로고</div>
+      <div class="search">
+        <input class="search-input" type="text" placeholder="검색어를 입력하세요...">
+        <button class="search-button" type="submit">검색🔍</button>
+      </div>
+      <div class="image-container">
+        <img src="img/pping.png" width="500px" height="" class="image">
+        <div class="speech-container">
+          <div class="speech-bubble">
+            여기에 말풍선 내용
+          </div>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const speechContainer = document.querySelector('.speech-container');
+      const speechBubble = document.querySelector('.speech-bubble');
+
+      // 처음에 "안녕하세요" 표시
+      speechBubble.textContent = '안녕하세요';
+      speechContainer.style.opacity = 1;
+
+      // 3초 후에 말풍선 사라짐
+      setTimeout(() => {
+        speechContainer.style.opacity = 0;
+      }, 3000);
+
+      // 각 항목에 마우스 올리면 설명 표시
+      const items = document.querySelectorAll('.subContainer1, .subContainer2, .subContainer3');
+      items.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+          speechBubble.textContent = `${item.className} 설명`;
+          speechContainer.style.opacity = 1;
+        });
+
+        item.addEventListener('mouseleave', function () {
+          speechContainer.style.opacity = 0;
+        });
+      });
+    });
+
+  </script>
+</body>
+
+</html>

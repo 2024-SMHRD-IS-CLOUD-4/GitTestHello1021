@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="JoinController2.java" method="post">
+		* 항목은 필수 항목입니다 <br> 
+		<input id="id" name="id" type="text" placeholder="* 아이디를 입력하세요"> <br> 
+		<input type="password" id="pw" name="pw" onkeyup="passCheck()" placeholder="* 암호를 입력하세요" required> 
+		<span id="passwordStrength"></span> 
+		<br> 
+		<input type="password" id="pwCheck" onkeyup="passConfirm()"	placeholder="* 암호를 입력하세요" required> 
+		<span id="confirmMsg"></span>
+		<br> 
+		<input type="text" id="nick" name="nick" placeholder="* 닉네임을 입력하세요"> 
+		<br> 
+		<input type="text" id="tel" name="tel" placeholder="전화번호를 입력하세요"> 
+		<br> 
+		<input type="text" id="email" name="email" placeholder="이메일을 입력하세요">
+		<br>
+		<button type="submit">회원가입</button>
+	</form>
+
+	<script>
+		function passConfirm() {
+			var password1 = document.getElementById('pw');
+			var password2 = document.getElementById('pwCheck');
+			var confirmMsg = document.getElementById('confirmMsg');
+			var correctColor = "green";
+			var wrongColor = "red";
+
+			if (password1.value === password2.value) {
+				confirmMsg.style.color = correctColor;
+				confirmMsg.innerHTML = "비밀번호가 일치합니다.";
+			} else {
+				confirmMsg.style.color = wrongColor;
+				confirmMsg.innerHTML = "비밀번호가 일치하지 않습니다.";
+			}
+		}
+
+		// 사용자가 password1 또는 password2 입력란에서 타이핑을 마치면 passConfirm() 호출
+		function passCheck() {
+			document.getElementById('pw').addEventListener('blur', passConfirm);
+			document.getElementById('pwCheck').addEventListener('blur',
+					passConfirm);
+
+			document
+					.getElementById('pw')
+					.addEventListener(
+							'input',
+							function() {
+								var password = this.value;
+								var strengthText = '';
+								var strengthColor = 'red';
+								if (password.length >= 5) {
+									strengthText = '약함';
+									if (/[a-zA-Z]/.test(password)
+											&& /[0-9]/.test(password)) {
+										strengthText = '보통';
+										strengthColor = 'orange';
+										if (/[^a-zA-Z0-9]/.test(password)) {
+											strengthText = '강함';
+											strengthColor = 'green';
+										}
+									}
+								} else {
+									strengthText = '너무 짧음';
+								}
+								document.getElementById('passwordStrength').textContent = strengthText;
+								document.getElementById('passwordStrength').style.color = strengthColor;
+							});
+		}
+		
+	</script>
+</body>
+</html>
