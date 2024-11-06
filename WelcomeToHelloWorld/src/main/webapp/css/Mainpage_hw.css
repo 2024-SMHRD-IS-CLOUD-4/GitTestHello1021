@@ -9,19 +9,26 @@
 }
 
 * {
-	font-family: 'HANBatang';
+	font-family: 'Malgun Gothic';
 	font-style: normal;
 }
 
 body {
-	background-color: rgb(121, 121, 121); /* 배경색 설정 */
-	/* overflow: hidden; /* 스크롤바 숨기기 */
-	width: 100%;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    min-height: 100vh; /* 화면 전체 높이 설정 */
+    background-color: #ECECEC; /* 배경색 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    width: 100%;
+    border: 10px solid #ECECEC; /* 전체 페이지 테두리 설정 */
+    box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
 }
 
-.container {
-	display: flex; /* 플렉스 박스 설정 */
-}
+
+	.container {
+		display: flex; /* 플렉스 박스 설정 */
+	}
 
 .subContainer1, .subContainer2, .subContainer3 {
 	/* padding: 10px; /* 패딩 설정 */
@@ -34,11 +41,26 @@ body {
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 270px; /* 너비 설정 */
 	background-color: rgb(255, 255, 255);
+	border: 5px solid #C9C9C9; /*박영호*/
+}
+
+#logo-wrapper {
+    width: 200px; /* 로고 영역의 너비 설정 */
+    height: 100px; /* 로고 영역의 높이 설정 */
+    border: 1px solid #ff5100; /* 테두리 색상 설정 (오렌지) */
+    display: flex; /* 자식 요소 정렬을 위해 flex 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+    background-color: white; /* 배경색 설정 */
+    border-radius: 10px; /* 모서리를 둥글게 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    margin-top: 10px; /* 상단 여백 설정 */
 }
 
 #logo {
-	width: 200px; /* 너비 설정 */
-	height: 100px; /* 높이 설정 */
+    max-width: 100%; /* 로고 이미지의 최대 너비를 부모에 맞추기 */
+    max-height: 100%; /* 로고 이미지의 최대 높이를 부모에 맞추기 */
 }
 
 #search {
@@ -65,19 +87,19 @@ body {
 }
 
 #profile {
-    margin: 0 auto; /* 중앙 정렬 */
-    margin-top: 30px; /* 위쪽 여백 설정 */
-    background-color: rgb(255, 252, 248);; /* 배경색 설정 */
-    color: rgb(0, 0, 0);
-    border-radius: 10px; /* 모서리 둥글게 */
-    padding: 10px; /* 패딩 설정 */
-    width: 200px; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    display: flex;
-    align-items: center; /* display: flex; 를 써야 적용이 된다. */
-    justify-content: center; /* display: flex; 를 써야 적용이 된다. */
-    text-align: center;
+	margin: 0 auto; /* 중앙 정렬 */
+	margin-top: 30px; /* 위쪽 여백 설정 */
+	background-color: rgb(255, 252, 248);; /* 배경색 설정 */
+	color: rgb(0, 0, 0);
+	border-radius: 10px; /* 모서리 둥글게 */
+	padding: 10px; /* 패딩 설정 */
+	width: 200px; /* 너비 설정 */
+	height: 60px; /* 높이 설정 */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	display: flex;
+	align-items: center; /* display: flex; 를 써야 적용이 된다. */
+	justify-content: center; /* display: flex; 를 써야 적용이 된다. */
+	text-align: center;
 }
 
 .search-button {
@@ -91,13 +113,15 @@ body {
 }
 
 #sg_button {
-	width: 120px;
-	height: 50px;
-	border-radius: 30px;
-	cursor: pointer;
-	font-size: 15px;
-	margin-left: 380px;
-	margin-top: 370px;
+    position: absolute; /* 절대 위치로 설정하여 영역 내에서 원하는 위치로 이동 */
+    bottom: 20px; /* 하단에서 20px 떨어진 위치로 조정 */
+    right: 20px; /* 오른쪽에서 20px 떨어진 위치로 조정 */
+    background: gray;
+    border: 5px solid gray;
+    color: rgb(255, 255, 255);
+    border-radius: 10px; /* 모서리를 둥글게 설정 */
+    padding: 10px 20px; /* 여백 추가 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
 }
 
 #sg_button {
@@ -136,18 +160,20 @@ body {
 
 .speech-bubble {
 	display: flex;
-	align-items: center; /* display: flex; 를 써야 적용이 된다. */
-	justify-content: center; /* display: flex; 를 써야 적용이 된다. */
-	text-align: center;
-	margin: auto; /* 중앙 정렬 */
-	margin-top: 160px; /* 위쪽 여백 설정 */
-	border-radius: 10px; /* 모서리 둥
-    글게 */
-	padding: 10px; /* 패딩 설정 */
-	width: 230px; /* 너비 설정 */
-	height: 300px; /* 높이 설정 */
-	background-color: #ff5100; /* 배경색 설정 */
+	align-items: center; /* 콘텐츠를 세로로 가운데 정렬 */
+	justify-content: center; /* 콘텐츠를 가로로 가운데 정렬 */
+	text-align: center; /* 텍스트를 가운데 정렬 */
+	margin: auto; /* 박스를 가로 방향으로 가운데 정렬 */
+	margin-top: 160px; /* 박스 위쪽 여백 */
+	border-radius: 10px; /* 모서리를 둥글게 */
+	padding: 10px; /* 박스 안쪽 여백 */
+	width: 230px; /* 박스 너비 */
+	height: 300px; /* 박스 높이 */
+	background-color: white; /* 배경색 */
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	border: 4px solid #ff5100e1; /* 오렌지 테두리 (4px 두께) */
+	font-size: 24px; /* 텍스트 크기 설정 */
+	font-weight: bold; /* 폰트 굵기를 볼드로 설정 */
 }
 
 .circle1 {
@@ -185,6 +211,7 @@ body {
 	display: flex; /* 플렉스 박스 설정 */
 	flex-direction: column; /* 세로 방향으로 정렬 */
 	background-color: rgb(255, 255, 255);
+	border: 5px solid #C9C9C9; /*박영호*/
 }
 
 .subContainer3 {
@@ -192,62 +219,97 @@ body {
 	width: 300px; /* 너비 설정 */
 	background-color: rgb(255, 255, 255);
 	border-style: solid;
+	border: 5px solid #C9C9C9; /*박영호*/
 }
 
-
 .subContainer2-1, .subContainer2-5 {
-	border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
+	border-bottom: 2px solid #ff7144;; /* 하단 테두리 설정 */
 }
 
 .subContainer2-1 {
 	/* flex: 0.3; /* 플렉스 비율 설정 */
-	background-color: #ff9900c2; /* 배경색 설정 */
+	background-color: #ff7144; /* 배경색 설정 */
 	height: 110px;
 }
 
 .subContainer2-2 {
-	/* flex: 10; /* 플렉스 비율 설정 */
-	display: flex; /* 플렉스 박스 설정 */
-	border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
-	height: 570px; /* 높이 설정 */
+    display: flex; /* 가로 정렬을 위해 flex 사용 */
+    border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
+    height: 570px; /* 높이 설정 */
 }
 
 .subContainer2-2-left {
-	flex: 4; /* 플렉스 비율 설정 */
-	border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-	overflow-y: auto; /* 세로 스크롤 활성화 */
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
-	padding-top: 30px;
-	padding-left: 30px;
+    flex: 4; /* 왼쪽 영역의 비율을 4로 설정 */
+    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    overflow-x: hidden; /* 가로 스크롤 제거 */
+    background-color: rgb(255, 255, 255); /* 배경색 설정 */
+    padding: 20px; /* 여백 설정 */
+    box-sizing: border-box; /* 테두리와 패딩을 포함한 크기 계산 */
+    width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
+    position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
+    border: 2px solid gray; /*박영호*/
 }
+
+
 
 .subContainer2-2-right {
-	align-content: center;
-	flex: 6; /* 플렉스 비율 설정 */
-	border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-	overflow-y: auto; /* 세로 스크롤 활성화 */
-	background-color: white; /* 배경색 설정 */
+    flex: 6; /* 오른쪽 영역의 비율을 6으로 설정 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    background-color: rgb(255, 255, 255); /* 배경색 설정 */
+    padding: 20px; /* 여백 설정 */
+    display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #C9C9C9; /*박영호*/
 }
+
+.subContainer2-2-right input[type="image"] {
+    border: 10px solid gray; /* 테두리 색상과 두께 설정 */
+    border-radius: 15px; /* 모서리를 둥글게 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+    padding: 5px; /* 이미지와 테두리 사이에 여백 추가 */
+}
+
+
 
 .subContainer2-5 {
-	display: flex; /* 플렉스 비율 설정
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
-	height: 200px;
-	align-items: center;
-}
-.subContainer2-5-left {
-  border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-  overflow-y: auto; /* 세로 스크롤 활성화 */
-  background-color: rgb(255, 255, 255); /* 배경색 설정 */
-  margin-right: 30px;
+    display: flex; /* 가로 정렬을 위해 flex 사용 */
+    height: 200px; /* 높이 설정 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: rgb(255, 255, 255); /* 배경색 설정 */
+    border: 5px solid #C9C9C9; /*박영호*/	    
 }
 
-.subContainer2-5-right {
-  align-content:center ;
-  border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-  margin-left: 40px;
-  
+.subContainer2-5-left {
+    flex: 6; /* 왼쪽 영역의 비율을 6으로 설정 */
+    background-color: rgb(255, 255, 255); /* 배경색 설정 */
+    height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 수직 방향 중앙 정렬 */
+    padding: 0; /* 내부 패딩 제거 */
+    margin: 0; /* 외부 여백 제거 */
+    gap: 0; /* 요소 간의 간격 제거 */
+    width: calc(100% - 4px); /* 부모 요소와 맞추기 위해 너비 조정 */
+    box-sizing: border-box; /* 테두리와 패딩 포함하여 크기 계산 */
 }
+	
+
+
+
+.subContainer2-5-right {
+    flex: 4; /* 오른쪽 영역의 비율을 4로 설정 */
+    display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    padding: 0; /* 내부 패딩 제거 */
+    margin: 0; /* 외부 여백 제거 */
+    background-color: rgb(255, 255, 255); /* 배경색 설정 */
+    height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
+}
+
+
 /*--------------------- Container3 버튼 설정 ------------------- */
 .subContainer3 button {
 	display: inline-block;
@@ -256,17 +318,17 @@ body {
 
 #btn1, #btn2, #btn3, #btn4, #btn5 {
 	background: #fff;
-	border: 5px solid #ff5100e1;
-	color: #ff5100e1;
+	border: 5px solid gray;
+	color: black;
 }
 
-#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover {
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover {
 	background: #ff5100e1;
 	border-color: #ff5100e1;
 	color: #fff;
 }
 
-#btn1:active, #btn2:active, #btn3:active, #btn4:active {
+#btn1:active, #btn2:active, #btn3:active, #btn4:active, #btn5:active {
 	background: #ff5100e1;
 	border-color: #fff;
 }
@@ -292,27 +354,24 @@ body {
 	font-size: 25px; /* 글자 크기 설정 */
 }
 
-#btn4{
-  margin-top: 10px; /* 위쪽 여백 설정 */
-  height: 100px; /* 높이 설정 */
-  width: 200px; /* 너비 설정 */
-  font-size: 25px; /* 글자 크기 설정 */
-
+#btn4 {
+	margin-top: 10px; /* 위쪽 여백 설정 */
+	height: 100px; /* 높이 설정 */
+	width: 200px; /* 너비 설정 */
+	font-size: 25px; /* 글자 크기 설정 */
 }
 
 #btn5 {
-  /* margin-top: 10px; */
-  height: 100px; /* 높이 설정 */
-  width: 200px; /* 너비 설정 */
-  font-size: 25px; /* 글자 크기 설정 */
-
+	/* margin-top: 10px; */
+	height: 100px; /* 높이 설정 */
+	width: 200px; /* 너비 설정 */
+	font-size: 25px; /* 글자 크기 설정 */
 }
 
 #btn3_h, #btn4_h {
 	background: #fff;
-	border: 5px solid #ff5100e1;
-	color: #ff5100e1;
-	margin-top: 20px;
+	border: 5px solid gray;
+	color: gray;
 }
 
 #btn3_h:hover, #btn4_h:hover {
@@ -323,24 +382,26 @@ body {
 
 #btn3_h:active, #btn4_h:active {
 	background: #ff5100e1;
-	border-color: #fff;
+	border: 5px solid gray;
+	border-color: black;
 }
 
 #btn1_h, #btn2_h {
-	background: #ff5100e1;
-	border: 5px solid #fff;
-	color: #fff;
+	background: white; /* 배경색 흰색 */
+	border: 5px solid #fff; /* 테두리 흰색 */
+	color: black; /* 글씨 색 검정색 */
 }
 
 #btn1_h:hover, #btn2_h:hover {
-	background: #fff;
-	border-color: #fff;
-	color: #ff5100e1;
+	background: #ff5100e1; /* 배경색 흰색 */
+	border-color: #ff5100e1; /* 테두리 흰색 */
+	color: black; /* 글씨 색 검정색으로 유지 */
 }
 
 #btn1_h:active, #btn2_h:active {
-	background: #fff;
-	border-color: #ff5100e1;
+	background: #ff5100e1; /* 배경색 흰색 */
+	border-color: #ff5100e1; /* 테두리 오렌지 색상 */
+	color: black; /* 글씨 색 검정색으로 유지 */
 }
 
 /* .subContainer2-1{
@@ -357,27 +418,22 @@ body {
 }
 
 #btn3_h, #btn4_h {
-	height: 120px; /* 높이 설정 */
-	width: 255px; /* 너비 설정 */
+	height: 100px; /* 높이 설정 */
+	width: 200px; /* 너비 설정 */
 	font-size: 50px; /* 글자 크기 설정 */
 }
 
-#btn3_h {
-	margin-left: 55px;
-}
-
-#btn4_h {
-	margin-left: -10px;
-}
-
 #btn1_h {
-	margin-left: 70px; /* 왼쪽 여백 설정 */
+	margin-left: 50px; /* 왼쪽 여백 설정 */
 	border-radius: 50px;
+	border: 5px solid gray;
 }
 
 #btn2_h {
-	margin-left: 80px;
-	border-radius: 15px;
+    margin-left: 100px; /* 왼쪽 여백 설정 */
+    margin-right: 45px; /* 오른쪽 여백 설정 */
+    border-radius: 50px;
+    border: 5px solid gray;
 }
 
 /*.subContainer2-5 .button1,*/
@@ -400,12 +456,12 @@ body {
 	font-size: 15px; /* 글자 크기 설정 */
 }
 
-.subContainer3-1{
-  height: 450px;
-  
+.subContainer3-1 {
+	height: 450px;
 }
-.subContainer3-2{
-  height: 200px;
-  margin-top: 50px;
+
+.subContainer3-2 {
+	height: 200px;
+	margin-top: 50px;
 }
 
