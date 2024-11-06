@@ -63,9 +63,9 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 			</div>
 			<div class="subContainer2-2">
-				<div class="subContainer2-2-right" align="center">
-					subContainer2-2-right-이미지<br> <input type="image"
-						src="img/음식1.jpg" height="450px"><br>
+				<div class="subContainer2-2-right" id="mainPage_img" align="center">
+					subContainer2-2-right-이미지<br> <input type="image" id="targetImage"
+						src="" height="450px"><br>
 
 				</div>
 				<div class="subContainer2-2-left">

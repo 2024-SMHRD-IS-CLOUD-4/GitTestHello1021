@@ -39,7 +39,8 @@
 		FROM (
 		SELECT post_num
 		FROM POST_INFO
-		ORDER BY post_num DESC
+		ORDER BY post_num
+		DESC
 		) WHERE ROWNUM = 1) ,
 		#{file_rname},
 		#{file_ext},
@@ -47,6 +48,16 @@
 		sysdate,
 		sysdate)
 	</insert>
+
+	<select id="NextPost" resultType="com.smhrd.model.PostImage">
+		SELECT FILE_EXT, FILE_SIZE,
+		FILE_RNAME
+		FROM (
+		SELECT FILE_EXT, FILE_SIZE, FILE_RNAME
+		FROM FILES_INFO
+		ORDER BY UPDATED_AT DESC
+		) WHERE ROWNUM = 1
+	</select>
 
 
 </mapper>
