@@ -72,6 +72,7 @@
   10. 2024/11/07(목) 12:23 | 시윤핑 ==>  |**UPDATE**|NextPostController, PrePostController  |**INSERT**|SharedFileNumber
   11. 2024/11/07(목) 12:30 | 영호핑 ==> My_post 추가 / 내 게시물 보기 페이지 추가
   12. 2024/11/07(목) 17:43 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js, MemberMapper.xml My_post.js  |**INSERT**|My_post.jsp, My_post_img_Controller.java, My_post_img_DAO
+  13. 2024/11/07(목) 19:10 | 영호핑 ==> 내 게시물(이름실수)
 
   
 </details>
