@@ -49,29 +49,62 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 window.onload = function() {
-    var imageElement = document.querySelector("#mainPage_img input[type='image']");
+	var imageElement = document.querySelector("#mainPage_img input[type='image']");
 
-    // 이미지가 존재하고 src 속성이 비어 있을 때 버튼 클릭
-    if (imageElement && (imageElement.src === "" || imageElement.src === window.location.href)) {
-        document.getElementById("btn4_h").click();
-    }
+	// 이미지가 존재하고 src 속성이 비어 있을 때 버튼 클릭
+	if (imageElement && (imageElement.src === "" || imageElement.src === window.location.href)) {
+		document.getElementById("btn4_h").click();
+	}
 };
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("btn4_h").addEventListener("click", function() {
-        fetch("NextPostController")
-            .then(response => response.json())
-            .then(data => {
-                if (data.base64Image && data.contentType) {
-                    // 이미지 데이터가 있을 때 src에 데이터 설정
-                    const imageElement = document.getElementById("targetImage");
-                    imageElement.src = `data:${data.contentType};base64,${data.base64Image}`;
-                } else {
-                    console.error("이미지를 불러오지 못했습니다.");
-                }
-            })
-            .catch(error => console.error("요청 오류:", error));
-    });
+	document.getElementById("btn4_h").addEventListener("click", function() {
+		fetch("NextPostController")
+			.then(response => response.json())
+			.then(data => {
+				if (data.base64Image && data.contentType) {
+					// 이미지 데이터가 있을 때 src에 데이터 설정
+					const imageElement = document.getElementById("targetImage");
+					imageElement.src = `data:${data.contentType};base64,${data.base64Image}`;
+				} else {
+					console.error("이미지를 불러오지 못했습니다.");
+				}
+
+				if (data.content) {
+					const contentElement = document.getElementById("targetPost");
+					contentElement.textContent = data.content;
+				} else {
+					console.error("컨텐츠를 불러오지 못했습니다.");
+				}
+			})
+			.catch(error => console.error("요청 오류:", error));
+	});
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("btn3_h").addEventListener("click", function() {
+		fetch("PrePostController")
+			.then(response => response.json())
+			.then(data => {
+				if (data.base64Image && data.contentType) {
+					// 이미지 데이터가 있을 때 src에 데이터 설정
+					const imageElement = document.getElementById("targetImage");
+					imageElement.src = `data:${data.contentType};base64,${data.base64Image}`;
+				} else {
+					console.error("이미지를 불러오지 못했습니다.");
+				}
+
+				if (data.content) {
+					const contentElement = document.getElementById("targetPost");
+					contentElement.textContent = data.content;
+				} else {
+					console.error("컨텐츠를 불러오지 못했습니다.");
+				}
+			})
+			.catch(error => console.error("요청 오류:", error));
+	});
+});
+
 
 //document.addEventListener("DOMContentLoaded", function() {
 //	document.getElementById("btn4_h").addEventListener("click", function() {

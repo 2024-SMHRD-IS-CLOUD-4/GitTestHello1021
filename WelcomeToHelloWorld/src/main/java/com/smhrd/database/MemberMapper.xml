@@ -49,14 +49,42 @@
 		sysdate)
 	</insert>
 
-	<select id="NextPost" resultType="com.smhrd.model.PostImage">
-		SELECT FILE_EXT, FILE_SIZE,
-		FILE_RNAME
+	<select id="NextPost" parameterType="int"
+		resultType="com.smhrd.model.PostImage">
+		SELECT FILE_NUM, POST_NUM, FILE_RNAME
 		FROM (
-		SELECT FILE_EXT, FILE_SIZE, FILE_RNAME
+		SELECT FILE_NUM,
+		POST_NUM, FILE_RNAME
 		FROM FILES_INFO
-		ORDER BY UPDATED_AT DESC
-		) WHERE ROWNUM = 1
+		WHERE FILE_NUM &lt; #{file_num}
+		ORDER BY FILE_NUM DESC
+		)
+		WHERE ROWNUM = 1
+	</select>
+
+	<select id="NextcPost" parameterType="int"
+		resultType="com.smhrd.model.PostContent">
+		SELECT POST_NUM, pOST_TITLE, POST_CONTENT, POST_VIEWS,
+		POST_LIKES, U_ID FROM POST_INFO WHERE POST_NUM = #{post_num}
+	</select>
+
+	<select id="FindNumber" resultType="com.smhrd.model.FindNumber">
+		SELECT MAX(FILE_NUM) AS
+		max_file_num, MIN(FILE_NUM) AS min_file_num
+		FROM FILES_INFO
+	</select>
+	
+		<select id="PrePost" parameterType="int"
+		resultType="com.smhrd.model.PostImage">
+		SELECT FILE_NUM, POST_NUM, FILE_RNAME
+		FROM (
+		SELECT FILE_NUM,
+		POST_NUM, FILE_RNAME
+		FROM FILES_INFO
+		WHERE FILE_NUM &gt; #{file_num}
+		ORDER BY FILE_NUM ASC
+		)
+		WHERE ROWNUM = 1
 	</select>
 
 

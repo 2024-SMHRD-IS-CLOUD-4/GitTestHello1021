@@ -20,17 +20,16 @@ import com.smhrd.model.NextPostDAO;
 import com.smhrd.model.PostContent;
 import com.smhrd.model.PostImage;
 
-@WebServlet("/NextPostController")
-public class NextPostController extends HttpServlet {
+
+@WebServlet("/NextPreController")
+public class NextPreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String file_folder = "\\\\DESKTOP-TIB5NGS\\storage\\";
 	private static int file_num = 99999;
 	private static int RESET_THRESHOLD = 0; // 임계값 설정
 	private static int INITIAL_FILE_NUM = 99999; // 초기화 값
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		FindNumberDAO fn = new FindNumberDAO();
 		List<FindNumber> findnumer = fn.findnumer();
 		int maxf = findnumer.get(0).getMax_file_num();
@@ -47,7 +46,7 @@ public class NextPostController extends HttpServlet {
 		PostContent cont = dao.NextcPost(post_num);
 		String content = cont.getPost_content();
 
-		file_num = image.get(0).getFile_num();
+		file_num = image.get(0).getFile_num();// 들어온값 저장
 
 		File imageFile = new File(file_folder + file_rname);
 		System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num);
@@ -104,33 +103,6 @@ public class NextPostController extends HttpServlet {
 			return Base64.getEncoder().encodeToString(bytes);
 		}
 		
-
-//		// 파일이 존재하고 디렉토리가 아닐 경우 전송
-//		if (imageFile.exists() && !imageFile.isDirectory()) {
-//			// MIME 타입 설정
-//			String contentType = Files.probeContentType(imageFile.toPath());
-//			if (contentType == null) {
-//				contentType = "application/octet-stream";
-//			}
-//			response.setContentType("text/html;charset=UTF-8");
-//
-//			// 이미지 파일을 Base64로 인코딩
-//			String base64Image = encodeFileToBase64(imageFile);
-//			request.setAttribute("base64Image", base64Image);
-//			request.setAttribute("contentType", contentType);
-//
-//			// JSP로 포워딩
-//			request.getRequestDispatcher("Mainpage_hw.jsp").forward(request, response);
-//		} else {
-//			response.sendError(HttpServletResponse.SC_NOT_FOUND);
-//		}
-//	}
-//
-//	private String encodeFileToBase64(File file) throws IOException {
-//		try (FileInputStream fis = new FileInputStream(file)) {
-//			byte[] bytes = fis.readAllBytes();
-//			return Base64.getEncoder().encodeToString(bytes);
-//		}
 
 	}
 

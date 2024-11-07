@@ -16,21 +16,20 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.JsonObject;
 import com.smhrd.model.FindNumber;
 import com.smhrd.model.FindNumberDAO;
-import com.smhrd.model.NextPostDAO;
 import com.smhrd.model.PostContent;
 import com.smhrd.model.PostImage;
+import com.smhrd.model.PrePostDAO;
 
-@WebServlet("/NextPostController")
-public class NextPostController extends HttpServlet {
+
+@WebServlet("/PrePostController")
+public class PrePostController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String file_folder = "\\\\DESKTOP-TIB5NGS\\storage\\";
-	private static int file_num = 99999;
-	private static int RESET_THRESHOLD = 0; // 임계값 설정
-	private static int INITIAL_FILE_NUM = 99999; // 초기화 값
+	private static int file_num = 0;
+	private static int RESET_THRESHOLD = 99999; // 임계값 설정
+	private static int INITIAL_FILE_NUM = 0; // 초기화 값
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		FindNumberDAO fn = new FindNumberDAO();
 		List<FindNumber> findnumer = fn.findnumer();
 		int maxf = findnumer.get(0).getMax_file_num();
@@ -38,8 +37,8 @@ public class NextPostController extends HttpServlet {
 		
 		System.out.println(maxf +"/"+ minf);
 
-		NextPostDAO dao = new NextPostDAO();
-		List<PostImage> image = dao.NextPost(file_num);
+		PrePostDAO dao = new PrePostDAO();
+		List<PostImage> image = dao.PrePost(file_num);
 
 		String file_rname = image.get(0).getFile_rname();
 		int post_num = image.get(0).getPost_num();
@@ -90,8 +89,8 @@ public class NextPostController extends HttpServlet {
 		
 		
 		response.getWriter().write(jsonResponse.toString());
-		RESET_THRESHOLD = minf;
-		INITIAL_FILE_NUM = maxf+1;
+		RESET_THRESHOLD = maxf;
+		INITIAL_FILE_NUM = minf;
 		if (file_num == RESET_THRESHOLD) {
 			file_num = INITIAL_FILE_NUM;
 		}
