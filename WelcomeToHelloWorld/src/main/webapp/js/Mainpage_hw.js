@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		window.location.href = "LogoutController1"; // 이동할 URL
 	});
 });
+document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("btn2").addEventListener("click", function() {
+		window.location.href = "My_post.jsp"; // 이동할 URL
+	});
+});
 
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn1").addEventListener("click", function() {
