@@ -21,7 +21,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 	<div class="container" id="container">
 
 		<section class="subContainer3" align="center">
-			subContainer3<br>
+			<br>
 			<button id="">
 				<img id="logo" src="img/로고1.png">
 			</button>
@@ -30,15 +30,27 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			</button>
 
 			<br>
+<div class="subContainer3-1">
+				
+				<%
+			if (memer.getU_type().substring(0, 4).equals("USER")) {
+			%>
+				<button id="btn1" style="border-radius: 30px; cursor: pointer;">글
+					작성하기</button>
+				<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
+					수정하기</button>
+				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
+					편집하기</button>
+				<button id="btn4" style="border-radius: 30px; cursor: pointer;">보류^^</button>
 
-			<button id="btn1" style="border-radius: 30px; cursor: pointer;">글
-				작성하기</button>
-			<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
-				수정하기</button>
-			<button id="btn3" style="border-radius: 30px; cursor: pointer;">보류^^</button>
-			<button id="btn4" style="border-radius: 30px; cursor: pointer;">
-				활동종료<br>(로그아웃)
-			</button>
+				<%
+				}
+				%>
+			</div>
+			<div class="subContainer3-2">
+				<button id="btn5" style="border-radius: 30px; cursor: pointer;">
+					활동종료<br>(로그아웃)
+				</button>
 		</section>
 
 		<style>
@@ -51,7 +63,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 		<form id="postForm" action="PostController1" method="post" enctype="multipart/form-data">
 			<section class="subContainer2">
 				<div class="subContainer2-1">
-					subContainer2-1<br>
+					<br>
 					<div class="search">
 						<input class="search-input" type="text"
 							placeholder="검색어를 입력하세요...">
@@ -64,7 +76,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 				<div class="subContainer2-2">
 					<div class="subContainer2-2-right" align="center">
-						subContainer2-2-right-이미지<br>
+						<br>
 						<div id="image-container">
 							<img id="imageimage" src="img/test.png" alt="미리보기 이미지" />
 						</div>
@@ -74,7 +86,6 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 							style="display: none;" />
 					</div>
 					<div class="subContainer2-2-left">
-						subContainer2-2-left-게시글
 						<div class="post" style="font-size: 20px; font-weight: bold;">
 
 							<div class="subContainer2-2-left">
@@ -98,7 +109,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 
 				<div class="subContainer2-5">
-					subContainer2-5-하단<br>
+					<br>
 					<button id="btn1_h" type="submit">작성하기 📝</button>
 					<button id="btn2_h" type="button">취소하기 ❌</button>
 					<button id="btn3_h" >◀</button>
@@ -110,7 +121,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 		<!-- 1번 옮김 -->
 
 		<section class="subContainer1">
-			subContainer1 <br>
+			<br>
 			<div class="image-container">
 				<img src="img/pping.png" width="500px" height="" id="image">
 				<div class="speech-container">

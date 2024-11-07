@@ -14,21 +14,20 @@
 }
 
 body {
-    display: flex; /* 플렉스 박스 사용 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    min-height: 100vh; /* 화면 전체 높이 설정 */
-    background-color: #ECECEC; /* 배경색 설정 */
-    margin: 0; /* 기본 여백 제거 */
-    width: 100%;
-    border: 10px solid #ECECEC; /* 전체 페이지 테두리 설정 */
-    box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
+	display: flex; /* 플렉스 박스 사용 */
+	justify-content: center; /* 가로 중앙 정렬 */
+	align-items: center; /* 세로 중앙 정렬 */
+	min-height: 100vh; /* 화면 전체 높이 설정 */
+	background-color: #ECECEC; /* 배경색 설정 */
+	margin: 0; /* 기본 여백 제거 */
+	width: 100%;
+	border: 10px solid #ECECEC; /* 전체 페이지 테두리 설정 */
+	box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
 }
 
-
-	.container {
-		display: flex; /* 플렉스 박스 설정 */
-	}
+.container {
+	display: flex; /* 플렉스 박스 설정 */
+}
 
 .subContainer1, .subContainer2, .subContainer3 {
 	/* padding: 10px; /* 패딩 설정 */
@@ -45,22 +44,22 @@ body {
 }
 
 #logo-wrapper {
-    width: 200px; /* 로고 영역의 너비 설정 */
-    height: 100px; /* 로고 영역의 높이 설정 */
-    border: 1px solid #ff5100; /* 테두리 색상 설정 (오렌지) */
-    display: flex; /* 자식 요소 정렬을 위해 flex 사용 */
-    align-items: center; /* 수직 중앙 정렬 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
-    background-color: white; /* 배경색 설정 */
-    border-radius: 10px; /* 모서리를 둥글게 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
-    margin-top: 10px; /* 상단 여백 설정 */
+	width: 200px; /* 로고 영역의 너비 설정 */
+	height: 100px; /* 로고 영역의 높이 설정 */
+	border: 1px solid #ff5100; /* 테두리 색상 설정 (오렌지) */
+	display: flex; /* 자식 요소 정렬을 위해 flex 사용 */
+	align-items: center; /* 수직 중앙 정렬 */
+	justify-content: center; /* 수평 중앙 정렬 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+	background-color: white; /* 배경색 설정 */
+	border-radius: 10px; /* 모서리를 둥글게 설정 */
+	margin: 0 auto; /* 중앙 정렬 */
+	margin-top: 10px; /* 상단 여백 설정 */
 }
 
 #logo {
-    max-width: 100%; /* 로고 이미지의 최대 너비를 부모에 맞추기 */
-    max-height: 100%; /* 로고 이미지의 최대 높이를 부모에 맞추기 */
+	max-width: 100%; /* 로고 이미지의 최대 너비를 부모에 맞추기 */
+	max-height: 100%; /* 로고 이미지의 최대 높이를 부모에 맞추기 */
 }
 
 #search {
@@ -113,15 +112,15 @@ body {
 }
 
 #sg_button {
-    position: absolute; /* 절대 위치로 설정하여 영역 내에서 원하는 위치로 이동 */
-    bottom: 20px; /* 하단에서 20px 떨어진 위치로 조정 */
-    right: 20px; /* 오른쪽에서 20px 떨어진 위치로 조정 */
-    background: gray;
-    border: 5px solid gray;
-    color: rgb(255, 255, 255);
-    border-radius: 10px; /* 모서리를 둥글게 설정 */
-    padding: 10px 20px; /* 여백 추가 */
-    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+	position: absolute; /* 절대 위치로 설정하여 영역 내에서 원하는 위치로 이동 */
+	bottom: 20px; /* 하단에서 20px 떨어진 위치로 조정 */
+	right: 20px; /* 오른쪽에서 20px 떨어진 위치로 조정 */
+	background: gray;
+	border: 5px solid gray;
+	color: rgb(255, 255, 255);
+	border-radius: 10px; /* 모서리를 둥글게 설정 */
+	padding: 10px 20px; /* 여백 추가 */
+	cursor: pointer; /* 마우스 커서 포인터로 변경 */
 }
 
 #sg_button {
@@ -233,82 +232,74 @@ body {
 }
 
 .subContainer2-2 {
-    display: flex; /* 가로 정렬을 위해 flex 사용 */
-    border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
-    height: 570px; /* 높이 설정 */
+	display: flex; /* 가로 정렬을 위해 flex 사용 */
+	border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
+	height: 570px; /* 높이 설정 */
 }
 
 .subContainer2-2-left {
-    flex: 4; /* 왼쪽 영역의 비율을 4로 설정 */
-    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    overflow-x: hidden; /* 가로 스크롤 제거 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    padding: 20px; /* 여백 설정 */
-    box-sizing: border-box; /* 테두리와 패딩을 포함한 크기 계산 */
-    width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
-    position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
-    border: 2px solid gray; /*박영호*/
+	flex: 4; /* 왼쪽 영역의 비율을 4로 설정 */
+	border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
+	overflow-y: auto; /* 세로 스크롤 활성화 */
+	overflow-x: hidden; /* 가로 스크롤 제거 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	padding: 20px; /* 여백 설정 */
+	box-sizing: border-box; /* 테두리와 패딩을 포함한 크기 계산 */
+	width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
+	position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
+	border: 2px solid gray; /*박영호*/
 }
 
-
-
 .subContainer2-2-right {
-    flex: 6; /* 오른쪽 영역의 비율을 6으로 설정 */
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    padding: 20px; /* 여백 설정 */
-    display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
-    justify-content: center;
-    align-items: center;
-    border: 5px solid #C9C9C9; /*박영호*/
+	flex: 6; /* 오른쪽 영역의 비율을 6으로 설정 */
+	overflow-y: auto; /* 세로 스크롤 활성화 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	padding: 20px; /* 여백 설정 */
+	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
+	justify-content: center;
+	align-items: center;
+	border: 5px solid #C9C9C9; /*박영호*/
 }
 
 .subContainer2-2-right input[type="image"] {
-    border: 10px solid gray; /* 테두리 색상과 두께 설정 */
-    border-radius: 15px; /* 모서리를 둥글게 설정 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
-    padding: 5px; /* 이미지와 테두리 사이에 여백 추가 */
+	border: 10px solid gray; /* 테두리 색상과 두께 설정 */
+	border-radius: 15px; /* 모서리를 둥글게 설정 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+	padding: 5px; /* 이미지와 테두리 사이에 여백 추가 */
 }
 
-
-
 .subContainer2-5 {
-    display: flex; /* 가로 정렬을 위해 flex 사용 */
-    height: 200px; /* 높이 설정 */
-    align-items: center; /* 수직 가운데 정렬 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    border: 5px solid #C9C9C9; /*박영호*/	    
+	display: flex; /* 가로 정렬을 위해 flex 사용 */
+	height: 200px; /* 높이 설정 */
+	align-items: center; /* 수직 가운데 정렬 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	border: 5px solid #C9C9C9; /*박영호*/
 }
 
 .subContainer2-5-left {
-    flex: 6; /* 왼쪽 영역의 비율을 6으로 설정 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
-    display: flex; /* 플렉스 박스 사용 */
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    align-items: center; /* 수직 방향 중앙 정렬 */
-    padding: 0; /* 내부 패딩 제거 */
-    margin: 0; /* 외부 여백 제거 */
-    gap: 0; /* 요소 간의 간격 제거 */
-    width: calc(100% - 4px); /* 부모 요소와 맞추기 위해 너비 조정 */
-    box-sizing: border-box; /* 테두리와 패딩 포함하여 크기 계산 */
+	flex: 6; /* 왼쪽 영역의 비율을 6으로 설정 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
+	display: flex; /* 플렉스 박스 사용 */
+	justify-content: center; /* 가로 방향 중앙 정렬 */
+	align-items: center; /* 수직 방향 중앙 정렬 */
+	padding: 0; /* 내부 패딩 제거 */
+	margin: 0; /* 외부 여백 제거 */
+	gap: 0; /* 요소 간의 간격 제거 */
+	width: calc(100% - 4px); /* 부모 요소와 맞추기 위해 너비 조정 */
+	box-sizing: border-box; /* 테두리와 패딩 포함하여 크기 계산 */
 }
-	
-
-
 
 .subContainer2-5-right {
-    flex: 4; /* 오른쪽 영역의 비율을 4로 설정 */
-    display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-    padding: 0; /* 내부 패딩 제거 */
-    margin: 0; /* 외부 여백 제거 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
+	flex: 4; /* 오른쪽 영역의 비율을 4로 설정 */
+	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
+	justify-content: center; /* 수평 가운데 정렬 */
+	align-items: center; /* 수직 가운데 정렬 */
+	padding: 0; /* 내부 패딩 제거 */
+	margin: 0; /* 외부 여백 제거 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
 }
-
 
 /*--------------------- Container3 버튼 설정 ------------------- */
 .subContainer3 button {
@@ -430,10 +421,10 @@ body {
 }
 
 #btn2_h {
-    margin-left: 100px; /* 왼쪽 여백 설정 */
-    margin-right: 45px; /* 오른쪽 여백 설정 */
-    border-radius: 50px;
-    border: 5px solid gray;
+	margin-left: 100px; /* 왼쪽 여백 설정 */
+	margin-right: 45px; /* 오른쪽 여백 설정 */
+	border-radius: 50px;
+	border: 5px solid gray;
 }
 
 /*.subContainer2-5 .button1,*/
@@ -464,4 +455,3 @@ body {
 	height: 200px;
 	margin-top: 50px;
 }
-
