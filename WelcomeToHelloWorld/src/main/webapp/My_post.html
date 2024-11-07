@@ -38,52 +38,60 @@
 
 
     <section class="subContainer2">
-      <div class="subContainer2-1"><br>
-        <div id="search">
-          <input class="search-input" type="text" placeholder="검색어를 입력하세요...">
-          <button class="search-button">검색🔍</button>
-        </div>
-
-
-      </div>
+      
       <div class="subContainer2-2">
-        <div class="subContainer2-2-right" align="center">
+        <div class="subContainer2-2-right" align="center" id="subContainer2_2_right">
+          <br>
+          <h3>✅ 사진을 선택하세요</h3>
           <div class="image-feed">
               <!-- Example images; replace with your image sources -->
-              <img src="img/음식1.jpg" alt="Image 1" id="image1">
-              <img src="img/음식2.jpg" alt="Image 2" id="image2">
-              <img src="img/음식3.jpg" alt="Image 3" id="image3">
-              <img src="img/음식4.jpg" alt="Image 4" id="image4">
-              <img src="img/음식5.jpg" alt="Image 5" id="image5">
-              <img src="img/음식6.jpg" alt="Image 6" id="image6">
-              <img src="img/음식7.jpg" alt="Image 7" id="image7">
-              <img src="img/음식8.jpg" alt="Image 8" id="image8">
-              <img src="img/음식9.jpg" alt="Image 9" id="image9">
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식1.jpg" alt="Image 1"  onclick="selectImage('image1')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식2.jpg" alt="Image 2"  onclick="selectImage('image2')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식3.jpg" alt="Image 3"  onclick="selectImage('image3')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식4.jpg" alt="Image 4"  onclick="selectImage('image4')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식5.jpg" alt="Image 5"  onclick="selectImage('image5')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식6.jpg" alt="Image 6"  onclick="selectImage('image6')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식7.jpg" alt="Image 7"  onclick="selectImage('image7')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식8.jpg" alt="Image 8"  onclick="selectImage('image8')"></label>
+               <label class="image-item"><input type="radio" name="image-select"><img src="img/음식9.jpg" alt="Image 9"  onclick="selectImage('image9')"></label>
           </div>
       </div>
       
       
 
-        <div class="subContainer2-2-left"><div class="post" style="font-size: 20px; font-weight: bold;">
-
+        <div class="subContainer2-2-left">
+        <div class="post" style="font-size: 20px; font-weight: bold;">
+			<br>
+            <p type='text' style="position: relative;">
+              <span id="postDate" style="margin-left: 30px;" ></span><!-- 날짜가 표시될 부분 --> 📆
+              <span class="orange-line"></span>
+              
+              <br>
       
           <!--<button id="sg_button">신고하기</button> -->
           </div>
         </div>
 
-      </div>
+         <script>
+          // 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
+          const postDate = new Date();  // 현재 날짜 및 시간 생성
+          const formattedDate = postDate.toISOString().split('T')[0];  // 날짜만 가져오도록 포맷
+          document.getElementById("postDate").innerText = formattedDate;  // 날짜를 HTML에 추가
+        </script>
+
+
+      </div>    
 
 
       <div class="subContainer2-5">
         <div class="subContainer2-5-left" id="2-5-l"><br>
-          <button id="btn1_h">수정하기</button>
-          <button id="btn2_h">삭제하기</button>
+          <button id="btn1_h">글 수정하기</button>
+          <button id="btn2_h">글 삭제하기</button>
         </div>
         
         <div class="subContainer2-5-right" id="2-5-r"><br>
-        <!--           <button id="btn3_h">◀</button>
- 						<button id="btn4_h">▶</button>			 -->
-	      <button id="btn2_h">뒤로가기 💬</button>
+          <button id="btn3_h">돌아가기</button>
+          <!-- <button id="btn4_h">▶</button> -->
         </div>
       </div>
     </section>
@@ -91,8 +99,7 @@
 
     <!-- 1번 옮김 -->
 
-    <section class="subContainer1">
-      <br>
+    <section class="subContainer1" id="subContainer1"><br>
       <div class="image-container">
         <img src="img/pping.png" width="500px" height="" id="image">
         <div class="speech-container">

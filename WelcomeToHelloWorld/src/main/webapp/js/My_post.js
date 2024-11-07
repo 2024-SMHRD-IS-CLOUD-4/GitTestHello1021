@@ -10,14 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
     btn3: "글 편집하기 버튼입니다.?",
     btn4: "보류!! <br> 보류!! <br> 보류!!",
     btn5: "활동 종료 버튼입니다!! <br><br> 로그아웃이 되니 조심하세요!!",
-    btn1_h: "표정을 남길 수 있어요!",
-    btn2_h: "댓글을 남길 수도, <br><br> 댓글을 읽을 수도 있어요",
-    btn3_h: "이전 게시물로 <br><br> 이동하는 버튼입니다.",
+    btn1_h: "이 게시물의 글을 <br> 수정할 수 있어요!!!",
+    btn2_h: "이 게시물을 <br> 삭제할 수 있어요!!!",
+    btn3_h: "첫 번째 화면으로 <br> (메인 페이지로) <br><br> 이동하는 버튼입니다.",
     btn4_h: "다음 게시물로 <br><br> 이동하는 버튼입니다.",
     profile: "나의 프로필",
     image:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
     search:"검색 버튼 !!",
-    subContainer1:"안녕하세요  <br> 궁금한 것이 있으면 <br> 저를 찾아주세요!❤"
+    subContainer1:"안녕하세요  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
+    subContainer2_2_left:"선택하신 사진에 대해 <br> 작성한 글입니다! <br><br> 글을 수정하거나 <br><br> 삭제할 수 있어요~ ",
+    subContainer2_2_right:"내가 올린 사진 목록입니다! <br><br> 어떤 글을 작성했는지 <br> 확인할 수 있고, <br><br> 글을 수정하거나 삭제할 수도 있어요! "
  
 
     // ... 다른 버튼들에 대한 설명 추가
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   speechContainer.style.opacity = 1;
 
   // 각 항목에 마우스 올리면 설명 표시 (줄바꿈 처리 추가)
-  const items = document.querySelectorAll(' .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, #profile, #image, #search, .subContainer1 ');
+  const items = document.querySelectorAll(' .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, #profile, #image, #search, #subContainer1, #subContainer2_2_left, #subContainer2_2_right ');
   items.forEach(item => {
     item.addEventListener('mouseenter', function () {
       const buttonId = item.id;
@@ -58,42 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 각 이미지에 클릭 이벤트 추가
-  document.getElementById('image1').addEventListener('click', () => loadText('음식1.txt'));
-  document.getElementById('image2').addEventListener('click', () => loadText('음식2.txt'));
-  document.getElementById('image3').addEventListener('click', () => loadText('음식3.txt'));
-  document.getElementById('image4').addEventListener('click', () => loadText('음식4.txt'));
-  document.getElementById('image5').addEventListener('click', () => loadText('음식5.txt'));
-  document.getElementById('image6').addEventListener('click', () => loadText('음식6.txt'));
-  document.getElementById('image7').addEventListener('click', () => loadText('음식7.txt'));
-  document.getElementById('image8').addEventListener('click', () => loadText('음식8.txt'));
-  document.getElementById('image9').addEventListener('click', () => loadText('음식9.txt'));
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-	// 페이지 로드 시 자동으로 이미지 불러오기
-	fetch("My_post_img_Controller")
-		.then(response => response.json())
-		.then(data => {
-			console.log(data); // JSON 응답을 출력하여 구조 확인
-			if (data.images && data.images.length > 0) {
-				const imageContainer = document.getElementsByClassName("image-feed")[0];
-				imageContainer.innerHTML = '';
 
-				data.images.forEach((imageData, index) => {
-					const imgElement = document.createElement('img');
-					if (imageData.contentType && imageData.base64Image) {
-						imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
-						imgElement.alt = `Dynamic Image ${index + 1}`;
-						imgElement.id = `image${index + 1}`;
-						document.getElementsByClassName("image-feed")[0].appendChild(imgElement);
-					} else {
-						console.error(`Invalid image data at index ${index}`);
-					}
-				})
-					.catch(error => console.error("Error fetching the image:", error));
+function selectImage(selectedId) {
+  // 모든 이미지의 'selected' 클래스를 제거하여 흰색 테두리로 초기화
+  const images = document.querySelectorAll('.image-item img');
+  images.forEach(img => img.classList.remove('selected'));
 
-
-			}
-		});
-
-});
+  // 클릭된 이미지에만 'selected' 클래스를 추가하여 주황색 테두리 적용
+  const selectedImage = document.getElementById(selectedId);
+  selectedImage.classList.add('selected');
+}
