@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				if (data.content) {
 					const contentElement = document.getElementById("targetPost");
-					contentElement.textContent = data.content;
+					contentElement.value = data.content;
 				} else {
 					console.error("컨텐츠를 불러오지 못했습니다.");
 				}
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				if (data.content) {
 					const contentElement = document.getElementById("targetPost");
-					contentElement.textContent = data.content;
+					contentElement.value = data.content;
 				} else {
 					console.error("컨텐츠를 불러오지 못했습니다.");
 				}
