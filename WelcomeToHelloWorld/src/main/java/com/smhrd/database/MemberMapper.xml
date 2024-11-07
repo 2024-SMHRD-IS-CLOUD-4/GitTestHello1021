@@ -73,8 +73,8 @@
 		max_file_num, MIN(FILE_NUM) AS min_file_num
 		FROM FILES_INFO
 	</select>
-	
-		<select id="PrePost" parameterType="int"
+
+	<select id="PrePost" parameterType="int"
 		resultType="com.smhrd.model.PostImage">
 		SELECT FILE_NUM, POST_NUM, FILE_RNAME
 		FROM (
@@ -86,6 +86,13 @@
 		)
 		WHERE ROWNUM = 1
 	</select>
-
+	<select id="selectMyPost" parameterType="String"
+		resultType="com.smhrd.model.PostImage">
+		SELECT f.FILE_RNAME
+		FROM FILES_INFO f
+		JOIN POST_INFO p ON
+		f.POST_NUM = p.POST_NUM
+		WHERE p.U_ID = #{u_id}
+	</select>
 
 </mapper>

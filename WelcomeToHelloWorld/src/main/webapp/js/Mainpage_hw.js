@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn2").addEventListener("click", function() {
-		window.location.href = "user_edit.jsp"; // 이동할 URL
+		window.location.href = "My_post.jsp"; // 이동할 URL
 	});
 });
 
