@@ -68,3 +68,32 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('image8').addEventListener('click', () => loadText('음식8.txt'));
   document.getElementById('image9').addEventListener('click', () => loadText('음식9.txt'));
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+	// 페이지 로드 시 자동으로 이미지 불러오기
+	fetch("My_post_img_Controller")
+		.then(response => response.json())
+		.then(data => {
+			console.log(data); // JSON 응답을 출력하여 구조 확인
+			if (data.images && data.images.length > 0) {
+				const imageContainer = document.getElementsByClassName("image-feed")[0];
+				imageContainer.innerHTML = '';
+
+				data.images.forEach((imageData, index) => {
+					const imgElement = document.createElement('img');
+					if (imageData.contentType && imageData.base64Image) {
+						imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
+						imgElement.alt = `Dynamic Image ${index + 1}`;
+						imgElement.id = `image${index + 1}`;
+						document.getElementsByClassName("image-feed")[0].appendChild(imgElement);
+					} else {
+						console.error(`Invalid image data at index ${index}`);
+					}
+				})
+					.catch(error => console.error("Error fetching the image:", error));
+
+
+			}
+		});
+
+});
