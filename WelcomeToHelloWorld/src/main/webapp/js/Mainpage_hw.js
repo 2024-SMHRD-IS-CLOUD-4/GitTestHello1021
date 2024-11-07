@@ -43,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("btn2").addEventListener("click", function() {
+		window.location.href = "user_edit.jsp"; // 이동할 URL
+	});
+});
+
+document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn1").addEventListener("click", function() {
 		window.location.href = "PostPage.jsp"; // 이동할 URL
 	});
