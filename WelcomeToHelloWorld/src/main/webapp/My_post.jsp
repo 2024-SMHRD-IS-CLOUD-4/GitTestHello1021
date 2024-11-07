@@ -59,9 +59,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			</div>
 			<div class="subContainer2-2">
 				<div class="subContainer2-2-right" align="center">
-					<div class="image-feed">
-
-					</div>
+					<div class="image-feed"></div>
 				</div>
 
 
@@ -79,14 +77,15 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<div class="subContainer2-5">
 				<div class="subContainer2-5-left" id="2-5-l">
 					<br>
-					<button id="btn1_h">표정짓기 😀</button>
-					<button id="btn2_h">댓글달기 💬</button>
+					<button id="btn1_h">수정하기</button>
+					<button id="btn2_h">삭제하기</button>
 				</div>
 
 				<div class="subContainer2-5-right" id="2-5-r">
 					<br>
-					<button id="btn3_h">◀</button>
-					<button id="btn4_h">▶</button>
+					<!--           <button id="btn3_h">◀</button>
+ 						<button id="btn4_h">▶</button>			 -->
+					<button id="btn2_h">뒤로가기 💬</button>
 				</div>
 			</div>
 		</section>
