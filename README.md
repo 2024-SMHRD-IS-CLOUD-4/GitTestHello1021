@@ -69,10 +69,10 @@
   7. 2024/11/07(목) 09:15 | 시윤핑 ==> ALL UPDATE and COMMIT
   8. 2024/11/07(목) 11:30 | 영호핑 ==> 글씨 제거
   9. 2024/11/07(목) 12:00 | 영호핑 ==> 버튼 수정 / 게시물 검색 웹 페이지 푸시
-  10. 2024/11/07(목) 12:23 | 시윤핑 ==>  |**UPDATE**|NextPostController, PrePostController 
-                                        |**INSERT**|SharedFileNumber
+  10. 2024/11/07(목) 12:23 | 시윤핑 ==>  |**UPDATE**|NextPostController, PrePostController  |**INSERT**|SharedFileNumber
   11. 2024/11/07(목) 12:30 | 영호핑 ==> My_post 추가 / 내 게시물 보기 페이지 추가
-  12. 
+  12. 2024/11/07(목) 17:43 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js, MemberMapper.xml My_post.js  |**INSERT**|My_post.jsp, My_post_img_Controller.java, My_post_img_DAO
+
   
 </details>
 
