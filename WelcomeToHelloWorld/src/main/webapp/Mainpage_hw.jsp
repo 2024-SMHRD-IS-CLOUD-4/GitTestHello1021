@@ -25,17 +25,18 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 			<br>
 			<div class="subContainer3-1">
-				
+
 				<%
-			if (memer.getU_type().substring(0, 4).equals("USER")) {
-			%>
+				if (memer.getU_type().substring(0, 4).equals("USER")) {
+				%> 
 				<button id="btn1" style="border-radius: 30px; cursor: pointer;">글
 					작성하기</button>
-				<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
-					수정하기</button>
+				<button id="btn2" style="border-radius: 30px; cursor: pointer;">내
+					게시물</button>
 				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
-					편집하기</button>
-				<button id="btn4" style="border-radius: 30px; cursor: pointer;">보류^^</button>
+					검색하기</button>
+				<button id="btn4" style="border-radius: 30px; cursor: pointer;">
+				</button>
 
 				<%
 				}
@@ -63,12 +64,13 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			</div>
 			<div class="subContainer2-2">
 				<div class="subContainer2-2-right" id="mainPage_img" align="center">
-					<br> <input type="image" id="targetImage"
-						src="" height="450px"><br>
+					<br> <input type="image" id="targetImage" src=""
+						height="450px"><br>
 
 				</div>
 				<div class="subContainer2-2-left">
-					<div class="post" id="targetPost" style="font-size: 20px; font-weight: bold;">
+					<div class="post" id="targetPost"
+						style="font-size: 20px; font-weight: bold;">
 						<button class="user_profile" type="submit" align="left">@지수핑</button>
 						<br> <br> 맛도링 ~ 😀👍<br>
 
