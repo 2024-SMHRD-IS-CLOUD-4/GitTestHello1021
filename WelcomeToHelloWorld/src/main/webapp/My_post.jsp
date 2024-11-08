@@ -96,7 +96,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<br>
 					<!--           <button id="btn3_h">◀</button>
  						<button id="btn4_h">▶</button>			 -->
-					<button id="btn2_h">뒤로가기</button>
+					<button id="btn3_h">뒤로가기</button>
 				</div>
 			</div>
 		</section>
