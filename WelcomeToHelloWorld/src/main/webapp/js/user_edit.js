@@ -84,9 +84,3 @@ function selectImage(selectedId) {
   const selectedImage = document.getElementById(selectedId);
   selectedImage.classList.add('selected');
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("btn3_h").addEventListener("click", function() {
-		window.location.href = "Mainpage_hw.jsp"; // 이동할 URL
-	});
-});
