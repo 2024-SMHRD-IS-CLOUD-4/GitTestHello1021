@@ -94,5 +94,15 @@
 		f.POST_NUM = p.POST_NUM
 		WHERE p.U_ID = #{u_id}
 	</select>
+	
+	<select id="findcontent" parameterType="String"
+		resultType="String">
+		SELECT p.POST_CONTENT
+		FROM FILES_INFO f
+		JOIN POST_INFO p ON
+		f.POST_NUM = p.POST_NUM
+		WHERE f.FILE_RNAME = #{file_rname}
+	</select>
+
 
 </mapper>

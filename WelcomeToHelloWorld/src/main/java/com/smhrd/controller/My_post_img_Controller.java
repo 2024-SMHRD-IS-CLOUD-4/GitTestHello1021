@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-
+import com.smhrd.model.FindContentDAO;
 import com.smhrd.model.MavenMemer;
 import com.smhrd.model.My_post_img_DAO;
 import com.smhrd.model.PostImage;
@@ -30,6 +30,10 @@ public class My_post_img_Controller extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("application/json; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		
 
 		HttpSession session = request.getSession();
 
@@ -44,7 +48,9 @@ public class My_post_img_Controller extends HttpServlet {
 		for (int i = 0; i < allImg.size(); i++) {
 			String file_rname = allImg.get(i).getFile_rname();
 			System.out.println(file_rname);
-
+			FindContentDAO fdao = new FindContentDAO();
+			String PostContent = fdao.findcontent(file_rname);
+			System.out.println(PostContent);
 			File imageFile = new File(file_folder + file_rname);
 
 			if (imageFile.exists() && !imageFile.isDirectory()) {
@@ -53,6 +59,7 @@ public class My_post_img_Controller extends HttpServlet {
 				JsonObject jo = new JsonObject();
 				jo.addProperty("contentType", contentType);
 				jo.addProperty("base64Image", base64Image);
+				jo.addProperty("PostContent", PostContent);
 				imageArray.add(jo);
 
 			}

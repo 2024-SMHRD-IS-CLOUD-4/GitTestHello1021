@@ -70,6 +70,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 							<!-- 날짜가 표시될 부분 -->
 							📆 <span class="orange-line"></span> <br> 피곤하당 😴🥱
 						</p>
+						<div id="pcontent"></div>
 
 						<!--<button id="sg_button">신고하기</button> -->
 					</div>
