@@ -76,7 +76,7 @@ function selectImage(selectedId) {
 
 function selectImage(selectedId) {
   // 모든 이미지의 'selected' 클래스를 제거하여 흰색 테두리로 초기화
-  const images = document.querySelectorAll('.image-item img');
+  const images = document.querySelectorAll('.image-feed img');
   images.forEach(img => {
     img.classList.remove('selected'); // 이전 선택된 이미지의 테두리 제거
   });
