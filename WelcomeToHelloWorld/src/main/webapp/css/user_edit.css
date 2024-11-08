@@ -1,13 +1,19 @@
 @charset "UTF-8";
 * {
-    font-family: 'MalgunGothic', sans-serif;
-    font-style: normal;
+	font-family: 'Malgun Gothic';
+	font-style: normal;
 }
 
 body {
-    background-color: rgb(121, 121, 121); /* 배경색 설정 */
-    /* overflow: hidden; /* 스크롤바 숨기기 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    min-height: 100vh; /* 화면 전체 높이 설정 */
+    background-color: #ffffff; /* 배경색 설정 */
+    margin: 0; /* 기본 여백 제거 */
     width: 100%;
+    border: 10px solid #ECECEC; /* 전체 페이지 테두리 설정 */
+    box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
 }
 
   
@@ -30,10 +36,23 @@ body {
     background-color: whitesmoke;
 }
 
+#logo-wrapper {
+  width: 200px; /* 로고 영역의 너비 설정 */
+  height: 100px; /* 로고 영역의 높이 설정 */
+  border: 3px solid rgb(250, 97, 5); /* 테두리 색상 설정 (오렌지) */
+  display: flex; /* 자식 요소 정렬을 위해 flex 사용 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+  background-color: white; /* 배경색 설정 */
+  border-radius: 10px; /* 모서리를 둥글게 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  margin-top: 10px; /* 상단 여백 설정 */
+}
+
 #logo{
-    width: 200px; /* 너비 설정 */
-    height: 100px; /* 높이 설정 */
-    align-items: center;
+  max-width: 200px; /* 로고 이미지의 최대 너비를 부모에 맞추기 */
+  max-height: 100%; /* 로고 이미지의 최대 높이를 부모에 맞추기 */
 }
   
 
@@ -61,21 +80,33 @@ body {
     box-sizing: border-box; /* 박스 크기 설정 */
 }
   
-#profile{
-    margin: 0 auto; /* 중앙 정렬 */
-    margin-top: 30px; /* 위쪽 여백 설정 */
-    background-color: rgb(255, 252, 248);; /* 배경색 설정 */
-    color: rgb(0, 0, 0);
-    border-radius: 10px; /* 모서리 둥글게 */
-    padding: 10px; /* 패딩 설정 */
-    width: 200px; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    display: flex;
-    align-items: center; /* display: flex; 를 써야 적용이 된다. */
-    justify-content: center; /* display: flex; 를 써야 적용이 된다. */
-    text-align: center;
-    
+#profile {
+	margin: 0 auto; /* 중앙 정렬 */
+	margin-top: 20px; /* 위쪽 여백 설정 */
+	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	color: rgb(0, 0, 0);
+	border-radius: 40px; /* 모서리 둥글게 */
+	padding: 10px; /* 패딩 설정 */
+	width: 190px; /* 너비 설정 */
+	height: 60px; /* 높이 설정 */
+/*	box-shadow: 0 0 10px rgb(255, 0, 0); /* 그림자 효과 */
+	display: flex;
+	align-items: center; /* display: flex; 를 써야 적용이 된다. */
+	justify-content: center; /* display: flex; 를 써야 적용이 된다. */
+	text-align: center;
+	border: 5px solid rgb(250, 97, 5);
+	font-size: 15px;
+	font-weight: bold;
+}
+#profile:hover {
+	background: rgb(250, 97, 5);
+	border: 5px solid rgb(255, 81, 0);
+	color: #fff;
+}
+
+#profile:active {
+	background: rgb(250, 97, 5);
+	border-color: #fff;
 }
 
 .search-button {
@@ -201,37 +232,38 @@ body {
   justify-content: start; /* 세로 방향 상단 정렬 */
 }
 
-.subContainer2-1,
+
 .subContainer2-5 {
     border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
 }
-  
-.subContainer2-1 {
-    /* flex: 0.3; /* 플렉스 비율 설정 */
-    background-color: #bfbfbf; /* 배경색 설정 */
-    height: 110px;
-}
-
 
 
 .subContainer2-2 {
-    /* flex: 10; /* 플렉스 비율 설정 */
-    display: flex; /* 플렉스 박스 설정 */
-    border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
-    height: 570px; /* 높이 설정 */
-    justify-content: space-between;
+    display: flex;
+    justify-content: center; /* 왼쪽과 오른쪽 여백을 동일하게 만들어 중앙 정렬 */
+    align-items: center; /* 수직 방향 중앙 정렬 */
+    border-bottom: 2px solid whitesmoke; 
+    height: 780px; 
 }
   
 .subContainer2-2-left {
-    flex: 4; /* 플렉스 비율 설정 */
-    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
+    /* flex: 4; */
+    border-right: none; /* 오른쪽 테두리 제거 */
+    overflow-y: auto; 
+    background-color: rgb(255, 255, 255); 
     
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    background-color: rgb(255, 255, 255); /* 배경색 설정 */
-    padding-top: 30px;
-    padding-left: 30px;
+    display: flex; /* 플렉스 박스 사용 */
+  border: 5px solid rgb(212, 212, 212); /* 테두리 색상과 두께 설정 */
+  border-radius: 15px; /* 모서리를 둥글게 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 추가 */
+  padding: 40px; /* 텍스트와 테두리 사이에 여백 추가 */
+  width: 500px;
+  height: 500px;
+  margin-left: 30px;
+  font-weight: bold;
 }
-  
+    
+
 
   
 
@@ -406,19 +438,13 @@ body {
 
  
 #btn1_h,
-#btn2_h{
+#btn3_h{
     height: 100px; /* 높이 설정 */
     width: 255px; /* 너비 설정 */
     font-size: 30px; /* 글자 크기 설정 */
-    
+    font-weight: bold;
+}
 
-}
-#btn3_h,
-#btn4_h{
-    height: 100px; /* 높이 설정 */
-    width: 255px; /* 너비 설정 */
-    font-size: 30px; /* 글자 크기 설정 */
-}
 #btn1_h{
   margin-left: 240px; 
   margin-right: 240px;
@@ -441,6 +467,8 @@ body {
   /* margin-left: 200px; 
   margin-right: 145px; */
   border-radius: 50px;
+  padding-bottom: -15px;
+  
 }
 
 /*.subContainer2-5 .button2,#btn4_h{
@@ -449,10 +477,23 @@ body {
   cursor: pointer;
 } */
 .user_profile {
-    height: 30px; /* 높이 설정 */
-    width: 80px; /* 너비 설정 */
-    font-size: 15px; /* 글자 크기 설정 */
+	border: 5px solid rgb(250, 97, 5); /* 주황색 테두리 (색상은 RGB 값을 사용했습니다) */
+	border-radius: 50px; /* 모서리를 둥글게 설정 */
+	padding: 10px 30px; /* 버튼 내부 여백을 줘서 모양을 예쁘게 만듦 */
+	background-color: white; /* 배경색 설정 */
+	color: black; /* 글자 색 설정 */
+	font-weight: bold; /* 글자 굵게 */
+	cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* 호버 효과를 위한 전환 효과 */
+	height: 50px; /* 높이 설정 */
+	width: auto; /* 너비 설정 */
+	font-size: 15px; /* 글자 크기 설정 */
 }
+
+.user_profile:hover {
+	background-color: rgb(250, 97, 5); /* 호버 시 배경색을 주황색으로 변경 */
+	color: white; /* 호버 시 글자 색을 흰색으로 변경 */
+  }
 
 .subContainer3-1{
   margin-top: 20px;
@@ -591,6 +632,8 @@ body {
 
 .subContainer2-2-left h3 {
   text-align: center;
+    font-size: 24px; /* 글자 크기를 원하는 만큼 키웁니다 (예: 28px) */
+    font-weight: bold; /* 글자 굵기를 좀 더 두껍게 */
 }
 
 .subContainer2-2-left {
