@@ -39,10 +39,10 @@ body {
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 270px; /* 너비 설정 */
 	background-color: rgb(255, 255, 255);
-    border-right: 2.5px solid #bfbfbf;
-    border-top: 2.5px solid #bfbfbf;
-    border-bottom: 2.5px solid #bfbfbf; /*박영호*/
-    border-left: 2.5px solid #bfbfbf;
+	border-right: 2.5px solid #bfbfbf;
+	border-top: 2.5px solid #bfbfbf;
+	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
+	border-left: 2.5px solid #bfbfbf;
 }
 
 #logo-wrapper {
@@ -67,7 +67,6 @@ body {
 	max-width: 100%; /* 로고 이미지의 최대 너비를 부모에 맞추기 */
 	max-height: 100%; /* 로고 이미지의 최대 높이를 부모에 맞추기 */
 }
-
 
 #profile {
 	margin: 0 auto; /* 중앙 정렬 */
@@ -103,8 +102,6 @@ body {
 	color: black; /* 글자 색상 변경 */
 }
 
-
-
 #sg_button {
 	width: 100px; /* 버튼 너비 설정 */
 	height: 50px; /* 버튼 높이 설정 */
@@ -117,8 +114,6 @@ body {
 	border: #4CAF50; /* 테두리 제거 */
 	border-radius: 10px; /* 테두리 둥글게 */
 }
-
-
 
 #sg_button {
 	background: gray;
@@ -208,7 +203,7 @@ body {
 	flex-direction: column; /* 세로 방향으로 정렬 */
 	background-color: rgb(255, 255, 255);
 	border-top: 2.5px solid #bfbfbf; /*박영호*/
-	border-bottom: 2.5px solid #bfbfbf; /*박영호*/	
+	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
 }
 
 .subContainer3 {
@@ -221,6 +216,7 @@ body {
 
 .subContainer2-1, .subContainer2-5 {
 	/*border-bottom: 2px solid #ff7144;; /* 하단 테두리 설정 */
+	
 }
 
 .subContainer2-1 {
@@ -245,10 +241,10 @@ body {
 	position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
 	height: 100%; /* 부모 요소에 맞게 높이 설정 */
 	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
-	border-left: 2.5px solid #bfbfbf; /*박영호*/		
-
+	border-left: 2.5px solid #bfbfbf; /*박영호*/
 }
-	
+
+
 .subContainer2-2-right {
 	flex: 6; /* 오른쪽 영역의 비율을 6으로 설정 */
 	overflow-x: hidden; /* 세로 스크롤 활성화 */
@@ -259,8 +255,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
-
-
 }
 
 .subContainer2-2-right img {
@@ -317,8 +311,14 @@ body {
 	font-weight: bold;
 }
 
-#btn1, #btn2, #btn3, #btn4, #btn5 {
+#btn1, #btn2, #btn3, #btn4 {
 	background: #fff;
+	border: 5px solid gray;
+	color: black;
+}
+
+#btn5 {
+	background: #bfbfbf;
 	border: 5px solid gray;
 	color: black;
 }
@@ -369,7 +369,7 @@ body {
 	font-size: 20px; /* 글자 크기 설정 */
 }
 
-#btn3_h{
+#btn3_h {
 	background: #fff;
 	border-top: 5px solid gray;
 	border-left: 5px solid gray;
@@ -377,15 +377,13 @@ body {
 	color: gray;
 }
 
-
-#btn4_h{
+#btn4_h {
 	background: #fff;
 	border-top: 5px solid gray;
 	border-right: 5px solid gray;
 	border-bottom: 5px solid gray;
 	color: gray;
 }
-
 
 #btn3_h:hover, #btn4_h:hover {
 	background: #ff5100e1;

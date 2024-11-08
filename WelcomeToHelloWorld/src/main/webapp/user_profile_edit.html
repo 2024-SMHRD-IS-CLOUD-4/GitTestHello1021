@@ -2,64 +2,92 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>헬로핑 변경</title>
-  <style>
-        .text-display {
-      white-space: pre-line;
-      /* 줄바꿈이 적용되도록 설정 */
-    }
-
-  </style>
-  <link rel="stylesheet" href="css/user_profile_edit.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>헬로핑 변경</title>
+<style>
+.text-display {
+	white-space: pre-line;
+	/* 줄바꿈이 적용되도록 설정 */
+}
+</style>
+<link rel="stylesheet" href="css/user_profile_edit.css">
 </head>
 
 <body>
-  <div class="container" id="container">
+	<div class="container" id="container">
 
-    <section class="subContainer3" align="center">subContainer3<br>
-      <button id=""><img id="logo" src="img/로고1.png"></button>
-      <button id="profile" type="submit"><img id="nickname" src="img/P_Ping.png" align="center">활동가 닉네임</button>
+		<section class="subContainer3" align="center">
+			<br>
+			<div id="logo-wrapper">
+				<img src="img/로고1.png" alt="로고 이미지" id="logo-image">
+			</div>
+			<button id="profile" type="submit">
+				<img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님
+			</button>
 
-      <div class="subContainer3-1"></div>
-      <div class="subContainer3-2"></div>
-    </section>
+			<div class="subContainer3-1"></div>
+		</section>
 
-    <section class="subContainer2">
-      <div class="subContainer2-1">
-        <br>
-        <div id="search">
-          <input class="search-input" type="text" placeholder="검색어를 입력하세요...">
-          <button class="search-button">검색🔍</button>
-        </div>
-      </div>
+		<section class="subContainer2">
 
-      <div class="subContainer2-2">
-        <div class="subContainer2-2-right" align="center" id="subContainer2_2_right">
-          <h3 align="center">헬로핑을 선택하세요</h3>
-          <div class="image-feed">
-            <!-- Example images; replace with your image sources -->
-             <div class="image-item"><img src="img/1.빨핑.png" alt="Image 1" id="image1" onclick="selectImage('image1')"></div>
-             <div class="image-item"><img src="img/2.노핑.png" alt="Image 2" id="image2" onclick="selectImage('image2')"></div>
-             <div class="image-item"><img src="img/3.초핑.png" alt="Image 3" id="image3" onclick="selectImage('image3')"></div>
-             <div class="image-item"><img src="img/4.파핑.png" alt="Image 4" id="image4" onclick="selectImage('image4')"></div>
-             <div class="image-item"><img src="img/5.보핑.png" alt="Image 5" id="image5" onclick="selectImage('image5')"></div>
-             <div class="image-item"><img src="img/6.연핑.png" alt="Image 6" id="image6" onclick="selectImage('image6')"></div>
-             
-             <div class="image-item"><img src="img/7.진핑.png" alt="Image 7" id="image7" onclick="selectImage('image7')"></div>
-             <div class="image-item"><img src="img/8.초핑.png" alt="Image 8" id="image8" onclick="selectImage('image8')"></div>
-             <div class="image-item"><img src="img/9.남핑.png" alt="Image 9" id="image9" onclick="selectImage('image9')"></div>
-             <div class="image-item"><img src="img/10.블핑.png" alt="Image 10" id="image10" onclick="selectImage('image10')"></div>
-     
-           </div>
-        </div>
-        </div>
 
-        <!-- <div class="subContainer2-2-left" id="subContainer2_2_left">
+			<div class="subContainer2-2">
+				<div class="subContainer2-2-right" align="center"
+					id="subContainer2_2_right">
+					<h3 align="center">헬로핑을 선택하세요</h3>
+					<div class="image-feed">
+						<!-- Example images; replace with your image sources -->
+						<div class="image-item">
+							<img src="img/1.빨핑.png" alt="Image 1" id="image1"
+								onclick="selectImage('image1')">
+						</div>
+						<div class="image-item">
+							<img src="img/2.노핑.png" alt="Image 2" id="image2"
+								onclick="selectImage('image2')">
+						</div>
+						<div class="image-item">
+							<img src="img/3.초핑.png" alt="Image 3" id="image3"
+								onclick="selectImage('image3')">
+						</div>
+						<div class="image-item">
+							<img src="img/4.파핑.png" alt="Image 4" id="image4"
+								onclick="selectImage('image4')">
+						</div>
+						<div class="image-item">
+							<img src="img/5.보핑.png" alt="Image 5" id="image5"
+								onclick="selectImage('image5')">
+						</div>
+						<div class="image-item">
+							<img src="img/6.연핑.png" alt="Image 6" id="image6"
+								onclick="selectImage('image6')">
+						</div>
+
+						<div class="image-item">
+							<img src="img/7.진핑.png" alt="Image 7" id="image7"
+								onclick="selectImage('image7')">
+						</div>
+						<div class="image-item">
+							<img src="img/8.초핑.png" alt="Image 8" id="image8"
+								onclick="selectImage('image8')">
+						</div>
+						<div class="image-item">
+							<img src="img/9.남핑.png" alt="Image 9" id="image9"
+								onclick="selectImage('image9')">
+						</div>
+						<div class="image-item">
+							<img src="img/10.블핑.png" alt="Image 10" id="image10"
+								onclick="selectImage('image10')">
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="subContainer2-2-left" id="subContainer2_2_left">
           <h3 align="right">❤</h3>
           <div class="image-feed2"> -->
-          <!-- <form id="profileEditForm">
+			<!-- <form id="profileEditForm">
             <div class="form-group">
               <label for="nickname">닉네임</label>
               <input type="text" id="nickname" name="nickname"><br>
@@ -74,36 +102,37 @@
             </div>
             <button type="submit" id="success">수정 완료</button>
           </form> -->
-      
 
-      <div class="subContainer2-5">
-        <div class="subContainer2-5-left" id="2-5-l"><br>
-          <button id="btn1_h">변경하기</button>
-          <!-- <button id="btn2_h">댓글달기 💬</button> -->
-        </div>
-        <div class="subContainer2-5-right" id="2-5-r"><br>
-          <button id="btn3_h">돌아가기</button>
-          <!-- <button id="btn4_h">▶</button> -->
-        </div>
-      </div>
-    </section>
 
-    <section class="subContainer1" id="subContainer1"><br>
-      <div class="image-container">
-        <img src="img/pping.png" width="500px" height="" id="image">
-        <div class="speech-container">
-          <div class="speech-bubble">
-            여기에 말풍선 내용
-          </div>
-          <div class="circle1"></div>
-          <div class="circle2"></div>
-          <div class="circle3"></div>
-        </div>
-      </div>
-    </section>
+			<div class="subContainer2-5">
+				<div class="subContainer2-5-left" id="2-5-l">
+					<br>
+					<button id="btn1_h">변경하기</button>
+					<!-- <button id="btn2_h">댓글달기 💬</button> -->
+				</div>
+				<div class="subContainer2-5-right" id="2-5-r">
+					<br>
+					<button id="btn3_h">돌아가기</button>
+					<!-- <button id="btn4_h">▶</button> -->
+				</div>
+			</div>
+		</section>
 
-  </div>
+		<section class="subContainer1" id="subContainer1">
+			<br>
+			<div class="image-container">
+				<img src="img/pping.png" width="500px" height="" id="image">
+				<div class="speech-container">
+					<div class="speech-bubble">여기에 말풍선 내용</div>
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+				</div>
+			</div>
+		</section>
 
-  <script src="js/user_profile_edit.js"></script>
+	</div>
+
+	<script src="js/user_profile_edit.js"></script>
 </body>
 </html>

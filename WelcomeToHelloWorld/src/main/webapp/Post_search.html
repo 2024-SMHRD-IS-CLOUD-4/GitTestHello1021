@@ -2,121 +2,125 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post_search.html</title>
-  <style>
-    .text-display {
-      white-space: pre-line;
-      /* 줄바꿈이 적용되도록 설정 */
-    }
-  </style>
-  <link rel="stylesheet" href="css/Post_search.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post_search.html</title>
+<style>
+.text-display {
+	white-space: pre-line;
+	/* 줄바꿈이 적용되도록 설정 */
+}
+</style>
+<link rel="stylesheet" href="css/Post_search.css">
 
 </head>
 
 <body>
-  <div class="container" id="container">
+	<div class="container" id="container">
 
-    <section class="subContainer3" align="center"><br>
-      <button id=""><img id="logo" src="img/로고1.png"></button>
-      <button id="profile" type="submit"><img id="nickname" src="img/P_Ping.png" align="center">활동가 닉네임</button>
+		<section class="subContainer3" align="center">
+			<br>
+			<div id="logo-wrapper">
+				<img src="img/로고1.png" alt="로고 이미지" id="logo-image">
+			</div>
+			<button id="profile" type="submit">
+				<img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님
+			</button>
 
-      <br>
-      <div class="subContainer3-1"></div>  
-      <div class="subContainer3-2"></div>
-    </section>
+			<br>
+			<div class="subContainer3-1"></div>
+			<div class="subContainer3-2"></div>
+		</section>
 
-    <section class="subContainer2">
-      <div class="subContainer2-1"><br>
-        <div id="search">
-          <input class="search-input" type="text" id="searchQuery" placeholder="검색어를 입력하세요...">
-          <button class="search-button" onclick="performSearch()">검색🔍</button>
-        </div>
-      </div>
-      
-      <div class="subContainer2-2">
-        <!-- Display large image only in 게시물 정보 section -->
-        <div class="subContainer2-2-right">
-          <h3>게시물 사진</h3>
-          <div id="largeImageContainer">
-            <img id="largeImage" src="" alt="게시물 이미지" style="display: none;">
-          </div>
-        </div>
+		<section class="subContainer2">
 
-        <!-- 게시물 정보 table and search form -->
-        <div class="subContainer2-2-left">
-          <h3>게시물 목록</h3>
-          <!-- Moved Table Here -->
-          <table id="dataTable">
-            <thead>
-              <tr>
-                <th>순번</th>
-                <th>작성자</th>
-                <th>작성일자</th>
-	
-                <th>게시물</th>
-              </tr>
-            </thead>
-            <tbody id="tableBody">
-              <!-- JavaScript will populate table rows here -->
-            </tbody>
-          </table>
+			<div class="subContainer2-2">
+				<!-- Display large image only in 게시물 정보 section -->
+				<div class="subContainer2-2-right">
+					<h3>게시물 사진</h3>
+					<div id="largeImageContainer">
+						<img id="largeImage" src="" alt="게시물 이미지" style="display: none;">
+					</div>
+				</div>
 
-          <h3>게시글 검색</h3>
-          <div class="form-group">
-            <label for="author">작성자:</label>
-            <input type="text" id="author" placeholder="작성자 검색">
-        </div>
-        <div class="form-group">
-            <label for="date">작성일자:</label>
-            <input type="text" id="date" placeholder="YYYY-MM-DD 형식">
-        </div>
-        <div class="form-group">
-            <label for="content">게시물:</label>
-            <input type="text" id="content" placeholder="게시물 검색">
-        </div>
-        <div class="form-group">
-            <label for="photo">업로드된 사진:</label>
-            <select id="photo">
-                <option>Photo for Example Post 1</option>
-                <!-- 다른 옵션들 추가 -->
-            </select>
-        </div>
-        <button type="button" onclick="filterTable()">조회</button>
-          </form>
-        </div>
-      </div>
+				<!-- 게시물 정보 table and search form -->
+				<div class="subContainer2-2-left">
+					<h3>게시물 목록</h3>
+					<!-- Moved Table Here -->
+					<table id="dataTable">
+						<thead>
+							<tr>
+								<th>순번</th>
+								<th>작성자</th>
+								<th>작성일자</th>
 
-      <div class="subContainer2-5">
-        <div class="subContainer2-5-left" id="2-5-l"><br>
-        </div>
-        
-        <div class="subContainer2-5-right" id="2-5-r"><br>
-        </div>
-      </div>
-    </section>
+								<th>게시물</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+							<!-- JavaScript will populate table rows here -->
+						</tbody>
+					</table>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h3>게시글 검색</h3>
+					<div class="form-group">
+						<label for="author">작성자:</label> <input type="text" id="author"
+							placeholder="작성자 검색">
+					</div>
+					<div class="form-group">
+						<label for="date">작성일자:</label> <input type="text" id="date"
+							placeholder="YYYY-MM-DD 형식">
+					</div>
+					<div class="form-group">
+						<label for="content">게시물:</label> <input type="text" id="content"
+							placeholder="게시물 검색">
+					</div>
+					<div class="form-group">
+						<label for="photo">업로드 사진:</label> <select id="photo">
+							<option>Photo for Example Post 1</option>
+							<!-- 다른 옵션들 추가 -->
+						</select>
+					</div>
+					<button type="button" onclick="filterTable()">조회</button>
+					</form>
+				</div>
 
 
-    <!-- 1번 옮김 -->
+			</div>
 
-    <section class="subContainer1">
-      <br>
-      <div class="image-container">
-        <img src="img/pping.png" width="500px" height="" id="image">
-        <div class="speech-container">
-          <div class="speech-bubble">
-            여기에 말풍선 내용
-          </div>
-          <div class="circle1"></div>
-          <div class="circle2"></div>
-          <div class="circle3"></div>
-        </div>
-      </div>
-    </section>
-  </div>
+			<div class="subContainer2-5">
+				<div class="subContainer2-5-left" id="2-5-l">
+					<br>
+				</div>
 
-  <script src="js/Post_search.js"></script>
+				<div class="subContainer2-5-right" id="2-5-r">
+					<br>
+					<button id="btn2_h">뒤로가기 💬</button>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- 1번 옮김 -->
+
+		<section class="subContainer1">
+			<br>
+			<div class="image-container">
+				<img src="img/pping.png" width="500px" height="" id="image">
+				<div class="speech-container">
+					<div class="speech-bubble">여기에 말풍선 내용</div>
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="js/Post_search.js"></script>
 </body>
 
 </html>

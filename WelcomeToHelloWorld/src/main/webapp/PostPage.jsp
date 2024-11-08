@@ -22,26 +22,27 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 		<section class="subContainer3" align="center">
 			<br>
-			<button id="">
-				<img id="logo" src="img/로고1.png">
-			</button>
+			<div id="logo-wrapper">
+				<img src="img/로고1.png" alt="로고 이미지" id="logo-image">
+			</div>
 			<button id="profile" type="submit">
 				<img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님
 			</button>
 
 			<br>
-<div class="subContainer3-1">
-				
+			<div class="subContainer3-1">
+
 				<%
-			if (memer.getU_type().substring(0, 4).equals("USER")) {
-			%>
+				if (memer.getU_type().substring(0, 4).equals("USER")) {
+				%>
 				<button id="btn1" style="border-radius: 30px; cursor: pointer;">글
 					작성하기</button>
 				<button id="btn2" style="border-radius: 30px; cursor: pointer;">글
 					수정하기</button>
 				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
 					편집하기</button>
-				<button id="btn4" style="border-radius: 30px; cursor: pointer;">보류^^</button>
+				<button id="btn4" style="border-radius: 30px; cursor: pointer;">
+				</button>
 
 				<%
 				}
@@ -60,19 +61,9 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 </style>
 
 
-		<form id="postForm" action="PostController1" method="post" enctype="multipart/form-data">
+		<form id="postForm" action="PostController1" method="post"
+			enctype="multipart/form-data">
 			<section class="subContainer2">
-				<div class="subContainer2-1">
-					<br>
-					<div class="search">
-						<input class="search-input" type="text"
-							placeholder="검색어를 입력하세요...">
-						<button class="search-button">검색🔍</button>
-					</div>
-
-
-				</div>
-
 
 				<div class="subContainer2-2">
 					<div class="subContainer2-2-right" align="center">
@@ -82,29 +73,34 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						</div>
 
 						<!-- 파일 입력 (숨김 처리) -->
-						<input type="file" id="imageUpload" name="imageUpload" accept="image/*"
-							style="display: none;" />
+						<input type="file" id="imageUpload" name="imageUpload"
+							accept="image/*" style="display: none;" />
 					</div>
+
 					<div class="subContainer2-2-left">
 						<div class="post" style="font-size: 20px; font-weight: bold;">
 
-							<div class="subContainer2-2-left">
-								<div class="text-box"
-									style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; background-color: #f9f9f9; max-width: 400px;">
-									<button class="user_profile" type="submit"
-										style="font-weight: bold; background: none; border: none; cursor: pointer; color: #007bff;"
-										align="left">@지수핑</button>
-									<br> <br>
-									<textarea id="textarea" name="textarea" placeholder="텍스트를 입력하세요..."
-										style="width: 100%; height: 300px; font-size: 16px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-								</div>
-							</div>
+							<br>
+							<p type='text' style="position: relative;">
+								<button class="user_profile" type="submit" align="left">
+									<img id="miniping" src="img/P_Ping.png" align="center">지숭님
+								</button>
+
+								<span id="postDate" style="margin-left: 30px;"></span>
+
+								<!-- 날짜가 표시될 부분 -->
+								📆 <span class="orange-line"></span> <br> 피곤하당 😴🥱
+							</p>
 
 
-							<button id="sg_button">신고하기</button>
 						</div>
 					</div>
-
+					<script>
+						// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
+						const postDate = new Date(); // 현재 날짜 및 시간 생성
+						const formattedDate = postDate.toISOString().split('T')[0]; // 날짜만 가져오도록 포맷
+						document.getElementById("postDate").innerText = formattedDate; // 날짜를 HTML에 추가
+					</script>
 				</div>
 
 
@@ -112,7 +108,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<br>
 					<button id="btn1_h" type="submit">작성하기 📝</button>
 					<button id="btn2_h" type="button">취소하기 ❌</button>
-					<button id="btn3_h" >◀</button>
+					<button id="btn3_h">◀</button>
 					<button id="btn4_h">▶</button>
 				</div>
 			</section>

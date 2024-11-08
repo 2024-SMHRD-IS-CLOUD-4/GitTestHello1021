@@ -25,9 +25,9 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 		<section class="subContainer3" align="center">
 			<br>
-			<button id="">
-				<img id="logo" src="img/로고1.png">
-			</button>
+			<div id="logo-wrapper">
+				<img src="img/로고1.png" alt="로고 이미지" id="logo-image">
+			</div>
 			<button id="profile" type="submit">
 				<img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님
 			</button>
@@ -48,15 +48,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 
 		<section class="subContainer2">
-			<div class="subContainer2-1">
-				<br>
-				<div id="search">
-					<input class="search-input" type="text" placeholder="검색어를 입력하세요...">
-					<button class="search-button">검색🔍</button>
-				</div>
 
-
-			</div>
 			<div class="subContainer2-2">
 				<div class="subContainer2-2-right" align="center">
 					<div class="image-feed"></div>
@@ -66,12 +58,31 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 				<div class="subContainer2-2-left">
 					<div class="post" style="font-size: 20px; font-weight: bold;">
-						ㅎㅇ
+
+						<br>
+						<p type='text' style="position: relative;">
+							<button class="user_profile" type="submit" align="left">
+								<img id="miniping" src="img/P_Ping.png" align="center">지숭님
+							</button>
+
+							<span id="postDate" style="margin-left: 30px;"></span>
+
+							<!-- 날짜가 표시될 부분 -->
+							📆 <span class="orange-line"></span> <br> 피곤하당 😴🥱
+						</p>
+
 						<!--<button id="sg_button">신고하기</button> -->
 					</div>
 				</div>
-
+				<script>
+					// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
+					const postDate = new Date(); // 현재 날짜 및 시간 생성
+					const formattedDate = postDate.toISOString().split('T')[0]; // 날짜만 가져오도록 포맷
+					document.getElementById("postDate").innerText = formattedDate; // 날짜를 HTML에 추가
+				</script>
 			</div>
+
+
 
 
 			<div class="subContainer2-5">
