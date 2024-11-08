@@ -471,6 +471,10 @@ body {
 	overflow-x: auto; /* Horizontal scroll */
 }
 
+.selected {
+  border-color: orange !important;
+}
+
 .subContainer2-2-right {
 	overflow-x: auto; /* Enables horizontal scrolling */
 	white-space: nowrap; /* Prevents line wrapping */
@@ -480,5 +484,8 @@ body {
 	width: 250px; /* Adjust to desired image width */
 	height: 250px; /* Adjust to desired image height */
 	object-fit: cover; /* Keeps aspect ratio while filling the frame */
-	border-radius: 10px; /* Optional: rounded corners for images */
+	border-radius: 10px;/* Optional: rounded corners for images */
+	cursor: pointer;
+	display: inline-block;
+	transition: border 0.3s ease;
 }
