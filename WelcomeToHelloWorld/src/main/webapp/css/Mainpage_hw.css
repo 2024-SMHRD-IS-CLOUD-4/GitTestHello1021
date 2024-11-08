@@ -53,7 +53,7 @@ body {
 	display: flex;
 	justify-content: center; /* 수평 가운데 정렬 */
 	align-items: flex-start; /* 수직 상단 정렬 */
-	background-color: white; /* 배경색 설정 */
+	background-color: #efefef; /* 배경색 설정 */
 	border-radius: 10px; /* 모서리를 둥글게 설정 */
 	margin: 0 auto; /* 수평 중앙 정렬 */
 	margin-top: -10px; /* 상단 마진 조정으로 로고를 위로 올림 */
@@ -211,8 +211,10 @@ body {
 .subContainer3 {
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 300px; /* 너비 설정 */
-/*	border-style: solid;
-/*	border: 2.5px solid #bfbfbf; /*박영호*/
+	border: 2.5px solid #bfbfbf;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
 }
 
 
@@ -221,8 +223,7 @@ body {
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
 	height: 1500px; /* 높이 설정 */
-	border-radius: 50px;
-	border: 2.5px solid #bfbfbf;
+
 	
 }
 
@@ -236,9 +237,10 @@ body {
 	width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
 	position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
 	height: 100%; /* 부모 요소에 맞게 높이 설정 */
-	border-bottom-right-radius: 50px;
+	border: 2.5px solid #bfbfbf;
 	border-top-right-radius: 50px;
-	/* border-left:0px solid #bfbfbf; */
+	border-bottom-right-radius: 50px;
+	border-left:none;
 	
 }
 
@@ -252,9 +254,9 @@ body {
 	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
 	justify-content: center;
 	align-items: center;
-	border-bottom-left-radius: 50px;
-	border-top-left-radius: 50px;
-	/* border-right: 2.5px solid #bfbfbf; */
+	border-top: 2.5px solid #bfbfbf;
+	border-bottom: 2.5px solid #bfbfbf;
+
 
 }
 
@@ -393,7 +395,7 @@ body {
 
 #btn3_h:active, #btn4_h:active {
 	background: #ff5100e1;
-	border: 5px solid gray;
+	border: 5px solid white;
 }
 
 #btn1_h, #btn2_h {
@@ -409,9 +411,8 @@ body {
 }
 
 #btn1_h:active, #btn2_h:active {
-	background: #ff5100e1; /* 배경색 흰색 */
-	border-color: #ff5100e1; /* 테두리 오렌지 색상 */
-	color: black; /* 글씨 색 검정색으로 유지 */
+	background: #ff5100e1;
+	border: 5px solid white;
 }
 
 /* .subContainer2-1{
@@ -453,6 +454,7 @@ body {
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
 	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 /*.subContainer2-5 .button2, */
@@ -460,7 +462,8 @@ body {
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
 	cursor: pointer;
-	margin-left:-5px;
+	margin-left: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 #curiousButton {
@@ -515,6 +518,7 @@ body {
 
 .subContainer3-1 {
 	height: 450px;
+
 }
 
 .subContainer3-2 {
@@ -541,5 +545,31 @@ body {
     height: 400px; /* 높이 조정 가능 */
     resize: vertical; /* 세로 크기 조정 가능 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
+}
+
+.container {
+   display: flex; /* 플렉스 박스 설정 */
+   position: relative; /* 귀의 절대 위치 조정을 위해 상대 위치 설정 */
+}
+
+.container::before, .container::after {
+   content: "";
+   margin-top: 20px;
+   position: absolute;
+   top: -130px; /* 귀의 상단 위치 조정 */
+   width: 130px;
+   height: 400px;
+   background: linear-gradient(to bottom, #ffffff, #ffffff);
+   border-radius: 120px 120px 0 0; /* 상단만 둥글게 */
+   z-index: -1; /* 귀를 뒤로 보내기 */
+   border: 60px solid #ff5100e1; /* 테두리 색상과 두께 설정 */
+}
+
+.container::before {
+   left: 400px; /* 왼쪽 귀 위치 */
+}
+
+.container::after {
+   right: 400px; /* 오른쪽 귀 위치 */
 }
 

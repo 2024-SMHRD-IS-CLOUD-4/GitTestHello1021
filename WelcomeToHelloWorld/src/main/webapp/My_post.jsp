@@ -50,7 +50,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 		<section class="subContainer2">
 
 			<div class="subContainer2-2">
-				<div class="subContainer2-2-right" align="center">
+				<div class="subContainer2-2-right" id="subContainer2_2_right"align="center">
 					<div class="image-feed"></div>
 				</div>
 
