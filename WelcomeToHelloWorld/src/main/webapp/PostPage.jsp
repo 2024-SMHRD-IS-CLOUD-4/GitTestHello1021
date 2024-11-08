@@ -61,7 +61,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<section class="subContainer2">
 
 				<div class="subContainer2-2">
-					<div class="subContainer2-2-right" align="center">
+					<div class="subContainer2-2-right" id="subContainer2_2_right"align="center">
 						<br>
 						<div id="image-container">
 							<img id="imageimage" src="img/test.png" alt="미리보기 이미지" />
@@ -113,7 +113,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 		<!-- 1번 옮김 -->
 
-		<section class="subContainer1">
+		<section class="subContainer1" id="subContainer1">
 			<br>
 			<div class="image-container">
 				<img src="img/pping.png" width="500px" height="" id="image">

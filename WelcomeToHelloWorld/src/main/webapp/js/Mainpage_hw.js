@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	    image:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 	    search:"검색 버튼 !!",
 	    success:"비밀번호를 <br> 정확하게 입력하시면 <br> 프로필 수정을 <br> 완료합니다!",
-	    subContainer2_2_right:"변경하고 싶은 <br> 헬로핑을 선택하세요!",
 	    curiousButton:"이 사진에 대해 <br><br> 궁금하시다면 <br><br> 제가 직접<br><br> 찾아드릴게요!"
 	 
 
@@ -31,22 +30,22 @@ document.addEventListener('DOMContentLoaded', function() {
 	speechContainer.style.opacity = 1;
 
 	// 각 항목에 마우스 올리면 설명 표시 (줄바꿈 처리 추가)
-	const items = document.querySelectorAll('.image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn1_h, .profile');
+	const items = document.querySelectorAll('#profile, .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, .profile');
 	items.forEach(item => {
-		item.addEventListener('mouseenter', function() {
-			const buttonId = item.id;
-			if (buttonTexts[buttonId]) {
-				const textWithBr = buttonTexts[buttonId].replace(/\n/g, '<br>');
-				speechBubble.innerHTML = textWithBr;
-			}
-			speechContainer.style.opacity = 1;
-		});
-
-		item.addEventListener('mouseleave', function() {
-			speechContainer.style.opacity = 0;
-		});
+	item.addEventListener('mouseenter', function() {
+	const buttonId = item.id;
+	if (buttonTexts[buttonId]) {
+	const textWithBr = buttonTexts[buttonId].replace(/\n/g, '<br>');
+	speechBubble.innerHTML = textWithBr;
+	}
+	speechContainer.style.opacity = 1;
 	});
-});
+
+	item.addEventListener('mouseleave', function() {
+	speechContainer.style.opacity = 0;
+	});
+	});
+	});
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn5").addEventListener("click", function() {
 		window.location.href = "LogoutController1"; // 이동할 URL

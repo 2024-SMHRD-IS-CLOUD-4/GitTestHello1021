@@ -74,9 +74,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					작성하기</button>
 				<button id="btn2" style="border-radius: 30px; cursor: pointer;">내
 					게시물 보기</button>
-				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
-					편집하기</button>
-				<button id="btn4" style="border-radius: 30px; cursor: pointer;">보류^^</button>
+				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글 검색하기</button>
+				<button id="btn4" style="border-radius: 30px; cursor: pointer;"> </button>
 
 				<%
 				}
@@ -107,16 +106,16 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<div class="post" style="font-size: 20px; font-weight: bold;">
 
 						<br>
-						<p type='text' style="position: relative;">
+						<p type='text' style="position: relative; top: -30px;">
 							<button class="user_profile" type="submit" align="left">
-								<img id="miniping" src="img/P_Ping.png" align="center">지숭님
+								<img id="miniping" src="img/P_Ping.png" align="center">글쓴이
 							</button>
 
-							<span id="postDate" style="margin-left: 30px;"></span>
+							<span id="postDate" style="margin-left: 30px;" ></span>
 
 							<!-- 날짜가 표시될 부분 -->
-							📆 <span class="orange-line"></span> <br> 피곤하당 😴🥱 <input
-								type="text" id="targetPost" placeholder="" readonly>
+							📆 <span class="orange-line"></span> <br>
+							<input type="text" id="targetPost" placeholder="" readonly>
 						</p>
 						<button id="sg_button">신고하기</button>
 					</div>
