@@ -41,21 +41,16 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					수정하기</button>
 				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
 					편집하기</button>
-				<button id="btn4" style="border-radius: 30px; cursor: pointer;">
-				</button>
 
 				<%
 				}
 				%>
 			</div>
 			<div class="subContainer3-2">
-				<button id="btn5" style="border-radius: 30px; cursor: pointer;">
-					활동종료<br>(로그아웃)
-				</button>
 		</section>
 
 		<style>
-#btn1, #btn2, #btn3, #sg_button, #btn3_h, #btn4_h {
+#btn1, #btn2, #btn3, #btn4, #sg_button, #btn3_h, #btn4_h, #btn5 {
 	display: none;
 }
 </style>
@@ -79,21 +74,23 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 					<div class="subContainer2-2-left">
 						<div class="post" style="font-size: 20px; font-weight: bold;">
-
 							<br>
-							<p type='text' style="position: relative;">
+							<p type='text' style="position: relative; top: -50px;">
 								<button class="user_profile" type="submit" align="left">
 									<img id="miniping" src="img/P_Ping.png" align="center">지숭님
 								</button>
-
 								<span id="postDate" style="margin-left: 30px;"></span>
-
 								<!-- 날짜가 표시될 부분 -->
-								📆 <span class="orange-line"></span> <br> 피곤하당 😴🥱
+								📆 <span class="orange-line"></span> <br>
 							</p>
-
-
 						</div>
+
+
+						<!-- 텍스트 입력용 박스 추가 -->
+
+
+						<textarea id="textarea" name="textarea" placeholder="글을 작성하세요..."
+							style="width: 100%; margin-top: -55px; height: 515px; font-size: 24px; padding: 0px; border: 5px solid #GRAY; border-radius: 8px; resize: vertical;"></textarea>
 					</div>
 					<script>
 						// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
