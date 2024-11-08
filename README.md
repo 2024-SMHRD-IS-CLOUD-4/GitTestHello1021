@@ -76,6 +76,7 @@
   14. 2024/11/07(목) 23:13 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js, Mainpage_hw.jsp
   15. 2024/11/08(금) 09:27 | 지수핑 ==> |**UPDATE**|My_post.html , My_post.css
   16. 2024/11/08(금) 09:45 | 영호핑 ==> 페이지 레이아웃 전체 적용
+  17. 2024/11/08(금) 12:02 | 지수핑 ==> |**UPDATE**| My_post.css => 2-2-right 아래 테두리 추가용 ~
 
   
 </details>
