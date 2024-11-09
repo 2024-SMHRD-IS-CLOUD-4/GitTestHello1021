@@ -206,7 +206,7 @@ body {
     border-top: 5px solid #ff5100; /* 상단 테두리 */
     border-bottom: 5px solid #ff5100; /* 하단 테두리 */
     border-left: 5px solid #ff5100; /* 왼쪽 테두리 */
-    border-right: 2px solid gray; /* 오른쪽 테두리만 2px로 설정 */
+    border-right: 2px solid #cbcbcb; /* 오른쪽 테두리만 2px로 설정 */
 
     border-top-left-radius: 50px; /* 좌측 상단 모서리 둥글게 */
     border-bottom-left-radius: 50px; /* 좌측 하단 모서리 둥글게 */
@@ -219,6 +219,7 @@ body {
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
 	height: 700px; /* 높이 설정 */
+	width: 1250px;
 }
 
 .subContainer2-2-left {
@@ -234,7 +235,7 @@ body {
 	border: 5px solid #ff5100e1;
 	border-top-right-radius: 50px;
 	border-left:none;
-	border-bottom: 2px solid gray;
+	border-bottom:none;
 }
 
 .subContainer2-2-right {
@@ -244,15 +245,11 @@ body {
 	background-color: #ffffff; /* 배경색 설정 */
 	padding: 20px;
     align-content:center ;
-    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
-    border-bottom: 2.5px solid #bfbfbf; /* 아래쪽 테두리 설정 */
-    white-space: nowrap; /* Prevents line wrapping */
-	border-right: 2.5px solid #bfbfbf; /*박영호*/
 	text-align: center; /* 텍스트를 중앙 정렬 */
 	font-size: 20px; /* 원하는 폰트 크기로 수정 */
     font-weight: bold; /* 강조 효과를 주기 위해 굵게 설정 */
+    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
 	border-top: 5px solid #ff5100e1;
-	border-bottom: 2px solid gray;
 }
 
 .subContainer2-5 {
@@ -263,7 +260,7 @@ body {
 	border: 5px solid #ff5100e1;
 	border-bottom-right-radius: 50px;
 	border-left:none;
-	border-top:none;
+	border-top: 2px solid #cbcbcb;
 }
 
 .subContainer2-5-left {

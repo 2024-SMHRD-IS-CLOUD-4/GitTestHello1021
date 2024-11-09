@@ -16,11 +16,12 @@ body {
 	margin: 0; /* 기본 여백 제거 */
 	width: 100%;
 	box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
-/* 	overflow: hidden; /* 스크롤 제거 */
+	overflow: hidden; /* 스크롤 제거 */
 }
 
 .container {
 	display: flex; /* 플렉스 박스 설정 */
+	
 	
 }
 
@@ -211,7 +212,7 @@ body {
     border-top: 5px solid #ff5100; /* 상단 테두리 */
     border-bottom: 5px solid #ff5100; /* 하단 테두리 */
     border-left: 5px solid #ff5100; /* 왼쪽 테두리 */
-    border-right: 2px solid gray; /* 오른쪽 테두리만 2px로 설정 */
+    border-right: 2px solid #cbcbcb; /* 오른쪽 테두리만 2px로 설정 */
 
     border-top-left-radius: 50px; /* 좌측 상단 모서리 둥글게 */
     border-bottom-left-radius: 50px; /* 좌측 하단 모서리 둥글게 */
@@ -226,6 +227,7 @@ body {
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
 	height: 700px; /* 높이 설정 */
+	width: 1250px;
 
 	
 }
@@ -243,7 +245,7 @@ body {
 	border: 5px solid #ff5100e1;
 	border-top-right-radius: 50px;
 	border-left:none;
-	border-bottom: 2px solid gray;
+	border-bottom:none;
 	
 }
 
@@ -253,12 +255,11 @@ body {
 	overflow-x: hidden; /* 세로 스크롤 활성화 */
 	overflow-y: hidden; /* 세로 스크롤 활성화 */
 	background-color: rgb(255, 255, 255); /* 배경색 설정 */
-	padding: 0px; /* 여백 설정 */
+	padding: 20px; /* 여백 설정 */
 	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
 	justify-content: center;
 	align-items: center;
 	border-top: 5px solid #ff5100e1;
-	border-bottom: 2px solid gray;
 }
 
 .subContainer2-2-right img {
@@ -287,7 +288,7 @@ body {
 	border: 5px solid #ff5100e1;
 	border-bottom-right-radius: 50px;
 	border-left:none;
-	border-top:none;
+	border-top: 2px solid #cbcbcb;
 	
 }
 
