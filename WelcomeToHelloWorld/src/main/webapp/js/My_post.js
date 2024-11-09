@@ -89,54 +89,51 @@ function selectImage(selectedId) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-	// 페이지 로드 시 자동으로 이미지 불러오기
-	fetch("My_post_img_Controller")
-		.then(response => response.json())
-		.then(data => {
-			console.log(data); // JSON 응답을 출력하여 구조 확인
-			if (data.images && data.images.length > 0) {
-				const imageContainer = document.getElementsByClassName("image-feed")[0];
-				imageContainer.innerHTML = ''; // 기존 이미지를 지우기
+    // 페이지 로드 시 자동으로 이미지 불러오기
+    fetch("My_post_img_Controller")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // JSON 응답을 출력하여 구조 확인
+            if (data.images && data.images.length > 0) {
+                const imageContainer = document.getElementsByClassName("image-feed")[0];
+                imageContainer.innerHTML = ''; // 기존 이미지를 지우기
 
-				data.images.forEach((imageData, index) => {
-					if (imageData.contentType && imageData.base64Image) {
-						const imgElement = document.createElement('img');
-						imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
-						imgElement.alt = `Dynamic Image ${index + 1}`;
-						imgElement.id = `image${index + 1}`;
-						imgElement.classList.add('image-item'); // 이미지에 클래스 추가
+                data.images.forEach((imageData, index) => {
+                    if (imageData.contentType && imageData.base64Image) {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
+                        imgElement.alt = `Dynamic Image ${index + 1}`;
+                        imgElement.id = `image${index + 1}`;
+                        imgElement.classList.add('image-item'); // 이미지에 클래스 추가
 
-						// 이미지 클릭 시 selectImage 함수 실행
-						imgElement.addEventListener('click', () => {
-							console.log(`Image with ID: ${imgElement.id} clicked!`); // 디버깅: 클릭 확인용
-							console.log(imageData.file_rname); // 파일 이름
-							console.log(imageData.PostContent); // 해당 이미지의 내용
+                        // 이미지 클릭 시 selectImage 함수 실행
+                        imgElement.addEventListener('click', () => {
+                            console.log(`Image with ID: ${imgElement.id} clicked!`); // 디버깅: 클릭 확인용
+                            console.log(imageData.file_rname); // 파일 이름
+                            console.log(imageData.PostContent); // 해당 이미지의 내용
 
-							// 'pcontent' 요소를 찾아서 해당 내용으로 업데이트
-							const postContentElement = document.getElementById('pcontent');
-							if (postContentElement) {
-								postContentElement.innerHTML = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
-							} else {
-								// 만약 pcontent가 없다면 새로운 pcontent 요소 생성
-								const newPostContent = document.createElement('div');
-								newPostContent.id = 'pcontent'; // 아이디 'pcontent' 설정
-								newPostContent.innerHTML = imageData.PostContent; // PostContent 삽입
-								document.body.appendChild(newPostContent); // 문서의 body에 추가 (혹은 원하는 위치에 추가)
-							}
+                            // 'targetPost' textarea 요소를 찾아서 해당 내용으로 업데이트
+                            const targetPostElement = document.getElementById('targetPost');
+                            if (targetPostElement) {
+                                targetPostElement.value = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
+                            } else {
+                                console.error('Textarea element with id "targetPost" not found');
+                            }
 
-							selectImage(imgElement.id);  // 기존 함수 호출
-						});
+                            selectImage(imgElement.id);  // 기존 함수 호출
+                        });
 
-						// 이미지 컨테이너에 추가
-						imageContainer.appendChild(imgElement);
-					} else {
-						console.error(`Invalid image data at index ${index}`);
-					}
-				});
-			}
-		})
-		.catch(error => console.error("Error fetching the image:", error));
+                        // 이미지 컨테이너에 추가
+                        imageContainer.appendChild(imgElement);
+                    } else {
+                        console.error(`Invalid image data at index ${index}`);
+                    }
+                });
+            }
+        })
+        .catch(error => console.error("Error fetching the image:", error));
 });
+
 
 document.getElementById("btn3_h").addEventListener("click", function() {
 	window.location.href = "Mainpage_hw.jsp"; // 이동할 URL

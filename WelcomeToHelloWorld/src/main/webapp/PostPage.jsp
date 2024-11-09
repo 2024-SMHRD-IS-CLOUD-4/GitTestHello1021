@@ -90,7 +90,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 
 						<textarea id="textarea" name="textarea" placeholder="글을 작성하세요..."
-							style="width: 100%; margin-top: -55px; height: 515px; font-size: 24px; padding: 0px; border: 5px solid #GRAY; border-radius: 8px; resize: vertical;"></textarea>
+							style=" font-size: 24px; padding: 20px; width: 400px; height: 450px; resize: vertical;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-top: -30px; "></textarea>
 					</div>
 					<script>
 						// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드

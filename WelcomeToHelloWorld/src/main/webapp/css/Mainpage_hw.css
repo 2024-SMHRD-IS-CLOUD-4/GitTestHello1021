@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-	font-family: 'HANBatang';
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.woff')
-		format('woff');
-	font-style: normal;
-}
-
 * {
 	font-family: 'Malgun Gothic';
 	font-style: normal;
@@ -15,7 +7,7 @@
 
 body {
 	transform: scale(0.9); /* 90% 크기로 축소 */
-    transform-origin: center; /* 축소 기준을 페이지 중앙으로 설정 */
+    transform-origin: bottom; /* 축소 기준을 페이지 중앙으로 설정 */
 	display: flex; /* 플렉스 박스 사용 */
 	justify-content: center; /* 가로 중앙 정렬 */
 	align-items: center; /* 세로 중앙 정렬 */
@@ -29,9 +21,11 @@ body {
 
 .container {
 	display: flex; /* 플렉스 박스 설정 */
+	
 }
 
-.subContainer1, .subContainer2, .subContainer3 {
+
+.subContainer1, .subContainer2 {
 	/* padding: 10px; /* 패딩 설정 */
 	height: 880px; /* 높이 설정 */
 	position: relative; /* 상대 위치 설정 */
@@ -85,7 +79,7 @@ body {
 	justify-content: center; /* display: flex; 를 써야 적용이 된다. */
 	text-align: center;
 	cursor: pointer; /* 마우스 커서가 버튼처럼 보이도록 설정 */
-	border: 3px solid gray; /* 테두리 색상 설정 */
+	border: 3px solid #ff5100e1; /* 테두리 색상 설정 */
 	transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* 전환 효과 추가 */
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
@@ -209,12 +203,21 @@ body {
 }
 
 .subContainer3 {
+	height: 870px; /* 높이 설정 */
+	position: relative; /* 상대 위치 설정 */
+	background-color: #efefef ;
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 300px; /* 너비 설정 */
-	border: 2.5px solid #bfbfbf;
-	border-bottom-left-radius: 50px;
-	border-bottom-right-radius: 50px;
-	border-top-left-radius: 50px;
+    border-top: 5px solid #ff5100; /* 상단 테두리 */
+    border-bottom: 5px solid #ff5100; /* 하단 테두리 */
+    border-left: 5px solid #ff5100; /* 왼쪽 테두리 */
+    border-right: 2px solid gray; /* 오른쪽 테두리만 2px로 설정 */
+
+    border-top-left-radius: 50px; /* 좌측 상단 모서리 둥글게 */
+    border-bottom-left-radius: 50px; /* 좌측 하단 모서리 둥글게 */
+    border-bottom-right-radius: 50px; /* 우측 하단 모서리 둥글게 */
+    border-top-right-radius: 0; /* 우측 상단 모서리 둥글지 않게 */
+    border-bottom-right-radius: 0; /* 우측 상단 모서리 둥글지 않게 */
 }
 
 
@@ -222,7 +225,7 @@ body {
 
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 1500px; /* 높이 설정 */
+	height: 700px; /* 높이 설정 */
 
 	
 }
@@ -237,10 +240,10 @@ body {
 	width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
 	position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
 	height: 100%; /* 부모 요소에 맞게 높이 설정 */
-	border: 2.5px solid #bfbfbf;
+	border: 5px solid #ff5100e1;
 	border-top-right-radius: 50px;
-	border-bottom-right-radius: 50px;
 	border-left:none;
+	border-bottom: 2px solid gray;
 	
 }
 
@@ -254,10 +257,8 @@ body {
 	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
 	justify-content: center;
 	align-items: center;
-	border-top: 2.5px solid #bfbfbf;
-	border-bottom: 2.5px solid #bfbfbf;
-
-
+	border-top: 5px solid #ff5100e1;
+	border-bottom: 2px solid gray;
 }
 
 .subContainer2-2-right img {
@@ -283,6 +284,11 @@ body {
 	height: 400px; /* 높이 설정 */
 	align-items: center; /* 수직 가운데 정렬 */
 	background-color: #efefef ;
+	border: 5px solid #ff5100e1;
+	border-bottom-right-radius: 50px;
+	border-left:none;
+	border-top:none;
+	
 }
 
 .subContainer2-5-left {
@@ -484,18 +490,12 @@ body {
 }
 
 .user_profile {
-	margin-top: 30px; /* 위쪽 여백 설정 */
-	background-color: rgb(255, 252, 248);; /* 배경색 설정 */
-	color: rgb(0, 0, 0);
-	border-radius: 10px; /* 모서리 둥글게 */
-	padding: 10px; /* 패딩 설정 */
-	width: 200px; /* 너비 설정 */
 	height: 60px; /* 높이 설정 */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-	cursor: pointer; /* 마우스 커서가 버튼처럼 보이도록 설정 */
-	border: 3px solid gray; /* 테두리 색상 설정 */
-	transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* 전환 효과 추가 */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	width: 200px; /* 너비 설정 */
+	font-size: 18px; /* 글자 크기 설정 */
+	background-color: rgb(255, 252, 248);
+	border-radius: 10px; /* 모서리 둥글게 */
+	font-weight: bold; /* 폰트 굵기를 볼드로 설정 */
 }
 
 .user_profile:hover {
@@ -537,14 +537,15 @@ body {
 
 /* targetPost 설정 */
 #targetPost {
-    border: 10px solid white;
-    border-radius: 15px;
-    padding: 20px;
-    font-size: 24px;
-    width: 400px;
-    height: 400px; /* 높이 조정 가능 */
-    resize: vertical; /* 세로 크기 조정 가능 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
+width: 400px;
+margin-top: 0px;
+height: 450px;
+font-size: 24px;
+padding: 20px;
+border: 4px solid white;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+resize: vertical;
 }
 
 .container {

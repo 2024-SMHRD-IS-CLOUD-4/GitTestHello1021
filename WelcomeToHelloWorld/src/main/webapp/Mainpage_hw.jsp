@@ -106,7 +106,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<div class="post" style="font-size: 20px; font-weight: bold;">
 
 						<br>
-						<p type='text' style="position: relative; top: -30px;">
+						<p type='text' style="position: relative; top: -50px;">
 							<button class="user_profile" type="submit" align="left">
 								<img id="miniping" src="img/P_Ping.png" align="center">글쓴이
 							</button>
@@ -115,7 +115,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 							<!-- 날짜가 표시될 부분 -->
 							📆 <span class="orange-line"></span> <br>
-							<input type="text" id="targetPost" placeholder="" readonly>
+							<input type="text" id="targetPost" placeholder="" readonly >
 						</p>
 						<button id="sg_button">신고하기</button>
 					</div>
@@ -149,7 +149,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 		<!-- 1번 옮김 -->
 
-		<section class="subContainer1">
+		<section class="subContainer1" id="subContainer1">
 			<br>
 			<div class="image-container">
 				<img src="img/pping.png" width="500px" height="" id="image">

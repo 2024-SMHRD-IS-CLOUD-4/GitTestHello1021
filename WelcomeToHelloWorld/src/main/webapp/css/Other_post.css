@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-	font-family: 'HANBatang';
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.woff')
-		format('woff');
-	font-style: normal;
-}
 
 * {
 	font-family: 'Malgun Gothic';
@@ -14,11 +7,13 @@
 }
 
 body {
+	transform: scale(0.9); /* 90% 크기로 축소 */
+    transform-origin: bottom; /* 축소 기준을 페이지 중앙으로 설정 */
 	display: flex; /* 플렉스 박스 사용 */
 	justify-content: center; /* 가로 중앙 정렬 */
 	align-items: center; /* 세로 중앙 정렬 */
 	min-height: 100vh; /* 화면 전체 높이 설정 */
-	background-color: #ffffff; /* 배경색 설정 */
+	background-color: #efefef; /* 배경색 설정 */
 	margin: 0; /* 기본 여백 제거 */
 	width: 100%;
 	box-sizing: border-box; /* 테두리를 포함한 크기 계산 */
@@ -29,20 +24,20 @@ body {
 	display: flex; /* 플렉스 박스 설정 */
 }
 
-.subContainer1, .subContainer2, .subContainer3 {
+.subContainer1, .subContainer2 {
 	/* padding: 10px; /* 패딩 설정 */
 	height: 880px; /* 높이 설정 */
 	position: relative; /* 상대 위치 설정 */
+	background-color: #efefef ;
 }
 
 .subContainer1 {
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 270px; /* 너비 설정 */
-	background-color: rgb(255, 255, 255);
-	border-right: 2.5px solid #bfbfbf;
+/*	border-right: 2.5px solid #bfbfbf;
 	border-top: 2.5px solid #bfbfbf;
 	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
-	border-left: 2.5px solid #bfbfbf;
+/*	border-left: 2.5px solid #bfbfbf;*/
 }
 
 #logo-wrapper {
@@ -75,17 +70,17 @@ body {
 	color: rgb(0, 0, 0);
 	border-radius: 10px; /* 모서리 둥글게 */
 	padding: 10px; /* 패딩 설정 */
-	width: 150px; /* 너비 설정 */
-	height: 50px; /* 높이 설정 */
+	width: 200px; /* 너비 설정 */
+	height: 60px; /* 높이 설정 */
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 	display: flex;
 	align-items: center; /* display: flex; 를 써야 적용이 된다. */
 	justify-content: center; /* display: flex; 를 써야 적용이 된다. */
 	text-align: center;
 	cursor: pointer; /* 마우스 커서가 버튼처럼 보이도록 설정 */
-	border: 3px solid gray; /* 테두리 색상 설정 */
-	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-	/* 전환 효과 추가 */
+	border: 3px solid #ff5100e1; /* 테두리 색상 설정 */
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* 전환 효과 추가 */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 /* 마우스를 올렸을 때 효과 */
@@ -153,7 +148,7 @@ body {
 	text-align: center; /* 텍스트를 가운데 정렬 */
 	margin: auto; /* 박스를 가로 방향으로 가운데 정렬 */
 	margin-top: 160px; /* 박스 위쪽 여백 */
-	border-radius: 10px; /* 모서리를 둥글게 */
+	border-radius: 50px; /* 모서리를 둥글게 */
 	padding: 10px; /* 박스 안쪽 여백 */
 	width: 230px; /* 박스 너비 */
 	height: 300px; /* 박스 높이 */
@@ -198,33 +193,32 @@ body {
 	width: 1200px; /* 너비 설정 */
 	display: flex; /* 플렉스 박스 설정 */
 	flex-direction: column; /* 세로 방향으로 정렬 */
-	background-color: rgb(255, 255, 255);
-	border-top: 2.5px solid #bfbfbf; /*박영호*/
-	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
+/*	border-top: 2.5px solid #bfbfbf; /*박영호*/
+/*	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
 }
 
 .subContainer3 {
+	height: 870px; /* 높이 설정 */
+	position: relative; /* 상대 위치 설정 */
+	background-color: #efefef ;
 	flex: 1; /* 플렉스 비율 설정 */
 	width: 300px; /* 너비 설정 */
-	background-color: rgb(255, 255, 255);
-	border-style: solid;
-	border: 2.5px solid #bfbfbf; /*박영호*/
+    border-top: 5px solid #ff5100; /* 상단 테두리 */
+    border-bottom: 5px solid #ff5100; /* 하단 테두리 */
+    border-left: 5px solid #ff5100; /* 왼쪽 테두리 */
+    border-right: 2px solid gray; /* 오른쪽 테두리만 2px로 설정 */
+
+    border-top-left-radius: 50px; /* 좌측 상단 모서리 둥글게 */
+    border-bottom-left-radius: 50px; /* 좌측 하단 모서리 둥글게 */
+    border-bottom-right-radius: 50px; /* 우측 하단 모서리 둥글게 */
+    border-top-right-radius: 0; /* 우측 상단 모서리 둥글지 않게 */
+    border-bottom-right-radius: 0; /* 우측 상단 모서리 둥글지 않게 */
 }
 
-.subContainer2-1, .subContainer2-5 {
-	/*border-bottom: 2px solid whitesmoke; /* 하단 테두리 설정 */
-	
-}
-
-.subContainer2-1 {
-	/* flex: 0.3; /* 플렉스 비율 설정 */
-	background-color: #ff7144; /* 배경색 설정 */
-	height: 110px;
-}
 
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 1500px; /* 높이 설정 */
+	height: 700px; /* 높이 설정 */
 }
 
 .subContainer2-2-left {
@@ -237,32 +231,43 @@ body {
 	width: 100%; /* 부모 요소에 맞게 가로 너비 설정 */
 	position: relative; /* 상대 위치 설정으로 자식 요소 위치 제어 */
 	height: 100%; /* 부모 요소에 맞게 높이 설정 */
-	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
+	border: 5px solid #ff5100e1;
+	border-top-right-radius: 50px;
+	border-left:none;
+	border-bottom: 2px solid gray;
 }
 
 .subContainer2-2-right {
-	flex: 6; /* 오른쪽 영역의 비율을 6으로 설정 */
-	overflow-x: hidden; /* 세로 스크롤 활성화 */
-	overflow-y: hidden; /* 세로 스크롤 활성화 */
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
-	padding: 20px; /* 여백 설정 */
-	display: flex; /* 수직 및 수평 중앙 정렬을 위해 flex 사용 */
-	justify-content: center;
-	align-items: center;
-	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
+	flex: 6; /* 플렉스 비율 설정 */
+	overflow-y: auto; /* 세로 스크롤 활성화 */
+	overflow-x: none;
+	background-color: #ffffff; /* 배경색 설정 */
+	padding: 20px;
+    align-content:center ;
+    border-right: 2px solid whitesmoke; /* 오른쪽 테두리 설정 */
+    border-bottom: 2.5px solid #bfbfbf; /* 아래쪽 테두리 설정 */
+    white-space: nowrap; /* Prevents line wrapping */
 	border-right: 2.5px solid #bfbfbf; /*박영호*/
+	text-align: center; /* 텍스트를 중앙 정렬 */
+	font-size: 20px; /* 원하는 폰트 크기로 수정 */
+    font-weight: bold; /* 강조 효과를 주기 위해 굵게 설정 */
+	border-top: 5px solid #ff5100e1;
+	border-bottom: 2px solid gray;
 }
 
 .subContainer2-5 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 400px; /* 높이 설정 */
+	height: 200px; /* 높이 설정 */
 	align-items: center; /* 수직 가운데 정렬 */
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
+	background-color: #efefef ;
+	border: 5px solid #ff5100e1;
+	border-bottom-right-radius: 50px;
+	border-left:none;
+	border-top:none;
 }
 
 .subContainer2-5-left {
 	flex: 6; /* 왼쪽 영역의 비율을 6으로 설정 */
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
 	height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
 	display: flex; /* 플렉스 박스 사용 */
 	justify-content: center; /* 가로 방향 중앙 정렬 */
@@ -281,7 +286,6 @@ body {
 	align-items: center; /* 수직 가운데 정렬 */
 	padding: 0; /* 내부 패딩 제거 */
 	margin: 0; /* 외부 여백 제거 */
-	background-color: rgb(255, 255, 255); /* 배경색 설정 */
 	height: 100%; /* 부모의 높이를 모두 차지하게 설정 */
 }
 
@@ -378,7 +382,7 @@ body {
 
 #btn1_h, #btn2_h {
 	background: white; /* 배경색 흰색 */
-	border: 5px solid #fff; /* 테두리 흰색 */
+	border: 5px solid rgb(212, 212, 212);
 	color: black; /* 글씨 색 검정색 */
 }
 
@@ -389,9 +393,8 @@ body {
 }
 
 #btn1_h:active, #btn2_h:active {
-	background: #ff5100e1; /* 배경색 흰색 */
-	border-color: #ff5100e1; /* 테두리 오렌지 색상 */
-	color: black; /* 글씨 색 검정색으로 유지 */
+	background: #ff5100e1;
+	border: 5px solid white;
 }
 
 /* .subContainer2-1{
@@ -432,6 +435,7 @@ body {
 	margin-right: 45px; /* 오른쪽 여백 설정 */
 	border-radius: 50px;
 	border: 5px solid gray;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 /*.subContainer2-5 .button1,*/
@@ -449,9 +453,25 @@ body {
 }
 
 .user_profile {
-	height: 50px; /* 높이 설정 */
-	width: 150px; /* 너비 설정 */
-	font-size: 12px; /* 글자 크기 설정 */
+	height: 60px; /* 높이 설정 */
+	width: 200px; /* 너비 설정 */
+	font-size: 18px; /* 글자 크기 설정 */
+	background-color: rgb(255, 252, 248);
+	border-radius: 10px; /* 모서리 둥글게 */
+	font-weight: bold; /* 폰트 굵기를 볼드로 설정 */
+}
+
+.user_profile:hover {
+	background: #ff5100e1; /* 배경색 변경 */
+	border-color: #ff5100e1; /* 테두리 색 변경 */
+	color: #fff; /* 글자 색상 변경 */
+}
+
+/* 버튼을 클릭했을 때 효과 */
+.user_profile:active {
+	background: #ff5100e1; /* 배경색 */
+	border-color: #fff; /* 테두리 색상 변경 */
+	color: black; /* 글자 색상 변경 */
 }
 
 .subContainer3-1 {
@@ -483,3 +503,32 @@ body {
 	object-fit: cover; /* Keeps aspect ratio while filling the frame */
 	border-radius: 10px; /* Optional: rounded corners for images */
 }
+
+
+.container {
+   display: flex; /* 플렉스 박스 설정 */
+   position: relative; /* 귀의 절대 위치 조정을 위해 상대 위치 설정 */
+}
+
+.container::before, .container::after {
+   content: "";
+   margin-top: 20px;
+   position: absolute;
+   top: -130px; /* 귀의 상단 위치 조정 */
+   width: 130px;
+   height: 400px;
+   background: linear-gradient(to bottom, #ffffff, #ffffff);
+   border-radius: 120px 120px 0 0; /* 상단만 둥글게 */
+   z-index: -1; /* 귀를 뒤로 보내기 */
+   border: 60px solid #ff5100e1; /* 테두리 색상과 두께 설정 */
+}
+
+.container::before {
+   left: 400px; /* 왼쪽 귀 위치 */
+}
+
+.container::after {
+   right: 400px; /* 오른쪽 귀 위치 */
+}
+
+
