@@ -79,6 +79,7 @@
   17. 2024/11/08(금) 12:02 | 지수핑 ==> |**UPDATE**| My_post.css => 2-2-right 아래 테두리 추가용 ~
   18. 2024/11/08(금) 17:29 | 지수핑 ==> |**UPDATE**|Postpage 일부 수정 + Mainpage_hw. jsp/css/js 수정!
   19. 2024/11/09(금) 08:34 | 지수핑 ==> |**UPDATE**|MainPage, PostPage, My_post 버튼 효과, 귀 업데이트 완
+  20. 2024/11/09(금) 13:23 | 지수핑 ==>|**UPDATE**| << MainPage, PostPage는 jsp, css >>, << My_post는 jsp, css, js >>, <<Other_post는 css >> 수정
   
 </details>
 
