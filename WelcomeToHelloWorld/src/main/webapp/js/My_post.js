@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		subContainer1: "안녕하세요  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 		subContainer2_2_left: "선택하신 사진에 대해 <br> 작성한 글입니다! <br><br> 글을 수정하거나 <br><br> 삭제할 수 있어요~ ",
 		subContainer2_2_right: "내가 올린<br>사진 목록입니다! <br><br> 어떤 글을<br>작성했는지 <br> 확인할 수 있고, <br><br> 글을 수정하거나<br>삭제할 수도 있어요! ",
-		targetPost:"내가 올린 <br><br> 게시글"
+		targetPost: "내가 올린 <br><br> 게시글"
 
 		// ... 다른 버튼들에 대한 설명 추가
 	};
@@ -106,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function() {
 							const targetPostElement = document.getElementById('targetPost');
 							if (targetPostElement) {
 								targetPostElement.value = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
+								const dateElement = document.getElementById('postDate');
+								dateElement.textContent = '📆수정일 : ' + imageData.updated_at2.slice(0, -8);
+
 							} else {
 								console.error('Textarea element with id "targetPost" not found');
 							}

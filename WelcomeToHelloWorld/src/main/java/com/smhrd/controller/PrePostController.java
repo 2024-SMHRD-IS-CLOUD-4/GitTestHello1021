@@ -52,9 +52,11 @@ public class PrePostController extends HttpServlet {
 		String content = cont.getPost_content();
 		file_num = image.get(0).getFile_num();
 		sharedFileNumber.setFileNum(file_num);
-
+		
+		String u_nick = dao.NextNick(post_num);
+		String updated_at = dao.updated_at(post_num);
 		File imageFile = new File(file_folder + file_rname);
-		System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num);
+		System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num+"/" + u_nick+"/" + updated_at);
 
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
@@ -68,6 +70,8 @@ public class PrePostController extends HttpServlet {
 			jsonResponse.addProperty("error", "Image not found");
 		}
 		jsonResponse.addProperty("content", content);
+		jsonResponse.addProperty("u_nick", u_nick);
+		jsonResponse.addProperty("updated_at", updated_at);
 		response.getWriter().write(jsonResponse.toString());
 	}
 

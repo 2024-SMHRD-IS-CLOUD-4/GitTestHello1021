@@ -69,7 +69,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 							<span id="postDate" style="margin-left: 30px;"></span>
 
 							<!-- 날짜가 표시될 부분 -->
-							📆 <span class="orange-line"></span> 
+							<span class="orange-line"></span> 
 						</p>
 								<textarea  id="targetPost" placeholder="" readonly ></textarea>
 							<div id="pcontent" display: none;></div>

@@ -93,6 +93,28 @@
 		POST_LIKES, U_ID FROM POST_INFO WHERE POST_NUM = #{post_num}
 	</select>
 
+	<select id="NextNick" parameterType="int" resultType="String">
+		SELECT
+		u.U_NICK
+		FROM USER_INFO u
+		JOIN POST_INFO p ON u.U_ID = p.U_ID
+		WHERE p.POST_NUM = #{post_num}
+	</select>
+	
+	<select id="updated_at" parameterType="int" resultType="String">
+		SELECT
+		UPDATED_AT
+		FROM POST_INFO
+		WHERE POST_NUM = #{post_num}
+	</select>
+	
+	<select id="updated_at2" parameterType="String" resultType="String">
+		SELECT
+		UPDATED_AT
+		FROM FILES_INFO
+		WHERE FILE_RNAME = #{file_rname}
+	</select>
+
 	<select id="FindNumber" resultType="com.smhrd.model.FindNumber">
 		SELECT MAX(FILE_NUM) AS
 		max_file_num, MIN(FILE_NUM) AS min_file_num
@@ -128,11 +150,11 @@
 		f.POST_NUM = p.POST_NUM
 		WHERE f.FILE_RNAME = #{file_rname}
 	</select>
-	
+
 	<delete id="DeleteImage">
-	DELETE FROM FILES_INFO
-	WHERE FILE_RNAME = #{file_rname}
-	
+		DELETE FROM FILES_INFO
+		WHERE FILE_RNAME = #{file_rname}
+
 	</delete>
 
 

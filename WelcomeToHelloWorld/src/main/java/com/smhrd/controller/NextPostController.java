@@ -21,6 +21,8 @@ import com.smhrd.model.PostContent;
 import com.smhrd.model.PostImage;
 import com.smhrd.model.SharedFileNumber;
 
+import oracle.jdbc.driver.json.tree.JsonpPrimitive;
+
 @WebServlet("/NextPostController")
 public class NextPostController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -52,9 +54,12 @@ public class NextPostController extends HttpServlet {
         String content = cont.getPost_content();
         file_num = image.get(0).getFile_num();
         sharedFileNumber.setFileNum(file_num);
+        
+        String u_nick = dao.NextNick(post_num);
+        String updated_at = dao.updated_at(post_num);
 
         File imageFile = new File(file_folder + file_rname);
-        System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num);
+        System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num+"/" + u_nick+"/" + updated_at);
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
@@ -66,8 +71,11 @@ public class NextPostController extends HttpServlet {
             jsonResponse.addProperty("base64Image", base64Image);
         } else {
             jsonResponse.addProperty("error", "Image not found");
+            
         }
         jsonResponse.addProperty("content", content);
+        jsonResponse.addProperty("u_nick", u_nick);
+        jsonResponse.addProperty("updated_at", updated_at);
         response.getWriter().write(jsonResponse.toString());
     }
 

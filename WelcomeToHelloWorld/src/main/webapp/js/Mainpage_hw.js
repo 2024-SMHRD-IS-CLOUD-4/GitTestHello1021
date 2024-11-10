@@ -89,6 +89,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (data.content) {
 					const contentElement = document.getElementById("targetPost");
 					contentElement.value = data.content;
+					const textElement = document.querySelector('#miniping').nextElementSibling;
+					textElement.textContent = data.u_nick +'님';
+					console.log(data.u_nick)
+					const dateElement = document.getElementById('postDate');
+					dateElement.textContent = '📆수정일 : ' + data.updated_at.slice(0,-8);
 				} else {
 					console.error("컨텐츠를 불러오지 못했습니다.");
 				}
@@ -114,6 +119,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (data.content) {
 					const contentElement = document.getElementById("targetPost");
 					contentElement.value = data.content;
+					const textElement = document.querySelector('#miniping').nextElementSibling;
+					textElement.textContent = data.u_nick +'님';
+					const dateElement = document.getElementById('postDate');
+					dateElement.textContent = '📆수정일 : ' + data.updated_at.slice(0,-8);
 				} else {
 					console.error("컨텐츠를 불러오지 못했습니다.");
 				}

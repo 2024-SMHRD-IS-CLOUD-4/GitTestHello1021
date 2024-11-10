@@ -15,5 +15,12 @@ public class My_post_img_DAO {
 		List<PostImage> result = Session.selectList("MemberMapper.selectMyPost", u_id);
 		Session.close();
 		return result;
+			
+	}
+	public String updated_at2(String file_rname) {
+		SqlSession Session = factory.openSession(true); 
+		String result = Session.selectOne("MemberMapper.updated_at2",file_rname);
+		Session.close();
+		return result;
 	}
 }

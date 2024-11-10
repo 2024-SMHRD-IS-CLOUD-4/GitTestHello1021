@@ -33,7 +33,6 @@ public class My_post_img_Controller extends HttpServlet {
 		response.setContentType("application/json; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		
 
 		HttpSession session = request.getSession();
 
@@ -48,6 +47,8 @@ public class My_post_img_Controller extends HttpServlet {
 		for (int i = 0; i < allImg.size(); i++) {
 			String file_rname = allImg.get(i).getFile_rname();
 			System.out.println(file_rname);
+			String updated_at2 = dao.updated_at2(file_rname);
+
 			FindContentDAO fdao = new FindContentDAO();
 			String PostContent = fdao.findcontent(file_rname);
 			System.out.println(PostContent);
@@ -61,6 +62,7 @@ public class My_post_img_Controller extends HttpServlet {
 				jo.addProperty("base64Image", base64Image);
 				jo.addProperty("PostContent", PostContent);
 				jo.addProperty("file_rname", file_rname);
+				jo.addProperty("updated_at2", updated_at2);
 				imageArray.add(jo);
 
 			}
