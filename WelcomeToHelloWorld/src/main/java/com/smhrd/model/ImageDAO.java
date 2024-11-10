@@ -14,5 +14,12 @@ public class ImageDAO {
 		Session.close();
 		return result;
 	}
+	
+	public int updateImage(PostImage m) {
+		SqlSession Session = factory.openSession(true); 
+		int result = Session.update("MemberMapper.updateImage", m);
+		Session.close();
+		return result;
+	}
 
 }

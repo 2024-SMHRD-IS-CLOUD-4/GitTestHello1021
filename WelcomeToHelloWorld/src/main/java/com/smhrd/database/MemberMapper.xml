@@ -30,6 +30,16 @@
 	</insert>
 
 
+	<update id="UpdateContent"
+		parameterType="com.smhrd.model.UpdateVo">
+		UPDATE POST_INFO
+		SET POST_CONTENT = #{post_content,
+		jdbcType=CLOB},
+		UPDATED_AT = sysdate
+		WHERE
+		DBMS_LOB.COMPARE(POST_CONTENT, #{updatecontent, jdbcType=CLOB}) = 0
+	</update>
+
 	<insert id="insertImage"
 		parameterType="com.smhrd.model.PostImage">
 		INSERT INTO FILES_INFO
@@ -49,6 +59,20 @@
 		sysdate)
 	</insert>
 
+
+	<update id="Updateimage"
+		parameterType="com.smhrd.model.UpdateVo">
+		UPDATE FILES_INFO
+		SET FILE_EXT = #{file_ext},
+		FILE_SIZE =
+		#{file_size},
+		FILE_RNAME = #{file_rname},
+		UPDATED_AT = sysdate
+		WHERE
+		FIlE_RNAME = #{updateimagename}
+	</update>
+
+
 	<select id="NextPost" parameterType="int"
 		resultType="com.smhrd.model.PostImage">
 		SELECT FILE_NUM, POST_NUM, FILE_RNAME
@@ -61,6 +85,7 @@
 		)
 		WHERE ROWNUM = 1
 	</select>
+
 
 	<select id="NextcPost" parameterType="int"
 		resultType="com.smhrd.model.PostContent">
@@ -94,7 +119,7 @@
 		f.POST_NUM = p.POST_NUM
 		WHERE p.U_ID = #{u_id}
 	</select>
-	
+
 	<select id="findcontent" parameterType="String"
 		resultType="String">
 		SELECT p.POST_CONTENT

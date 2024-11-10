@@ -60,6 +60,7 @@ public class My_post_img_Controller extends HttpServlet {
 				jo.addProperty("contentType", contentType);
 				jo.addProperty("base64Image", base64Image);
 				jo.addProperty("PostContent", PostContent);
+				jo.addProperty("file_rname", file_rname);
 				imageArray.add(jo);
 
 			}

@@ -1,3 +1,5 @@
+let globalFileRname = null;
+
 document.addEventListener('DOMContentLoaded', function() {
 	const speechContainer = document.querySelector('.speech-container');
 	const speechBubble = document.querySelector('.speech-bubble');
@@ -20,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		subContainer1: "안녕하세요  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 		subContainer2_2_left: "선택하신 사진에 대해 <br> 작성한 글입니다! <br><br> 글을 수정하거나 <br><br> 삭제할 수 있어요~ ",
 		subContainer2_2_right: "내가 올린<br>사진 목록입니다! <br><br> 어떤 글을<br>작성했는지 <br> 확인할 수 있고, <br><br> 글을 수정하거나<br>삭제할 수도 있어요! "
-
 
 		// ... 다른 버튼들에 대한 설명 추가
 	};
@@ -63,17 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-function selectImage(selectedId) {
-	// 모든 이미지의 'selected' 클래스를 제거하여 흰색 테두리로 초기화
-	const images = document.querySelectorAll('.image-item img');
-	images.forEach(img => img.classList.remove('selected'));
-
-	// 클릭된 이미지에만 'selected' 클래스를 추가하여 주황색 테두리 적용
-	const selectedImage = document.getElementById(selectedId);
-	selectedImage.classList.add('selected');
-}
-
 function selectImage(selectedId) {
 	// 모든 이미지의 'selected' 클래스를 제거하여 흰색 테두리로 초기화
 	const images = document.querySelectorAll('.image-feed img');
@@ -85,59 +75,79 @@ function selectImage(selectedId) {
 	const selectedImage = document.getElementById(selectedId);
 	selectedImage.classList.add('selected');  // 'selected' 클래스 추가
 
-	console.log(`Selected Image ID: ${selectedId}`); // 디버깅: 선택된 이미지 ID 확인
+	globalFileRname = selectedImage.dataset.fileRname; // 전역 변수에 file_rname 저장
+
+	console.log(`Selected Image ID: ${selectedId}`);
+	console.log(`Selected globalFileRname: ${globalFileRname}`); // 디버깅: 선택된 이미지 ID 확인
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // 페이지 로드 시 자동으로 이미지 불러오기
-    fetch("My_post_img_Controller")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data); // JSON 응답을 출력하여 구조 확인
-            if (data.images && data.images.length > 0) {
-                const imageContainer = document.getElementsByClassName("image-feed")[0];
-                imageContainer.innerHTML = ''; // 기존 이미지를 지우기
+	// 페이지 로드 시 자동으로 이미지 불러오기
+	fetch("My_post_img_Controller")
+		.then(response => response.json())
+		.then(data => {
+			console.log(data); // JSON 응답을 출력하여 구조 확인
+			if (data.images && data.images.length > 0) {
+				const imageContainer = document.getElementsByClassName("image-feed")[0];
+				imageContainer.innerHTML = ''; // 기존 이미지를 지우기
 
-                data.images.forEach((imageData, index) => {
-                    if (imageData.contentType && imageData.base64Image) {
-                        const imgElement = document.createElement('img');
-                        imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
-                        imgElement.alt = `Dynamic Image ${index + 1}`;
-                        imgElement.id = `image${index + 1}`;
-                        imgElement.classList.add('image-item'); // 이미지에 클래스 추가
+				data.images.forEach((imageData, index) => {
+					if (imageData.contentType && imageData.base64Image) {
+						const imgElement = document.createElement('img');
+						imgElement.src = `data:${imageData.contentType};base64,${imageData.base64Image}`;
+						imgElement.alt = `Dynamic Image ${index + 1}`;
+						imgElement.id = `image${index + 1}`;
+						imgElement.classList.add('image-item'); // 이미지에 클래스 추가
+						imgElement.dataset.fileRname = imageData.file_rname; // 데이터 속성으로 file_rname 저장
 
-                        // 이미지 클릭 시 selectImage 함수 실행
-                        imgElement.addEventListener('click', () => {
-                            console.log(`Image with ID: ${imgElement.id} clicked!`); // 디버깅: 클릭 확인용
-                            console.log(imageData.file_rname); // 파일 이름
-                            console.log(imageData.PostContent); // 해당 이미지의 내용
+						// 이미지 클릭 시 selectImage 함수 실행
+						imgElement.addEventListener('click', () => {
+							const targetPostElement = document.getElementById('targetPost');
+							if (targetPostElement) {
+								targetPostElement.value = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
+							} else {
+								console.error('Textarea element with id "targetPost" not found');
+							}
 
-                            // 'targetPost' textarea 요소를 찾아서 해당 내용으로 업데이트
-                            const targetPostElement = document.getElementById('targetPost');
-                            if (targetPostElement) {
-                                targetPostElement.value = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
-                            } else {
-                                console.error('Textarea element with id "targetPost" not found');
-                            }
+							selectImage(imgElement.id);  // 기존 함수 호출
+						});
 
-                            selectImage(imgElement.id);  // 기존 함수 호출
-                        });
-
-                        // 이미지 컨테이너에 추가
-                        imageContainer.appendChild(imgElement);
-                    } else {
-                        console.error(`Invalid image data at index ${index}`);
-                    }
-                });
-            }
-        })
-        .catch(error => console.error("Error fetching the image:", error));
+						// 이미지 컨테이너에 추가
+						imageContainer.appendChild(imgElement);
+					} else {
+						console.error(`Invalid image data at index ${index}`);
+					}
+				});
+			}
+		})
+		.catch(error => console.error("Error fetching the image:", error));
 });
 
 
 document.getElementById("btn3_h").addEventListener("click", function() {
 	window.location.href = "Mainpage_hw.jsp"; // 이동할 URL
 });
+
 document.getElementById("btn1_h").addEventListener("click", function() {
-	window.location.href = "PostEditPage.jsp"; // 이동할 URL
+	const textareaElement = document.getElementById("targetPost");
+
+	if (textareaElement && globalFileRname) {
+		const textarea = textareaElement.value;
+
+		if (textarea.trim() === "") {
+			alert("수정할 이미지를 클릭하세요.");
+		} else {
+			// GET 방식으로 JSP 페이지로 데이터 요청 (주소창에 파라미터를 모두 담아 전송)
+			const url = `UpdatePage.jsp?name=${encodeURIComponent(globalFileRname)}&content=${encodeURIComponent(textarea)}`;
+			window.location.href = url; // JSP로 이동하면서 데이터를 URL로 전달
+		}
+	} else {
+		if (!textareaElement) {
+			console.error("targetPost 요소를 찾을 수 없습니다.");
+		}
+		if (!globalFileRname) {
+			alert("이미지를 먼저 선택하세요.");
+		}
+	}
+
 });
