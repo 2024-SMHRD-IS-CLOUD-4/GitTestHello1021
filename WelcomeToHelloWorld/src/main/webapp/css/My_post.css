@@ -257,7 +257,7 @@ body {
 
 .subContainer2-5 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 400px; /* 높이 설정 */
+	height: 176px; /* 높이 설정 */
 	align-items: center; /* 수직 가운데 정렬 */
 	background-color: #efefef ;
 	border: 5px solid #ff5100e1;
@@ -428,7 +428,7 @@ body {
 #btn1_h {
 	margin-left: 50px; /* 왼쪽 여백 설정 */
 	border-radius: 50px;
-	border: 5px solid rgb(212, 212, 212);
+	border: 5px solid #efefef;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
@@ -436,16 +436,16 @@ body {
 	margin-left: 100px; /* 왼쪽 여백 설정 */
 	margin-right: 45px; /* 오른쪽 여백 설정 */
 	border-radius: 50px;
-	border: 5px solid rgb(212, 212, 212);
+	border: 5px solid #efefef;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 /*.subContainer2-5 .button1,*/
 #btn3_h {
     margin-left: 70px;
-    border-radius: 145px;
+    border-radius: 30px;
     margin-right: 100px;
-	border: 5px solid rgb(212, 212, 212);
+	border: 5px solid #bbbbbb;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
@@ -494,6 +494,7 @@ body {
 	width: max-content;
 	/* Ensures the grid is not limited by container width */
 	overflow-x: auto; /* Horizontal scroll */
+	margin-left: 18px;
 	
 }
 
@@ -527,7 +528,8 @@ body {
 /* targetPost 설정 */
 #targetPost {
 width: 400px;
-margin-top: -40px;
+margin-top: -43px;
+margin-left: -1px;
 height: 450px;
 font-size: 24px;
 padding: 20px;

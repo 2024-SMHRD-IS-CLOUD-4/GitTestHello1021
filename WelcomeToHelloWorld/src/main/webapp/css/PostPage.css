@@ -432,14 +432,14 @@ border-bottom-left-radius: 20px; /* 좌측 하단 모서리 둥글게 */
 }
 
 #btn1_h {
-	margin-left: 225px; /* 왼쪽 여백 설정 */
+	margin-left: 220px; /* 왼쪽 여백 설정 */
 	border-radius: 50px;
 	border: 5px solid #efefef;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 #btn2_h {
-	margin-left: 400px; /* 왼쪽 여백 설정 */
+	margin-left: 370px; /* 왼쪽 여백 설정 */
 	margin-right: 0px; /* 오른쪽 여백 설정 */
 	border-radius: 50px;
 	border: 5px solid #efefef;
