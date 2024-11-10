@@ -128,6 +128,12 @@
 		f.POST_NUM = p.POST_NUM
 		WHERE f.FILE_RNAME = #{file_rname}
 	</select>
+	
+	<delete id="DeleteImage">
+	DELETE FROM FILES_INFO
+	WHERE FILE_RNAME = #{file_rname}
+	
+	</delete>
 
 
 </mapper>

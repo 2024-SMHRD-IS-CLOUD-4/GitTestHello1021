@@ -6,22 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	  const buttonTexts = {
 	    subContainer1:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 	    sg_button: "이 버튼을 <br> 클릭하시면 <br><br>  해당 게시글을  <br> 신고할 수 있어요!",
-	    btn1: "새로운 글을  <br><br> 작성할 수 있어요!",
+	    btn1: "글 작성 버튼입니다. <br><br> 새로운 글을  <br> 작성할 수 있습니다.",
 	    btn2: "내 게시물을 <br> 볼 수 있어요!  <br><br> 편집/ 삭제도 가능!",
 	    btn3: "게시물을 <br><br> 찾을 수 있어요!",
 	    btn4: "보류!! <br> 보류!! <br> 보류!!",
 	    btn5: "활동 종료 <br> 버튼입니다!! <br><br> 로그아웃이 되니 <br> 조심하세요!!",
 	    btn1_h: "표정을 <br><br> 남길 수 있어요!",
-	    btn2_h: "댓글을 남길 수도, <br><br> 읽을 수도 있어요!",
-	    btn3_h: "이전 게시물로 <br><br> 이동하는 버튼",
-	    btn4_h: "다음 게시물로 <br><br> 이동하는 버튼",
+	    btn2_h: "댓글을 남길 수도, <br><br> 읽을 수도 있어요",
+	    btn3_h: "이전 게시물로 <br><br> 이동하는 <br><br> 버튼입니다.",
+	    btn4_h: "다음 게시물로 <br><br> 이동하는 <br><br> 버튼입니다.",
 	    profile: "나의 프로필",
 	    image:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 	    search:"검색 버튼 !!",
 	    success:"비밀번호를 <br> 정확하게 입력하시면 <br> 프로필 수정을 <br> 완료합니다!",
-	    curiousButton:"이 사진에 대해 <br><br> 궁금하시다면 <br><br> 제가 직접<br><br> 찾아드릴게요!",
-		mainPage_img:"게시물 사진",
-		targetPost:"게시글"
+	    curiousButton:"이 사진에 대해 <br><br> 궁금하시다면 <br><br> 제가 직접<br><br> 찾아드릴게요!"
 	 
 
 	    // ... 다른 버튼들에 대한 설명 추가
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	speechContainer.style.opacity = 1;
 
 	// 각 항목에 마우스 올리면 설명 표시 (줄바꿈 처리 추가)
-	const items = document.querySelectorAll('#curiousButton, #targetPost, #mainPage_img, #subContainer1, #profile, .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, .profile');
+	const items = document.querySelectorAll('#profile, .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, .profile');
 	items.forEach(item => {
 	item.addEventListener('mouseenter', function() {
 	const buttonId = item.id;
@@ -128,5 +126,3 @@ document.addEventListener("DOMContentLoaded", function() {
 //		window.location.href = "NextPostController"; // 이동할 URL
 //	});
 //});
-
-
