@@ -405,8 +405,8 @@ body {
     border-bottom-left-radius: 20px; /* 좌측 하단 모서리 둥글게 */
 /*    border-bottom-right-radius: 20px; /* 우측 하단 모서리 둥글게} */
 #btn1_h, #btn2_h {
-	height: 80px; /* 높이 설정 */
-	width: 255px; /* 너비 설정 */
+	height: 100px; /* 높이 설정 */
+	width: 250px; /* 너비 설정 */
 	font-size: 30px; /* 글자 크기 설정 */
 }
 
@@ -431,10 +431,10 @@ body {
 }
 
 #btn2_h {
-	margin-left: 100px; /* 왼쪽 여백 설정 */
+	margin-left: 15px; /* 왼쪽 여백 설정 */
 	margin-right: 45px; /* 오른쪽 여백 설정 */
-	border-radius: 50px;
-	border: 5px solid rgb(212, 212, 212);
+	border-radius: 30px;
+	border: 5px solid #bbbbbb;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 

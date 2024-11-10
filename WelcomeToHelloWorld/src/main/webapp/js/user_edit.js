@@ -4,36 +4,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 버튼별 설명 텍스트 저장 (객체 형태로 관리)
   const buttonTexts = {
-    subContainer1:"활동가 수정 페이지입니다! <br><br> 닉네임 또는 비밀번호를 <br><br> 수정할 수 있어요!❤",
-    sg_button: "이 버튼을 클릭하시면 <br>  해당 게시글을  <br> 신고할 수 있어요!",
-	btn1: "새로운 글을  <br> 작성할 수 있어요!",
-	btn2: "작성된 글을  <br> 수정할 수 있어요!",
-    btn3: "글 편집하기 버튼입니다.?",
-    btn4: "보류!! <br> 보류!! <br> 보류!!",
-    btn5: "활동 종료 버튼입니다!! <br><br> 로그아웃이 되니 조심하세요!!",
-    btn1_h: "표정을 남길 수 있어요!",
-	btn2_h: "댓글을 남길 수도, <br><br> 댓글을 읽을 수도 있어요!",
+	subContainer1:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
+    subContainer2:"활동가 수정<br>페이지입니다! <br><br> 회원님의<br>정보를 <br><br> 수정할 수 있어요!❤",
+    btn1_h: "변경하실 정보를 <br> 정확하게<br>입력하셨다면 <br><br> 프로필 수정을 <br> 완료합니다!",
 	btn3_h: "이전 게시물로 <br><br> 이동하는 버튼",
-	btn4_h: "다음 게시물로 <br><br> 이동하는 버튼",
     profile: "나의 프로필",
     image:"안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
     search:"검색 버튼 !!",
     success:"변경하실 <br> 닉네임 또는 비밀번호를 <br> 정확하게 입력하셨다면 <br> 프로필 수정을 <br> 완료합니다!",
     subContainer2_2_right:"변경하고 싶은 <br> 헬로핑을 선택하세요!",
-    password:"변경하실 <br><br> 회원님의 비밀번호를 <br><br> 입력하세요!",
-    confirmPassword:"변경하실 <br><br> 회원님의 비밀번호를 <br><br> 한 번 더 입력하세요!",
-    nickname:"변경하실 <br><br>  닉네임을 입력하세요!",
-    tel:"변경하실 <br><br> 전화번호를 입력하세요!"
+    password:"변경하실 <br><br> 비밀번호를 <br><br> 입력하세요!",
+    confirmPassword:"변경하실 <br><br> 비밀번호를 <br><br> 한 번 더<br><br>입력하세요!",
+    nickname:"변경하실 <br><br>닉네임을<br><br>입력하세요!",
+    tel:"변경하실 <br><br> 전화번호를<br><br>입력하세요!"
 
     // ... 다른 버튼들에 대한 설명 추가
   };
 
   // 처음에 "안녕하세요" 표시
-  speechBubble.innerHTML ="활동가 수정 페이지입니다! <br><br> 닉네임 또는 비밀번호를 <br><br> 수정할 수 있어요!❤";
+  speechBubble.innerHTML ="안녕하세요 !  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤";
   speechContainer.style.opacity = 1;
 
   // 각 항목에 마우스 올리면 설명 표시 (줄바꿈 처리 추가)
-  const items = document.querySelectorAll('#tel, #subContainer2_2_right,  #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, #profile, #image, #search, #subContainer1, #success, #password,#confirmPassword, #nickname ');
+  const items = document.querySelectorAll('#subContainer1, #tel, #btn1_h, #btn3_h, #profile, #image, #search, #subContainer2, #success, #password,#confirmPassword, #nickname ');
   items.forEach(item => {
     item.addEventListener('mouseenter', function () {
       const buttonId = item.id;

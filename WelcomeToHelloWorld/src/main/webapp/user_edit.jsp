@@ -21,30 +21,25 @@
 MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 %>
 <body>
-  <div class="container" id="container">
+<div class="container" id="container">
 
-    <section class="subContainer3" align="center"><br>
-      <button id=""><img id="logo" src="img/로고1.png"></button>
-      <button id="profile" type="submit"><img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님</button>
+		<section class="subContainer3" align="center">
+			<br>
+			<div id="logo-wrapper">
+				<img src="img/로고1.png" alt="로고 이미지" id="logo-image">
+			</div>  <button id="profile" type="submit"><img id="nickname" src="img/P_Ping.png" align="center"><%=memer.getU_nick()%>님</button>
 
       <div class="subContainer3-1"></div>
       <div class="subContainer3-2"></div>
     </section>
 
-    <section class="subContainer2">
-      <div class="subContainer2-1">
-        <br>
-        <div id="search">
-          <input class="search-input" type="text" placeholder="검색어를 입력하세요...">
-          <button class="search-button">검색🔍</button>
-        </div>
-      </div>
+    <section class="subContainer2" id="subContainer2">
 
       <div class="subContainer2-2">
         
         <div class="subContainer2-2-left">
-          <h3>활동가 수정</h3>
           <form id="profileEditForm">
+          <h3>활동가 수정</h3>
             <div class="form-group">
               <label for="nickname">닉네임</label>
               <input type="text" id="nickname" name="nickname"><br>
