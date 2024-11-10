@@ -79,7 +79,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 								<button class="user_profile" type="submit" align="left">
 									<img id="miniping" src="img/P_Ping.png" align="center">지숭님
 								</button>
-								<span id="postDate" style="margin-left: 30px;"></span>
+								<span id="postDate" style="margin-left: 100px;"></span>
 								<!-- 날짜가 표시될 부분 -->
 								📆 <span class="orange-line"></span> <br>
 							</p>
@@ -91,7 +91,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 						<textarea id="textarea" name="textarea" placeholder="글을 작성하세요..."
 							style=" font-size: 24px; padding: 20px; width: 400px; height: 450px; resize: vertical;
-							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-top: -30px; "></textarea>
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-top: -43px; "></textarea>
 					</div>
 					<script>
 						// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드

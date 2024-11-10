@@ -10,9 +10,10 @@
 
 <body>
 
-	<h1 class="title" align="center">title</h1>
+	<h2 class="title" align="center">헬로월드에 오신 것을</h2>
+	<h2 class="title" align="center">환영합니다!</h2>
 	<div class="form nosign">
-		<div class="form-header">
+		<div class="form-header"><br><br>
 			<div class="show-nosign">비회원</div>
 			<div class="show-signin">회원</div>
 			<div class="show-signup">계정생성</div>
@@ -23,33 +24,35 @@
 		<form id="myForm" method="post">
 			<div class="form-elements">
 				<div class="form-element">
-					<input name="u_id" type="text" placeholder="ID">
+					<input name="u_id" type="text" placeholder="아이디">
 				</div>
 				<div class="form-element">
 					<input id="pw" name="u_pw" onkeyup="passCheck()" type="password"
-						placeholder="Password">
+						placeholder="비밀번호">
 				</div>
 				<div>
 					<span id="passwordStrength"></span>
 				</div>
 				<div class="form-element">
 					<input id="pwCheck" onkeyup="passConfirm()" type="password"
-						placeholder="Password Check">
+						placeholder="비밀번호 확인">
 				</div>
 				<div>
 					<span id="confirmMsg"></span>
 				</div>
 				<div class="form-element">
-					<input name="u_nick" type="text" placeholder="Nick-Name">
+					<input name="u_nick" type="text" placeholder="닉네임">
 				</div>
 				<div class="form-element">
-					<input name="u_email" type="text" placeholder="E-mail">
+					<input name="u_email" type="text" placeholder="이메일">
 				</div>
 				<div class="form-element">
-					<input name="u_tel" type="text" placeholder="TEL">
+					<input name="u_tel" type="text" placeholder="전화번호">
 				</div>	
 				<div class="form-element">
 					<button id="submit-btn"></button>
+					
+					
 				</div>
 			</div>
 		</form>

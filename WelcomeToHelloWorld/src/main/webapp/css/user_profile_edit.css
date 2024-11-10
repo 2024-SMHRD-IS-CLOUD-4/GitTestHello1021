@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-	font-family: 'HANBatang';
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
-	src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.woff')
-		format('woff');
-	font-style: normal;
-}
 
 * {
 	font-family: 'MalgunGothic', sans-serif;
@@ -226,7 +219,8 @@ body {
 
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 1500px; /* 높이 설정 */
+	height: 700px; /* 높이 설정 */
+	width: 1250px;
 }
 
 .subContainer2-2-left {
@@ -241,6 +235,7 @@ body {
 	height: 100%; /* 부모 요소에 맞게 높이 설정 */
 	border-bottom: 2.5px solid #bfbfbf; /*박영호*/
 	border-left: 2.5px solid #bfbfbf; /*박영호*/
+	margin-left: -4px;
 }
 
 .subContainer2-2-right {
