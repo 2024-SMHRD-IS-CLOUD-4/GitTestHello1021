@@ -84,6 +84,7 @@
   21. 2024/11/09(금) 17:20 | 지수핑 ==> |**UPDATE**|Mainpage_hw, My_post, Other_post, Post_search, PostPage => css,
                                                    Post_search.html, PostPage.jsp
   22. 2024/11/10(금) 22:31 | 지수핑 ==> |**UPDATE**|js, jsp, html 수정 완료
+  23. 2024/11/10(금) 23:37 | 지수핑 ==> |**UPDATE**| My_post, PostPage => css, jsp 수정
   
 </details>
 
