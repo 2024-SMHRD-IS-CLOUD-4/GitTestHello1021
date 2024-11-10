@@ -81,8 +81,9 @@
   19. 2024/11/09(금) 08:34 | 지수핑 ==> |**UPDATE**|MainPage, PostPage, My_post 버튼 효과, 귀 업데이트 완
   20. 2024/11/09(금) 13:23 | 지수핑 ==> |**UPDATE**|<< MainPage, PostPage는 jsp, css >>, << My_post는 jsp, css, js >>, 
                                                    <<Other_post는 css >> 수정
-  21. 2024/11/09(금) 17:20 | 지수핑 ==> |**UPDATE**|Mainpage_hw, My_post, Other_post, Post_search, PostPage => css,     
+  21. 2024/11/09(금) 17:20 | 지수핑 ==> |**UPDATE**|Mainpage_hw, My_post, Other_post, Post_search, PostPage => css,
                                                    Post_search.html, PostPage.jsp
+  22. 2024/11/10(금) 22:31 | 지수핑 ==> |**UPDATE**|js, jsp, html 수정 완료
   
 </details>
 
