@@ -219,7 +219,7 @@ body {
 
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 700px; /* 높이 설정 */
+	height: 697px; /* 높이 설정 */
 	width: 1250px;
 }
 

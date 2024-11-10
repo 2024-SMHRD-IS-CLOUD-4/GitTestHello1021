@@ -11,6 +11,9 @@
 	white-space: pre-line;
 	/* 줄바꿈이 적용되도록 설정 */
 }
+#btn1, #btn2, #btn3, #btn4, #sg_button, #btn3_h, #btn4_h, #btn5 {
+	display: none;
+}
 </style>
 <link rel="stylesheet" href="css/PostPage.css">
 </head>
@@ -47,6 +50,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 				%>
 			</div>
 			<div class="subContainer3-2">
+			</div>
 		</section>
 
 		<style>
@@ -54,7 +58,6 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 	display: none;
 }
 </style>
-
 
 		<form id="postForm" action="PostController1" method="post"
 			enctype="multipart/form-data">
