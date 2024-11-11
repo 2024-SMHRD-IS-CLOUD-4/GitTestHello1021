@@ -32,8 +32,10 @@ public class LoginController1 extends HttpServlet {
 		System.out.println(result);
 
 		if(result == null) {
-			response.sendRedirect("Login.html");
-			System.out.print("실패");
+			if(result == null) {
+			    response.sendRedirect("Login.html?error=invalid");
+			    System.out.print("실패");
+			}
 		}else {
 			HttpSession session = request.getSession();
 			session.setAttribute("login_user", result);
