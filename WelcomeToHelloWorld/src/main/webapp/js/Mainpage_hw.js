@@ -255,3 +255,23 @@ modalCloseButton.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
 
+// 모달 창 열기 함수 (궁금해요 버튼 클릭 시 호출)
+function showCuriousModal() {
+    const modal = document.getElementById("curiousModal");
+    modal.style.display = "block";
+}
+
+// 모달 창 닫기 함수
+function closeCuriousModal() {
+    const modal = document.getElementById("curiousModal");
+    modal.style.display = "none";
+}
+
+// 모달 창 외부 클릭 시 닫기 기능 추가
+window.onclick = function(event) {
+    const modal = document.getElementById("curiousModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+

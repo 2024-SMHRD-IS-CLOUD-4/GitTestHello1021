@@ -61,10 +61,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<div class="post" style="font-size: 20px; font-weight: bold;">
 
 						<br>
-						<p type='text' style="position: relative;  top: -50px;">
-							<button class="user_profile" type="submit" align="left">
-								<img id="miniping" src="img/P_Ping.png" align="center">지숭님
-							</button>
+						<p type='text' style="position: relative;  top: -30px; left:40%;">
+							
 
 							<span id="postDate" style="margin-left: 30px;"></span>
 
@@ -77,7 +75,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<!--<button id="sg_button">신고하기</button> -->
 					</div>
 				</div>
-
+				
 			</div>
 
 
@@ -86,8 +84,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<div class="subContainer2-5">
 				<div class="subContainer2-5-left" id="2-5-l">
 					<br>
-					<button id="btn1_h">수정하기 📝</button>
-					<button id="btn2_h">삭제하기 ❌</button>
+					<button id="btn1_h">수정하기📝</button>
+					<button id="btn2_h">삭제하기❌</button>
 				</div>
 
 				<div class="subContainer2-5-right" id="2-5-r">

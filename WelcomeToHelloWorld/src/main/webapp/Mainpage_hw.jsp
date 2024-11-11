@@ -127,8 +127,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<!-- 신고 모달 창 HTML 추가 -->
 						<div id="reportModal" class="modal">
 						    <div class="modal-content">
-						        <p>모달 창 입니다.</p>
-						        <button class="close-btn" onclick="closeModal()">닫기</button>
+						        <span id="modalContent">모달 창입니다.</span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
+						        <button class="close-btn" onclick="closeModal('reportModal')">닫기</button>
 						    </div>
 						</div>
 						<!-- 기존 신고하기 버튼 -->
@@ -138,7 +138,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			</div>
 
 
-			<div class="subContainer2-5">
+			<div class="subContainer2-5" style="font-size: 20px; font-weight: bold;">
 				<div class="subContainer2-5-left" id="2-5-l">
 					<br>
 					<button id="btn1_h">표정짓기😀</button>
@@ -149,7 +149,16 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			            <button id="emo4" onclick="addReaction(this)">😴</button>
 			            <button id="emo5" onclick="addReaction(this)">🤬</button>
 					</div>
-					<button id="curiousButton" onclick="handleCuriousClick()">궁금해요🔍</button>
+					
+					<!-- 신고 모달 창 HTML 추가 -->
+						<div id="reportModal1" class="modal">
+						    <div class="modal-content">
+						        <span id="modalContent1">궁금해용옹옹옹옹</span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
+						        <button class="close-btn" onclick="closeModal('reportModal1')">닫기</button>
+						    </div>
+						</div>
+						<!-- 기존 궁금해요 버튼 -->
+					<button id="curiousButton" >궁금해요🔍</button>
 				</div>
 				<div class="subContainer2-5-right" id="2-5-r">
 					<br>
@@ -178,28 +187,48 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 	<!-- JavaScript 코드 -->
 	<script>
-    // 모달 창 열기 함수
-    function openReportModal() {
-        const modal = document.getElementById("reportModal");
+	// 모달 창 열기 함수 (버튼 종류에 따라 다르게 표시)
+	function showModal(buttonType) {
+    let modal;
+    if (buttonType === "sg_button") {
+        modal = document.getElementById("reportModal");
+    } else if (buttonType === "curiousButton") {
+        modal = document.getElementById("reportModal1");
+    }
+
+    if (modal) {
         modal.style.display = "block";
     }
+}
 
-    // 모달 창 닫기 함수
-    function closeModal() {
-        const modal = document.getElementById("reportModal");
-        modal.style.display = "none";
-    }
+	// 모달 창 닫기 함수
+	function closeModal(modalId) {
+	    const modal = document.getElementById(modalId);
+	    if (modal) {
+	        modal.style.display = "none";
+	    }
+	}
 
-    // 신고하기 버튼 클릭 시 모달 창 열기
-    document.getElementById("sg_button").addEventListener("click", openReportModal);
+	// 모달 창 외부 클릭 시 닫기 기능 추가
+	window.onclick = function(event) {
+	    const modals = document.querySelectorAll(".modal");
+	    modals.forEach(function(modal) {
+	        if (event.target == modal) {
+	            modal.style.display = "none";
+	        }
+	    });
+	}
 
-    // 모달 창 외부 클릭 시 닫기 기능 추가
-    window.onclick = function(event) {
-        const modal = document.getElementById("reportModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+	// `신고하기` 버튼 클릭 시 모달 창 열기
+	document.getElementById("sg_button").addEventListener("click", function() {
+	    showModal("sg_button");
+	});
+
+	// `궁금해요` 버튼 클릭 시 모달 창 열기
+	document.getElementById("curiousButton").addEventListener("click", function() {
+	    showModal("curiousButton");
+	});
+
 </script>
 
 
