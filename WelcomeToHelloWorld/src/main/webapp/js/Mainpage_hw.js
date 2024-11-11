@@ -48,15 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-	const profileButton = document.getElementById("profile");
 
-	if (!memer.getU_type().substring(0, 4).equals("USER")) {
-		// USER가 아닌 경우에만 profile 버튼 클릭 시 페이지 이동
-		profileButton.addEventListener("click", function() {
-			window.location.href = "user_edit.jsp"; // 이동할 URL
-		});
-	}
+document.addEventListener("DOMContentLoaded", function() {
+    // 버튼 텍스트에서 닉네임 값 가져오기
+    const profileButton = document.getElementById("profile");
+    const nicknameText = profileButton.innerText.trim(); // 공백 제거 후 닉네임 추출
+
+    // 조건문: 닉네임의 앞 4글자가 'user'일 때 페이지 이동
+    if (nicknameText.substring(0, 4).toLowerCase() !== "user") {
+        profileButton.addEventListener("click", function() {
+            window.location.href = "user_edit.jsp"; // 이동할 URL
+        });
+    }
 });
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn5").addEventListener("click", function() {
@@ -138,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					const dateElement = document.getElementById('postDate');
 					dateElement.textContent = '📆수정일 : ' + data.updated_at.slice(0, -8);
 					console.log("updated_at:", data.updated_at);
-					
+
 					const curiousButton = document.getElementById("curiousButton");
 					curiousButton.setAttribute("data-file-rname", data.file_rname);
 					console.log("file_rname 속성 설정:", data.file_rname);
