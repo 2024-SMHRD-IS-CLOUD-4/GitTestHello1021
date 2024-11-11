@@ -15,6 +15,13 @@
 		#{u_pw}
 	</select>
 
+	<update id="UpdateUserinfo"
+		parameterType="com.smhrd.model.MavenMemer">
+		UPDATE USER_INFO
+		SET U_PW = #{u_pw}, U_NICK = #{u_nick}, U_TEL = #{u_tel}
+		WHERE U_ID = #{u_id}
+	</update>
+
 	<insert id="insertContent"
 		parameterType="com.smhrd.model.PostContent">
 		INSERT INTO POST_INFO
@@ -98,21 +105,24 @@
 		u.U_NICK
 		FROM USER_INFO u
 		JOIN POST_INFO p ON u.U_ID = p.U_ID
-		WHERE p.POST_NUM = #{post_num}
+		WHERE
+		p.POST_NUM = #{post_num}
 	</select>
-	
+
 	<select id="updated_at" parameterType="int" resultType="String">
 		SELECT
 		UPDATED_AT
 		FROM POST_INFO
 		WHERE POST_NUM = #{post_num}
 	</select>
-	
-	<select id="updated_at2" parameterType="String" resultType="String">
+
+	<select id="updated_at2" parameterType="String"
+		resultType="String">
 		SELECT
 		UPDATED_AT
 		FROM FILES_INFO
-		WHERE FILE_RNAME = #{file_rname}
+		WHERE FILE_RNAME =
+		#{file_rname}
 	</select>
 
 	<select id="FindNumber" resultType="com.smhrd.model.FindNumber">
@@ -153,7 +163,8 @@
 
 	<delete id="DeleteImage">
 		DELETE FROM FILES_INFO
-		WHERE FILE_RNAME = #{file_rname}
+		WHERE FILE_RNAME =
+		#{file_rname}
 
 	</delete>
 

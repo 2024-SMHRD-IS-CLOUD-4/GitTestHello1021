@@ -24,6 +24,15 @@ public class MavenMemer {
 		this.u_id = id;
 		this.u_pw = pw;
 	}
+
+
+	public MavenMemer(String u_id, String u_pw, String u_nick, String u_tel) {
+		super();
+		this.u_id = u_id;
+		this.u_pw = u_pw;
+		this.u_nick = u_nick;
+		this.u_tel = u_tel;
+	}
 	
 	
 

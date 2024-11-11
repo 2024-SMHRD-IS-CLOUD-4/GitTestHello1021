@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		subContainer1: "안녕하세요  <br><br> 궁금한 것이 있으면 <br><br> 저를 찾아주세요!❤",
 		subContainer2_2_left: "선택하신 사진에 대해 <br> 작성한 글입니다! <br><br> 글을 수정하거나 <br><br> 삭제할 수 있어요~ ",
 		subContainer2_2_right: "내가 올린<br>사진 목록입니다! <br><br> 어떤 글을<br>작성했는지 <br> 확인할 수 있고, <br><br> 글을 수정하거나<br>삭제할 수도 있어요! ",
-		targetPost:"내가 올린 <br><br> 게시글"
+		targetPost: "내가 올린 <br><br> 게시글"
 
 		// ... 다른 버튼들에 대한 설명 추가
 	};
@@ -106,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function() {
 							const targetPostElement = document.getElementById('targetPost');
 							if (targetPostElement) {
 								targetPostElement.value = imageData.PostContent; // 이미지에 해당하는 PostContent 삽입
+								const dateElement = document.getElementById('postDate');
+								dateElement.textContent = '📆수정일 : ' + imageData.updated_at2.slice(0, -8);
+
 							} else {
 								console.error('Textarea element with id "targetPost" not found');
 							}
@@ -139,23 +142,27 @@ document.getElementById("btn2_h").addEventListener("click", function() {
 		if (textarea.trim() === "") {
 			alert("삭제할 이미지를 클릭하세요.");
 		} else {
-			alert("정말 삭제하시겠습니까??");
-			// 동기 요청으로 JSP에 데이터 전송
-			const url = `DelPageController`;
-			const form = document.createElement("form");
-			form.method = "POST";
-			form.action = url;
+			if (confirm("정말 삭제하시겠습니까?")) {
+				// '예'를 선택한 경우, 동기 요청으로 JSP에 데이터 전송
+				const url = `DelPageController`;
+				const form = document.createElement("form");
+				form.method = "POST";
+				form.action = url;
 
-			const input = document.createElement("input");
-			input.type = "hidden";
-			input.name = "name";
-			input.value = globalFileRname;
-			form.appendChild(input);
+				const input = document.createElement("input");
+				input.type = "hidden";
+				input.name = "name";
+				input.value = globalFileRname;
+				form.appendChild(input);
 
-			document.body.appendChild(form);
+				document.body.appendChild(form);
 
+				form.submit();
+			} else {
+				// '아니요'를 선택한 경우
+				alert("삭제를 취소했습니다."); // 사용자가 삭제를 취소했음을 알림
+			}
 
-			form.submit();
 		}
 	} else {
 		if (!textareaElement) {
