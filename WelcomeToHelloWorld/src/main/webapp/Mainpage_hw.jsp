@@ -46,6 +46,8 @@
 .close-btn:hover {
 	background-color: #d32f2f;
 }
+
+
 </style>
 
 <link rel="stylesheet" href="css/Mainpage_hw.css">
@@ -97,9 +99,17 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<div class="subContainer2-2">
 				<div class="subContainer2-2-right" id="mainPage_img" align="center"
 					style="position: relative;">
-					<br> <input type="image" id="targetImage" src=""
+					 <input type="image" id="targetImage" src=""
 						height="450px"><br>
-					<button id="curiousButton" onclick="handleCuriousClick()">궁금해요</button>
+
+
+						
+						
+					
+					
+					<button id="curiousButton1" onclick="handleCuriousClick()">
+					<div class="reaction" id="reactionContainer"></div>
+					</button>
 
 				</div>
 				<div class="subContainer2-2-left">
@@ -108,19 +118,24 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<br>
 						<p type='text' style="position: relative; top: -50px;">
 							<button class="user_profile" type="submit" align="left">
-								<img id="miniping" src="img/P_Ping.png" align="center"><p style="display: inline-block; margin: 0; vertical-align: middle;"></p>
+								<img id="miniping" src="img/P_Ping.png" align="center">글쓴이
 							</button>
 
-							<span id="postDate" style="margin-left: 30px;" ></span> 
+							<span id="postDate" style="margin-left: 30px;" ></span>
 
 							<!-- 날짜가 표시될 부분 -->
-							<span class="orange-line" id="day"></span><br>
+							📆 <span class="orange-line"></span> <br>
 							<input type="text" id="targetPost" placeholder="" readonly >
 						</p>
 						<button id="sg_button">신고하기</button>
 					</div>
 				</div>
-
+				<script>
+					// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
+					const postDate = new Date(); // 현재 날짜 및 시간 생성
+					const formattedDate = postDate.toISOString().split('T')[0]; // 날짜만 가져오도록 포맷
+					document.getElementById("postDate").innerText = formattedDate; // 날짜를 HTML에 추가
+				</script>
 
 
 			</div>
@@ -129,10 +144,16 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<div class="subContainer2-5">
 				<div class="subContainer2-5-left" id="2-5-l">
 					<br>
-					<button id="btn1_h">표정짓기 😀</button>
-					<button id="btn2_h">댓글달기 💬</button>
+					<button id="btn1_h">표정짓기😀</button>
+					<div id="emojiPopup" class="emoji-popup">
+			            <button id="emo1" onclick="addReaction(this)">😍</button>
+			            <button id="emo2" onclick="addReaction(this)">😄</button>
+			            <button id="emo3" onclick="addReaction(this)">😥</button>
+			            <button id="emo4" onclick="addReaction(this)">😴</button>
+			            <button id="emo5" onclick="addReaction(this)">🤬</button>
+					</div>
+					<button id="curiousButton" onclick="handleCuriousClick()">궁금해요🔍</button>
 				</div>
-
 				<div class="subContainer2-5-right" id="2-5-r">
 					<br>
 					<button id="btn3_h">◀</button>

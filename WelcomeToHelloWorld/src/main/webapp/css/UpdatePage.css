@@ -227,7 +227,7 @@ body {
 
 .subContainer2-2 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 700px; /* 높이 설정 */
+	height: 780px; /* 높이 설정 */
 	width: 100%;
 }
 
@@ -262,7 +262,7 @@ body {
 
 .subContainer2-5 {
 	display: flex; /* 가로 정렬을 위해 flex 사용 */
-	height: 200px; /* 높이 설정 */
+	height: 196px; /* 높이 설정 */
 	align-items: center; /* 수직 가운데 정렬 */
 	background-color: #efefef ;
 	border: 5px solid #ff5100e1;
@@ -432,14 +432,14 @@ border-bottom-left-radius: 20px; /* 좌측 하단 모서리 둥글게 */
 }
 
 #btn1_h {
-	margin-left: 225px; /* 왼쪽 여백 설정 */
+	margin-left: 186px; /* 왼쪽 여백 설정 */
 	border-radius: 50px;
 	border: 5px solid #efefef;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
 }
 
 #btn2_h {
-	margin-left: 400px; /* 왼쪽 여백 설정 */
+	margin-left: 367px; /* 왼쪽 여백 설정 */
 	margin-right: 0px; /* 오른쪽 여백 설정 */
 	border-radius: 50px;
 	border: 5px solid #efefef;
@@ -504,6 +504,7 @@ border-bottom-left-radius: 20px; /* 좌측 하단 모서리 둥글게 */
 #textarea {
     border: 4px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 부드러운 그림자 추가 */
+    border-radius: 8px;
 }
 
 .container {

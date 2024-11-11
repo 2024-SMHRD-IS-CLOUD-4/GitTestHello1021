@@ -107,8 +107,8 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 				<div class="subContainer2-5">
 					<br>
-					<button id="btn1_h" type="submit">작성하기 📝</button>
-					<button id="btn2_h" type="button">취소하기 ❌</button>
+					<button id="btn1_h" type="submit">작성하기📝</button>
+					<button id="btn2_h" type="button">취소하기❌</button>
 					<button id="btn3_h">◀</button>
 					<button id="btn4_h">▶</button>
 				</div>
