@@ -114,13 +114,13 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<br>
 						<p type='text' style="position: relative; top: -50px;">
 							<button class="user_profile" type="submit" align="left">
-								<img id="miniping" src="img/P_Ping.png" align="center">글쓴이
+								<img id="miniping" src="img/P_Ping.png" align="center"><p style="display: inline-block; margin: 0; vertical-align: middle;"></p>
 							</button>
 
 							<span id="postDate" style="margin-left: 30px;" ></span>
 
 							<!-- 날짜가 표시될 부분 -->
-							📆 <span class="orange-line"></span> <br>
+							<span class="orange-line"></span> <br>
 							<input type="text" id="targetPost" placeholder="" readonly >
 						</p>
 						

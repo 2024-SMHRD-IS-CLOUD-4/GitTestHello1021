@@ -133,14 +133,22 @@ function getQueryParameter(param) {
 
 // 'message' 파라미터가 'updateSuccess'인 경우 알림 표시
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded 이벤트 실행됨');
-    const message = getQueryParameter('message');
-    console.log('Message parameter:', message);
-    if (message === 'updateSuccess') {
-        alert('회원정보가 수정이 완료되었습니다. 다시 로그인하세요.');
-    }
+	console.log('DOMContentLoaded 이벤트 실행됨');
+	const message = getQueryParameter('message');
+	console.log('Message parameter:', message);
+	if (message === 'updateSuccess') {
+		alert('회원정보가 수정이 완료되었습니다. 다시 로그인하세요.');
+	}
 });
 
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error') && urlParams.get('error') === 'invalid') {
+        setTimeout(() => {
+            alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+        }, 500); // 500ms 지연 후 알림 표시
+    }
+};
 // 이벤트 리스너 등록
 setupFormSwitch();
 document.getElementById("submit-btn").addEventListener("click", gosite);

@@ -77,12 +77,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<!--<button id="sg_button">신고하기</button> -->
 					</div>
 				</div>
-				<script>
-					// 작성 시점의 날짜를 표시하기 위한 JavaScript 코드
-					const postDate = new Date(); // 현재 날짜 및 시간 생성
-					const formattedDate = postDate.toISOString().split('T')[0]; // 날짜만 가져오도록 포맷
-					document.getElementById("postDate").innerText = formattedDate; // 날짜를 HTML에 추가
-				</script>
+
 			</div>
 
 
