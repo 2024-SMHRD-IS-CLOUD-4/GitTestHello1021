@@ -49,9 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("profile").addEventListener("click", function() {
-		window.location.href = "user_edit.jsp"; // 이동할 URL
-	});
+	const profileButton = document.getElementById("profile");
+
+	if (!memer.getU_type().substring(0, 4).equals("USER")) {
+		// USER가 아닌 경우에만 profile 버튼 클릭 시 페이지 이동
+		profileButton.addEventListener("click", function() {
+			window.location.href = "user_edit.jsp"; // 이동할 URL
+		});
+	}
 });
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("btn5").addEventListener("click", function() {
