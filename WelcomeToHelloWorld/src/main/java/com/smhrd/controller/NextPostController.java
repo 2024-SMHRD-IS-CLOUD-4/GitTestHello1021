@@ -76,6 +76,7 @@ public class NextPostController extends HttpServlet {
         jsonResponse.addProperty("content", content);
         jsonResponse.addProperty("u_nick", u_nick);
         jsonResponse.addProperty("updated_at", updated_at);
+        jsonResponse.addProperty("file_rname", file_rname);
         response.getWriter().write(jsonResponse.toString());
     }
 

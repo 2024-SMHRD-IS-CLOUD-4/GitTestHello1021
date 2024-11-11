@@ -153,7 +153,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					<!-- 신고 모달 창 HTML 추가 -->
 						<div id="reportModal1" class="modal">
 						    <div class="modal-content">
-						        <span id="modalContent1">궁금해용옹옹옹옹</span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
+						        <span id="modalContent1"></span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
 						        <button class="close-btn" onclick="closeModal('reportModal1')">닫기</button>
 						    </div>
 						</div>

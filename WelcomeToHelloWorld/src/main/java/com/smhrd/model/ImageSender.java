@@ -8,11 +8,16 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
+
+import org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport;
 import org.json.JSONObject;
 
 public class ImageSender {
     public static void main(String[] args) {
-        String imagePath = "\\\\DESKTOP-TIB5NGS\\storage\\호두_187709561460000.jpg"; // 이미지 파일 경로
+    	
+    	
+    	
+        String imagePath = "\\\\DESKTOP-TIB5NGS\\storage\\test_134565215703300.png"; // 이미지 파일 경로
         String serverUrl = "http://127.0.0.1:5000/upload"; // Flask 서버 URL
 
         try {

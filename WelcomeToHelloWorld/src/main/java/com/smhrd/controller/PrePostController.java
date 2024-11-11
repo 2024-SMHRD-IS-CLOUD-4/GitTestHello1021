@@ -55,6 +55,7 @@ public class PrePostController extends HttpServlet {
 		
 		String u_nick = dao.NextNick(post_num);
 		String updated_at = dao.updated_at(post_num);
+		
 		File imageFile = new File(file_folder + file_rname);
 		System.out.println(file_rname + "/" + imageFile + "/" + file_num + "/" + post_num+"/" + u_nick+"/" + updated_at);
 
@@ -72,6 +73,7 @@ public class PrePostController extends HttpServlet {
 		jsonResponse.addProperty("content", content);
 		jsonResponse.addProperty("u_nick", u_nick);
 		jsonResponse.addProperty("updated_at", updated_at);
+		jsonResponse.addProperty("file_rname", file_rname);
 		response.getWriter().write(jsonResponse.toString());
 	}
 
