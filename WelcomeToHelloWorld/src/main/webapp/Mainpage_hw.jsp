@@ -101,9 +101,11 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 			<div class="subContainer2-2">
 				<div class="subContainer2-2-right" id="mainPage_img" align="center"
 					style="position: relative;">
-					<input type="image" id="targetImage" src="" 
-					height="450px"><br>
-					<button id="curiousButton" onclick="handleCuriousClick()">궁금해요</button>
+					 <input type="image" id="targetImage" src=""
+						height="450px"><br>
+					<button id="curiousButton1" onclick="handleCuriousClick()">
+					<div class="reaction" id="reactionContainer"></div>
+					</button>
 
 				</div>
 				<div class="subContainer2-2-left">
@@ -112,33 +114,43 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<br>
 						<p type='text' style="position: relative; top: -50px;">
 							<button class="user_profile" type="submit" align="left">
-								<img id="miniping" src="img/P_Ping.png" align="center">
-								<p
-									style="display: inline-block; margin: 0; vertical-align: middle;"></p>
+								<img id="miniping" src="img/P_Ping.png" align="center">글쓴이
 							</button>
 
-							<span id="postDate" style="margin-left: 30px;"></span>
+							<span id="postDate" style="margin-left: 30px;" ></span>
 
 							<!-- 날짜가 표시될 부분 -->
-							<span class="orange-line" id="day"></span><br> <input
-								type="text" id="targetPost" placeholder="" readonly>
+							📆 <span class="orange-line"></span> <br>
+							<input type="text" id="targetPost" placeholder="" readonly >
 						</p>
+						
+						<!-- 신고 모달 창 HTML 추가 -->
+						<div id="reportModal" class="modal">
+						    <div class="modal-content">
+						        <p>모달 창 입니다.</p>
+						        <button class="close-btn" onclick="closeModal()">닫기</button>
+						    </div>
+						</div>
+						<!-- 기존 신고하기 버튼 -->
 						<button id="sg_button">신고하기</button>
 					</div>
 				</div>
-
-
-
 			</div>
 
 
 			<div class="subContainer2-5">
 				<div class="subContainer2-5-left" id="2-5-l">
 					<br>
-					<button id="btn1_h">표정짓기 😀</button>
-					<button id="btn2_h">댓글달기 💬</button>
+					<button id="btn1_h">표정짓기😀</button>
+					<div id="emojiPopup" class="emoji-popup">
+			            <button id="emo1" onclick="addReaction(this)">😍</button>
+			            <button id="emo2" onclick="addReaction(this)">😄</button>
+			            <button id="emo3" onclick="addReaction(this)">😥</button>
+			            <button id="emo4" onclick="addReaction(this)">😴</button>
+			            <button id="emo5" onclick="addReaction(this)">🤬</button>
+					</div>
+					<button id="curiousButton" onclick="handleCuriousClick()">궁금해요🔍</button>
 				</div>
-
 				<div class="subContainer2-5-right" id="2-5-r">
 					<br>
 					<button id="btn3_h">◀</button>
@@ -166,26 +178,29 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 	<!-- JavaScript 코드 -->
 	<script>
-		function handleCuriousClick() {
-			// 모달 창을 표시하기
-			const modal = document.getElementById("myModal");
-			modal.style.display = "block";
-		}
+    // 모달 창 열기 함수
+    function openReportModal() {
+        const modal = document.getElementById("reportModal");
+        modal.style.display = "block";
+    }
 
-		function closeModal() {
-			// 모달 창을 닫기
-			const modal = document.getElementById("myModal");
-			modal.style.display = "none";
-		}
+    // 모달 창 닫기 함수
+    function closeModal() {
+        const modal = document.getElementById("reportModal");
+        modal.style.display = "none";
+    }
 
-		// 모달 창 외부 클릭 시 닫기 기능 추가
-		window.onclick = function(event) {
-			const modal = document.getElementById("myModal");
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
+    // 신고하기 버튼 클릭 시 모달 창 열기
+    document.getElementById("sg_button").addEventListener("click", openReportModal);
+
+    // 모달 창 외부 클릭 시 닫기 기능 추가
+    window.onclick = function(event) {
+        const modal = document.getElementById("reportModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 
 	<script src="js/Mainpage_hw.js"></script>

@@ -15,6 +15,9 @@
 	white-space: pre-line;
 	/* 줄바꿈이 적용되도록 설정 */
 }
+#btn1, #btn2, #btn3, #btn4, #sg_button, #btn3_h, #btn4_h, #btn5 {
+	display: none;
+}
 </style>
 <link rel="stylesheet" href="css/UpdatePage.css">
 </head>
@@ -66,11 +69,7 @@
 			<div class="subContainer3-2">
 		</section>
 
-		<style>
-#btn1, #btn2, #btn3, #btn4, #sg_button, #btn3_h, #btn4_h, #btn5 {
-	display: none;
-}
-</style>
+
 
 		<form id="postForm" action="UpdatePageController" method="post"
 			enctype="multipart/form-data">
@@ -121,8 +120,8 @@
 				</div>
 				<div class="subContainer2-5">
 					<br>
-					<button id="btn1_h" type="submit">작성하기 📝</button>
-					<button id="btn2_h" type="button">취소하기 ❌</button>
+					<button id="btn1_h" type="submit">작성하기📝</button>
+					<button id="btn2_h" type="button">취소하기❌</button>
 					<button id="btn3_h">◀</button>
 					<button id="btn4_h">▶</button>
 				</div>

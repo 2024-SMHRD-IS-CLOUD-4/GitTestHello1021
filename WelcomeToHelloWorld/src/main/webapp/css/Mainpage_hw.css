@@ -661,4 +661,38 @@ resize: vertical;
     left: 45%;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
 }
+/* 모달 창 스타일 */
+.modal {
+    display: none; /* 처음에는 보이지 않도록 설정 */
+    position: fixed; /* 창을 항상 고정된 위치에 표시 */
+    z-index: 1; /* 가장 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 전체 화면 너비 */
+    height: 100%; /* 전체 화면 높이 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 24% 38%;
+    padding: 27px;
+    border: 1px solid #888;
+    width: 325px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close-btn {
+    background-color: #f44336; /* 닫기 버튼 색상 설정 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
+}
+
+.close-btn:hover {
+    background-color: #d32f2f; /* 마우스를 올렸을 때 색상 변경 */
+}
 
