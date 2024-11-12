@@ -90,6 +90,7 @@
   26. 2024/11/11(월) 17:08 | 지수핑 ==> |**UPDATE**|Mainpage => jsp, js, css | updatePage => jsp 수정
   27. 2024/11/11(월) 18:42 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage 업데이트
   28. 2024/11/12(화) 09:40 | 지수핑 ==> |**UPDATE**|귀 위치, 모달창 수정
+  29. 2024/11/12(화) 10:26 | 지수핑 ==> |**UPDATE**|최종 Login.js / MainPage update!
   
 </details>
 
