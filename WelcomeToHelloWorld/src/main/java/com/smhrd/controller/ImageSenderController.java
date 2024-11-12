@@ -44,7 +44,7 @@ public class ImageSenderController extends HttpServlet {
             return;
         }
         String imagePath = "\\\\DESKTOP-TIB5NGS\\storage\\" + fileRname; // 이미지 파일 경로
-        String serverUrl = "http://127.0.0.1:5000/upload"; // Flask 서버 URL
+        String serverUrl = "http://127.0.0.1:5000/upload"; // 기본 서버 URL
         try {
             File imageFile = new File(imagePath);
             if (!imageFile.exists()) {

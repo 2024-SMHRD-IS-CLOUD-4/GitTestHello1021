@@ -10,7 +10,7 @@ function setupFormSwitch() {
 		resetClass(form, "signup");
 		resetClass(form, "signin");
 		form.classList.add("nosign");
-		document.getElementById("submit-btn").innerText = "바로 입장하기!";
+		document.getElementById("submit-btn").innerText = "손님으로 입장하기!";
 	});
 
 	document.getElementsByClassName("show-signup")[0].addEventListener("click", function() {
@@ -26,7 +26,7 @@ function setupFormSwitch() {
 		resetClass(form, "signup");
 		resetClass(form, "nosign");
 		form.classList.add("signin");
-		document.getElementById("submit-btn").innerText = "로그인하기!";
+		document.getElementById("submit-btn").innerText = "활동가로 입장하기!";
 	});
 
 	// 기본 상태로 설정
@@ -38,7 +38,7 @@ const gosite = (event) => {
 	let buttonText = document.getElementById("submit-btn").innerText;
 	let form = document.getElementById("myForm");
 
-	if (buttonText === "바로 입장하기!") {
+	if (buttonText === "손님으로 입장하기!") {
 		form.action = "notLoginController1";
 		form.submit();
 	} else if (buttonText === "계정 생성하기!") {
@@ -59,7 +59,7 @@ const gosite = (event) => {
 			}
 			alert(alertMessage.trim());
 		}
-	} else if (buttonText === "로그인하기!") {
+	} else if (buttonText === "활동가로 입장하기!") {
 		form.action = "LoginController1";
 		form.submit();
 	}

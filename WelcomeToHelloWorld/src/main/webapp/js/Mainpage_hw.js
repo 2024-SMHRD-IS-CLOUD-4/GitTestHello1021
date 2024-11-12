@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		curiousButton: "이 사진에 대해 <br><br> 궁금하시다면 <br><br> 제가 직접<br><br> 찾아드릴게요!",
 		mainPage_img: "게시물 사진",
 		targetPost: "게시글",
-		emojiPopup: "표정을 <br><br> 선택하세요!"
+		emojiPopup: "표정을 <br><br> 선택하세요!",
+		user_profile:"게시글을 <br><br> 작성한 <br><br> 활동가의 <br><br> 닉네임"
 		// ... 다른 버튼들에 대한 설명 추가
 	};
 
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	speechContainer.style.opacity = 1;
 
 	// 각 항목에 마우스 올리면 설명 표시 (줄바꿈 처리 추가)
-	const items = document.querySelectorAll('#emojiPopup, #curiousButton, #targetPost, #mainPage_img, #subContainer1, #profile, .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, .profile');
+	const items = document.querySelectorAll('#user_profile, #emojiPopup, #curiousButton, #targetPost, #mainPage_img, #subContainer1, #profile, .image-container, #sg_button, #btn1, #btn2, #btn3, #btn4, #btn5, #btn1_h, #btn2_h, #btn3_h, #btn4_h, .profile');
 	items.forEach(item => {
 		item.addEventListener('mouseenter', function() {
 			const buttonId = item.id;

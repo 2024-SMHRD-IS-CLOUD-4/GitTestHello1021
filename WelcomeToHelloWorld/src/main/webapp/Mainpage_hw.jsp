@@ -110,7 +110,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 
 						<br>
 						<p type='text' style="position: relative; top: -50px;">
-							<button class="user_profile" type="submit" align="left">
+							<button id="user_profile"class="user_profile" type="submit" align="left">
 								<img id="miniping" src="img/P_Ping.png" align="center"><p style="display: inline-block; margin: 0; vertical-align: middle;"></p>
 							</button>
 

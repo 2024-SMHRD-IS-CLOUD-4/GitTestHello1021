@@ -688,6 +688,10 @@ resize: vertical;
     border-radius: 10px;
 }
 
+#modalContent1 p {
+    text-align: left;
+}
+
 .close-btn {
     background-color: #f44336; /* 닫기 버튼 색상 설정 */
     color: white;
