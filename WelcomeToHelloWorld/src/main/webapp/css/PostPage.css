@@ -526,9 +526,9 @@ border-bottom-left-radius: 20px; /* 좌측 하단 모서리 둥글게 */
 }
 
 .container::before {
-   left: 400px; /* 왼쪽 귀 위치 */
+   left: 255px; /* 왼쪽 귀 위치 */
 }
 
 .container::after {
-   right: 400px; /* 오른쪽 귀 위치 */
+   right: 510px; /* 오른쪽 귀 위치 */
 }

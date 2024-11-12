@@ -76,10 +76,7 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 					작성하기</button>
 				<button id="btn2" style="border-radius: 30px; cursor: pointer;">내
 					게시물 보기</button>
-				<button id="btn3" style="border-radius: 30px; cursor: pointer;">글
-					검색하기</button>
-				<button id="btn4" style="border-radius: 30px; cursor: pointer;">
-				</button>
+				
 
 				<%
 				}
@@ -127,7 +124,9 @@ MavenMemer memer = (MavenMemer) session.getAttribute("login_user");
 						<!-- 신고 모달 창 HTML 추가 -->
 						<div id="reportModal" class="modal">
 						    <div class="modal-content">
-						        <span id="modalContent">모달 창입니다.</span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
+						        <span id="modalContent">신고가 접수되었습니다. <br><br>검토 후 <br>적절한 조치를 취할 예정입니다.
+ <br><br>불편을 드려 죄송합니다.<br><br><br>
+</span><br><br> <!-- 이 부분의 내용이 JavaScript로 변경됨 -->
 						        <button class="close-btn" onclick="closeModal('reportModal')">닫기</button>
 						    </div>
 						</div>
