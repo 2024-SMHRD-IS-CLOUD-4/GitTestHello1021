@@ -42,6 +42,24 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 
 ## 7. 모델구현
 
+#### 1. 입장페이지
+![1  웹 페이지 구현(입장페이지)](https://github.com/user-attachments/assets/cd76249b-082e-41fa-acab-94c75e4b3c5a)
+
+#### 2. 손님 페이지
+![2  웹 페이지 구현(손님 페이지)](https://github.com/user-attachments/assets/f8af5cc4-0e3f-4b14-9681-e80f83d5485a)
+
+#### 3. 활동가 페이지
+![3  웹 페이지 구현(활동가 페이지)](https://github.com/user-attachments/assets/de5cbc25-80bd-4846-9a8e-9483dcb6cd0e)
+
+#### 4. 글 작성페이지
+![4  웹 페이지 구현(글 작성페이지)](https://github.com/user-attachments/assets/27a00097-aaf2-4498-bd0f-e7ede40e9dee)
+
+#### 5. 내 게시물 보기
+![5  웹 페이지 구현(내 게시물 보기)](https://github.com/user-attachments/assets/541e5fa5-1634-43bb-85b1-392eac37fedd)
+
+#### 6. OCR(궁금해요 : 헬로 GPT)
+![image](https://github.com/user-attachments/assets/4e12b5fc-0f8d-49e3-b5c8-86cb90d67904)
+
 ## 8. WEB페이지
 
 ## 9. 모델 개발 트러블 슈팅
