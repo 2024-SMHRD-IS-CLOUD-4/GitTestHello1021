@@ -15,7 +15,7 @@
 4. 각각의 조각마다 설명을 추가함으로써 해당 기능을 처음 사용 하더라도 어려움 없이 사용할 수 있도록 개발함
 
 ## 3. 개발환경
-|<span style="color: red;">구분</span>|내용|
+|구분|내용|
 |------|---|
 |사용언어|JAVA, HTML, CSS, JavaScript, Python|
 |사용 라이브러리|Mybatis, Maven, Flask|
