@@ -92,11 +92,19 @@
   27. 2024/11/10(일) 22:31 | 지수핑 ==> |**UPDATE**|js, jsp, html 수정 완료
   28. 2024/11/10(일) 23:37 | 지수핑 ==> |**UPDATE**|My_post, PostPage => css, jsp 수정
   29. 2024/11/11(월) 00:16 | 지수핑 ==> |**UPDATE**|Post_search => css,html, PostPage => css, user_edit => jsp, css, js 수정
-  30. 2024/11/11(월) 15:45 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage, UpdatePage 수정
-  31. 2024/11/11(월) 17:08 | 지수핑 ==> |**UPDATE**|Mainpage => jsp, js, css | updatePage => jsp 수정
-  32. 2024/11/11(월) 18:42 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage 업데이트
-  33. 2024/11/12(화) 09:40 | 지수핑 ==> |**UPDATE**|귀 위치, 모달창 수정
-  34. 2024/11/12(화) 10:26 | 지수핑 ==> |**UPDATE**|최종 Login.js / MainPage update!
+  30. 2024/11/11(월) 00:31 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js, Mainpage_hw.jsp, Membermapper.xml, My_post.js, My_post.jsp, My_post.img_Controller.java, My_post.img_DAO.java, NextPostController.java, NextPostDAO, PrepostController.java, PrePostDAO.java
+  31. 2024/11/11(월) 15:45 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage, UpdatePage 수정
+  32. 2024/11/11(월) 16:40 | 시윤핑 ==> |**INSERT**|ImageSender.java, user_edit_controller.java, user_edit_DAO.java
+  33. 2024/11/11(월) 17:08 | 지수핑 ==> |**UPDATE**|Mainpage => jsp, js, css | updatePage => jsp 수정
+  34. 2024/11/11(월) 17:31 | 시윤핑 ==> |**UPDATE**|login.js, Mainpage_hw.jsp, My_post.jsp
+  35. 2024/11/11(월) 17:44 | 시윤핑 ==> |**UPDATE**|LoginController1.java
+  36. 2024/11/11(월) 18:42 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage 업데이트
+  37. 2024/11/12(화) 00:33 | 시윤핑 ==> |**INSERT**|ImageSenderController.java |**UPDATE**|ImageSender.java, Mainpage_hw.js, Mainpage_hw.jsp, NextPostController.java, PrePostController.java
+  38. 2024/11/12(화) 01:18 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js
+  39. 2024/11/12(화) 01:43 | 시윤핑 ==> |**UPDATE**| Mainpage_hw.js
+
+  40. 2024/11/12(화) 09:40 | 지수핑 ==> |**UPDATE**|귀 위치, 모달창 수정
+  41. 2024/11/12(화) 10:26 | 지수핑 ==> |**UPDATE**|최종 Login.js / MainPage update!
   
 </details>
 
