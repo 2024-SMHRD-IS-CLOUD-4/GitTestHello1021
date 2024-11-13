@@ -1,9 +1,5 @@
 # Welcone To Hello World!!😀 (~ END 2024-11-12)
 
-### 코딩할때
-<details>
-<summary>접기 / 펼치기</summary>
-
 ## ‼필수 사항‼
 1. 현재 **사용중인 사람**이 있는지 없는지 **확인**할것
 2. 없다면 **체크박스에 체크**하고 대략적인 시간쓰기
@@ -169,4 +165,3 @@
 참고 : 
 1. [https://velog.io/@ktw9115/Git-Hub-README.md-%EC%9E%91%EC%84%B1%EB%B2%95](https://velog.io/@gmlstjq123/Readme.md-%ED%8C%8C%EC%9D%BC-%EC%9E%91%EC%84%B1%EB%B2%95)
 
-</details>
