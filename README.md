@@ -16,7 +16,7 @@
 
 ## 3. 개발환경
 |구분|내용|
-|------|---|
+|<span style="color: red;">------</span>|---|
 |사용언어|JAVA, HTML, CSS, JavaScript, Python|
 |사용 라이브러리|Mybatis, Maven, Flask|
 |개발도구|Visual Studio Code, 이클립스|
