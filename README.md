@@ -77,21 +77,26 @@
   14. 2024/11/07(목) 23:13 | 시윤핑 ==> |**UPDATE**|Mainpage_hw.js, Mainpage_hw.jsp
   15. 2024/11/08(금) 09:27 | 지수핑 ==> |**UPDATE**|My_post.html , My_post.css
   16. 2024/11/08(금) 09:45 | 영호핑 ==> 페이지 레이아웃 전체 적용
-  17. 2024/11/08(금) 12:02 | 지수핑 ==> |**UPDATE**| My_post.css => 2-2-right 아래 테두리 추가용 ~
-  18. 2024/11/08(금) 17:29 | 지수핑 ==> |**UPDATE**|Postpage 일부 수정 + Mainpage_hw. jsp/css/js 수정!
-  19. 2024/11/09(토) 08:34 | 지수핑 ==> |**UPDATE**|MainPage, PostPage, My_post 버튼 효과, 귀 업데이트 완
-  20. 2024/11/09(토) 13:23 | 지수핑 ==> |**UPDATE**|<< MainPage, PostPage는 jsp, css >>, << My_post는 jsp, css, js >>, 
+  17. 2024/11/08(금) 10:18 | 시윤핑 == >|**UPDATE**|My_post.js, My_post.jsp
+  18. 2024/11/08(금) 11:38 | 시윤핑 ==> |**UPDATE**| My_post.css, My_post.js
+  19. 2024/11/08(금) 12:02 | 지수핑 ==> |**UPDATE**|My_post.css => 2-2-right 아래 테두리 추가용 ~
+  20. 2024/11/08(금) 17:29 | 지수핑 ==> |**UPDATE**|Postpage 일부 수정 + Mainpage_hw. jsp/css/js 수정!
+  21. 2024/11/09(토) 08:34 | 지수핑 ==> |**UPDATE**|MainPage, PostPage, My_post 버튼 효과, 귀 업데이트 완
+  22. 2024/11/09(토) 13:23 | 지수핑 ==> |**UPDATE**|<< MainPage, PostPage는 jsp, css >>, << My_post는 jsp, css, js >>, 
                                                    <<Other_post는 css >> 수정
-  21. 2024/11/09(금) 17:20 | 지수핑 ==> |**UPDATE**|Mainpage_hw, My_post, Other_post, Post_search, PostPage => css,
+  23. 2024/11/09(금) 17:20 | 지수핑 ==> |**UPDATE**|Mainpage_hw, My_post, Other_post, Post_search, PostPage => css,
                                                    Post_search.html, PostPage.jsp
-  22. 2024/11/10(일) 22:31 | 지수핑 ==> |**UPDATE**|js, jsp, html 수정 완료
-  23. 2024/11/10(일) 23:37 | 지수핑 ==> |**UPDATE**|My_post, PostPage => css, jsp 수정
-  24. 2024/11/11(월) 00:16 | 지수핑 ==> |**UPDATE**|Post_search => css,html, PostPage => css, user_edit => jsp, css, js 수정
-  25. 2024/11/11(월) 15:45 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage, UpdatePage 수정
-  26. 2024/11/11(월) 17:08 | 지수핑 ==> |**UPDATE**|Mainpage => jsp, js, css | updatePage => jsp 수정
-  27. 2024/11/11(월) 18:42 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage 업데이트
-  28. 2024/11/12(화) 09:40 | 지수핑 ==> |**UPDATE**|귀 위치, 모달창 수정
-  29. 2024/11/12(화) 10:26 | 지수핑 ==> |**UPDATE**|최종 Login.js / MainPage update!
+  24. 2024/11/10(일) 16:56 | 시윤핑 ==> |**UPDATE**|ImageDAO.java, MemberMapper.xml, My_post.js, My_post_img_cotroller.java
+  25. 2024/11/10(일) 17:08 | 시윤핑 ==> |**INSERT**|UpdatePage.css
+  26. 2024/11/10(일) 21:24 | 시윤핑 ==> |**INSERT**|DELETE, UPDATE FUNCTION COMMIT
+  27. 2024/11/10(일) 22:31 | 지수핑 ==> |**UPDATE**|js, jsp, html 수정 완료
+  28. 2024/11/10(일) 23:37 | 지수핑 ==> |**UPDATE**|My_post, PostPage => css, jsp 수정
+  29. 2024/11/11(월) 00:16 | 지수핑 ==> |**UPDATE**|Post_search => css,html, PostPage => css, user_edit => jsp, css, js 수정
+  30. 2024/11/11(월) 15:45 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage, UpdatePage 수정
+  31. 2024/11/11(월) 17:08 | 지수핑 ==> |**UPDATE**|Mainpage => jsp, js, css | updatePage => jsp 수정
+  32. 2024/11/11(월) 18:42 | 지수핑 ==> |**UPDATE**|Mainpage, My_post, PostPage 업데이트
+  33. 2024/11/12(화) 09:40 | 지수핑 ==> |**UPDATE**|귀 위치, 모달창 수정
+  34. 2024/11/12(화) 10:26 | 지수핑 ==> |**UPDATE**|최종 Login.js / MainPage update!
   
 </details>
 
