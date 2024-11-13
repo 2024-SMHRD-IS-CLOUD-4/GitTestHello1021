@@ -70,5 +70,5 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 ## 10. 팀원 단위 업무 분장
 
 ## 11. 시연영상
-[Release HelloWouldVideo](https://github.com/2024-SMHRD-IS-CLOUD-4/GitTestHello1021/releases/tag/HelloWouldVideo)
+![시연영상 (1)](https://github.com/user-attachments/assets/3f70b252-a8cf-460a-adf4-8f4971746003)
 ## 12. 참고 문헌
