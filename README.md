@@ -29,6 +29,7 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 
 
 ## 5. 서비스 아키택쳐
+#### <Ver.JspServlet>
 ![서비스 아키택쳐](https://github.com/user-attachments/assets/6eb8303d-5295-4440-aeb2-a1aa99f39db4)
 ## 6. ERD
 
