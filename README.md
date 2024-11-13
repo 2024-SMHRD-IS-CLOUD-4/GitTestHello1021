@@ -17,6 +17,8 @@
 ## 3. 개발환경
 |구분|내용|
 |------|---|
-|테스트1|테스트2|
-|테스트1|테스트2|
-|테스트1|테스트2|
+|사용언어|JAVA, HTML, CSS, JavaScript, Python|
+|사용 라이브러리|Mybatis, Maven, Flask|
+|개발도구|Visual Studio Code, 이클립스|
+|서버환경|tomcat 9.0, Flask|
+|데이터베이스|Oracle|
