@@ -1,5 +1,4 @@
-# Welcone To Hello World!!😀 💻Work Space💻
-### (~ END 2024-11-12)
+# Welcone To Hello World!!😀 💻Work Space💻 ### (~ END 2024-11-12)
 
 ## ‼필수 사항‼
 1. 현재 **사용중인 사람**이 있는지 없는지 **확인**할것
