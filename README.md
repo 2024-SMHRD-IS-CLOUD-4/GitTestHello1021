@@ -1,6 +1,8 @@
 # Welcome To Hello World!!😀 Project!! 
 ### (~ END 2024-11-12)
 ---
+![mainpage](https://github.com/user-attachments/assets/47515424-8ea6-409b-893e-b81d219e7ad0)
+
 ## 1. 프로젝트 개요
 #### 주제
 SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디지털 세계에 접근하고 이해할 수 있도록 직관적이고 사용자 친화적인 경험을 제공하는 SNS 플랫폼
