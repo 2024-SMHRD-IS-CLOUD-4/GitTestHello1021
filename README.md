@@ -24,11 +24,12 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 |서버환경|tomcat 9.0, Flask|
 |데이터베이스|Oracle|
 
+
 ## 4. 유스케이스
 
 
 ## 5. 서비스 아키택쳐
-
+![서비스 아키택쳐](https://github.com/user-attachments/assets/6eb8303d-5295-4440-aeb2-a1aa99f39db4)
 ## 6. ERD
 
 ## 7. 모델구현
