@@ -1,4 +1,4 @@
-# Welcone To Hello World!!😀 Project!! 
+# Welcome To Hello World!!😀 Project!! 
 ### (~ END 2024-11-12)
 ---
 ## 1. 프로젝트 개요
