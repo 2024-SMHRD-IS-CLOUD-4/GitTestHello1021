@@ -30,8 +30,12 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 
 ## 5. 서비스 아키택쳐
 #### <Ver.JspServlet>
-![서비스 아키택쳐](https://github.com/user-attachments/assets/6eb8303d-5295-4440-aeb2-a1aa99f39db4)
+![서비스 아키택쳐1](https://github.com/user-attachments/assets/6eb8303d-5295-4440-aeb2-a1aa99f39db4)
+#### <Ver.Flask>
+![서비스 아키택쳐2](https://github.com/user-attachments/assets/55e661fc-d614-4bfc-9dfa-4b21d67e4f27)
+
 ## 6. ERD
+![ERD](https://github.com/user-attachments/assets/20eb5b03-9dfb-40e1-9846-53db49e632b4)
 
 ## 7. 모델구현
 
