@@ -37,7 +37,8 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 ![ERD](https://github.com/user-attachments/assets/20eb5b03-9dfb-40e1-9846-53db49e632b4)
 
 ## 7. 모델구현
-
+![3](https://github.com/user-attachments/assets/9cda6825-3ad5-466d-8179-f8c6f74337bc)
+![4](https://github.com/user-attachments/assets/fc908b17-0701-41db-96d0-95cebe4e12a9)
 
 ## 8. WEB페이지
 
