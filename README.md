@@ -167,4 +167,4 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 ![시연영상 (1)](https://github.com/user-attachments/assets/3f70b252-a8cf-460a-adf4-8f4971746003)
 [▶시연영상](https://github.com/2024-SMHRD-IS-CLOUD-4/GitTestHello1021/releases/tag/HelloWouldVideo)
 ## 12. 참고 문헌(자료)
-HuggingFace : https://huggingface.co/Salesforce/blip-image-captioning-large
+HuggingFace API : https://huggingface.co/Salesforce/blip-image-captioning-large
