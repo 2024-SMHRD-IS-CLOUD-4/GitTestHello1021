@@ -25,7 +25,7 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 
 
 ## 4. 유스케이스
-
+![(핵심)플로우차트-페이지-2 drawio](https://github.com/user-attachments/assets/39f19d23-131e-4f1e-9574-472e1862c5e9)
 
 ## 5. 서비스 아키택쳐
 #### <Ver.JspServlet>
@@ -37,7 +37,6 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 ![ERD](https://github.com/user-attachments/assets/20eb5b03-9dfb-40e1-9846-53db49e632b4)
 
 ## 7. 모델구현
-
 
 
 ## 8. WEB페이지
