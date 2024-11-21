@@ -24,7 +24,7 @@ SNS 인스타그램을  기반으로 디지털 소외계층이 보다 쉽게 디
 |데이터베이스|Oracle|
 
 
-## 4. 유스케이스
+## 4. 플로우차트
 ![(핵심)플로우차트-페이지-2 drawio](https://github.com/user-attachments/assets/39f19d23-131e-4f1e-9574-472e1862c5e9)
 
 ## 5. 서비스 아키택쳐
